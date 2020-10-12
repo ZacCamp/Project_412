@@ -30,8 +30,6 @@ def startUpDB (dbname):
     if occurrences == 0:
         cursor.execute('CREATE DATABASE ' + dbname) 
 
-        connection.commit()
-
         connection2 = getOpenConnection(dbname = DB_NAME)
 
         loadDogTable('dogs', 'dogs_data.txt', connection2) 
@@ -48,7 +46,7 @@ def loadDogTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (intakeType text, sex text, maintenanceLevel text, temperament text, age int, dogID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (breed text, intakeType text, sex text, maintenanceLevel text, temperament text, age int, adoptionStatus text, dogID int);") 
 
     dogFile = open(filePath, "r")
 
@@ -57,14 +55,16 @@ def loadDogTable(tableName, filePath, openConnection):
     for i in dataList:
         splitList = i.split('::')
 
-        intakeType = splitList[0]
-        sex = splitList[1]
-        maintenanceLevel = splitList[2]
-        temperament = splitList[3]
-        age = int(splitList[4])
-        dogID = int(splitList[5])
+        breed = splitList[0]
+        intakeType = splitList[1]
+        sex = splitList[2]
+        maintenanceLevel = splitList[3]
+        temperament = splitList[4]
+        age = int(splitList[5])
+        adoptionStatus = splitList[6]
+        dogID = int(splitList[7])
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s , %s , %s)", (intakeType, sex, maintenanceLevel, temperament, age, dogID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s , %s , %s, %s, %s)", (breed, intakeType, sex, maintenanceLevel, temperament, age, adoptionStatus, dogID))
 
     dogFile.close()
 
