@@ -26,6 +26,8 @@ def main():
 
         dataAsList.append('false' + "::") # adopted status
 
+        dataAsList.append(str(random.randint(0, 4)) + "::") # shelterID
+
         dataAsList.append(str(ID) + "::\n") # sequential id
 
     File = open("dogs_data.txt", "w")
