@@ -6,23 +6,21 @@ def loadPersonTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, phoneNumber text, address text, shelterID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int);")
 
-    shleterFile = open(filePath, "r")
+    fp = open(filePath, "r")
 
-    dataList = shleterFile.readlines()
+    dataList = fp.readlines()
     
     for i in dataList:
         splitList = i.split('::')
 
         name = splitList[0]
-        number = splitList[1]
-        address = splitList[2]
-        shelterID = int(splitList[3])
+        personID = int(splitList[1])
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s)", (name, number, address, shelterID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s)", (name, personID))
 
-    shleterFile.close()
+    fp.close()
 
     cursor.close()
     openConnection.commit()
@@ -36,23 +34,22 @@ def loadEmployeeTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, phoneNumber text, address text, shelterID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int ,shelterID int);") 
 
-    shleterFile = open(filePath, "r")
+    fp = open(filePath, "r")
 
-    dataList = shleterFile.readlines()
+    dataList = fp.readlines()
     
     for i in dataList:
         splitList = i.split('::')
 
         name = splitList[0]
-        number = splitList[1]
-        address = splitList[2]
-        shelterID = int(splitList[3])
+        personID = int(splitList[1])
+        shelterID = int(splitList[2])
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s)", (name, number, address, shelterID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s )", (name, personID, shelterID))
 
-    shleterFile.close()
+    fp.close()
 
     cursor.close()
     openConnection.commit()
@@ -65,23 +62,23 @@ def loadAdopterTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, phoneNumber text, address text, shelterID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int, zipCode int, phoneNumber text);") 
 
-    shleterFile = open(filePath, "r")
+    fp = open(filePath, "r")
 
-    dataList = shleterFile.readlines()
+    dataList = fp.readlines()
     
     for i in dataList:
         splitList = i.split('::')
 
         name = splitList[0]
-        number = splitList[1]
-        address = splitList[2]
-        shelterID = int(splitList[3])
+        personID = int(splitList[1])
+        zipCode = int(splitList[2])
+        phoneNumber = splitList[3]
 
         cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s)", (name, number, address, shelterID))
 
-    shleterFile.close()
+    fp.close()
 
     cursor.close()
     openConnection.commit()
@@ -129,9 +126,9 @@ def loadShelterTable(tableName, filePath, openConnection):
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
     cursor.execute("CREATE TABLE " + tableName + " (name text, phoneNumber text, address text, shelterID int);") 
 
-    shleterFile = open(filePath, "r")
+    fp = open(filePath, "r")
 
-    dataList = shleterFile.readlines()
+    dataList = fp.readlines()
     
     for i in dataList:
         splitList = i.split('::')
@@ -143,7 +140,7 @@ def loadShelterTable(tableName, filePath, openConnection):
 
         cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s)", (name, number, address, shelterID))
 
-    shleterFile.close()
+    fp.close()
 
     cursor.close()
     openConnection.commit()
