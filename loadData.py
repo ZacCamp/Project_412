@@ -76,7 +76,7 @@ def loadAdopterTable(tableName, filePath, openConnection):
         zipCode = int(splitList[2])
         phoneNumber = splitList[3]
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s)", (name, number, address, shelterID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s)", (name, personID, zipCode, phoneNumber))
 
     fp.close()
 

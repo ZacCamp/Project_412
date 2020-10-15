@@ -1,0 +1,1000 @@
+foxhound::stray::female::high::neutral::8::false::4::0::
+mastiff::surrendered::male::medium::neutral::7::false::3::1::
+Welsh terrier::surrendered::female::low::neutral::12::false::0::2::
+Australian cattle dog::surrendered::male::high::neutral::12::false::1::3::
+Staffordshire bull terrier::surrendered::male::high::assertive::5::false::3::4::
+cairn terrier::stray::female::low::passive::11::false::4::5::
+mastiff::stray::female::medium::passive::7::false::4::6::
+Chesapeake Bay retriever::stray::female::low::assertive::1::false::4::7::
+greyhound::stray::female::medium::assertive::13::false::3::8::
+keeshond::stray::male::medium::passive::1::false::1::9::
+Maltese::stray::male::low::passive::9::false::0::10::
+borzoi::stray::female::medium::passive::13::false::3::11::
+Samoyed::surrendered::male::low::passive::13::false::4::12::
+Rhodesian ridgeback::stray::male::high::assertive::5::false::2::13::
+Gordon setter::surrendered::male::low::neutral::2::false::3::14::
+Skye terrier::stray::female::high::assertive::12::false::3::15::
+bichon frise::stray::female::medium::assertive::8::false::3::16::
+fox terrier::surrendered::male::low::passive::5::false::0::17::
+American Staffordshire terrier::stray::male::medium::passive::8::false::1::18::
+Rottweiler::surrendered::female::high::neutral::11::false::1::19::
+flat-coated retriever::surrendered::male::medium::assertive::2::false::0::20::
+Canaan dog::surrendered::female::low::assertive::13::false::1::21::
+Chesapeake Bay retriever::stray::male::medium::assertive::9::false::3::22::
+flat-coated retriever::surrendered::male::low::passive::12::false::0::23::
+schnauzer::stray::female::low::neutral::9::false::0::24::
+curly-coated retriever::stray::female::medium::neutral::4::false::0::25::
+Tibetan terrier::surrendered::male::medium::neutral::1::false::0::26::
+Saint Bernard::surrendered::male::low::assertive::10::false::4::27::
+curly-coated retriever::stray::male::low::neutral::13::false::0::28::
+pug::stray::male::medium::passive::7::false::4::29::
+basset hound::surrendered::male::low::assertive::9::false::4::30::
+keeshond::stray::male::high::assertive::5::false::4::31::
+Alaskan Malamute::stray::male::high::neutral::9::false::4::32::
+Rhodesian ridgeback::stray::female::low::assertive::8::false::2::33::
+Irish setter::surrendered::male::high::passive::10::false::2::34::
+komondor::surrendered::female::medium::passive::8::false::3::35::
+briard::surrendered::female::medium::assertive::6::false::0::36::
+Norwich terrier::surrendered::female::low::passive::4::false::4::37::
+Finnish spitz::surrendered::male::high::passive::13::false::4::38::
+basenji::stray::female::medium::assertive::9::false::3::39::
+Tibetan terrier::stray::male::medium::neutral::3::false::1::40::
+Chinese shar-pei::stray::male::high::neutral::12::false::4::41::
+dachshund::surrendered::male::medium::assertive::12::false::1::42::
+Maltese::surrendered::female::low::neutral::7::false::0::43::
+Irish wolfhound::surrendered::female::low::assertive::1::false::4::44::
+Sealyham terrier::stray::female::low::passive::5::false::2::45::
+Shetland sheepdog::stray::male::low::neutral::6::false::1::46::
+Akita::stray::male::low::assertive::10::false::2::47::
+Rottweiler::stray::male::low::neutral::3::false::0::48::
+American Staffordshire terrier::stray::female::low::passive::8::false::3::49::
+German wirehaired pointer::surrendered::female::medium::neutral::8::false::4::50::
+Brittany::surrendered::male::high::neutral::2::false::3::51::
+Canaan dog::surrendered::female::medium::assertive::5::false::2::52::
+Irish setter::surrendered::female::low::assertive::6::false::1::53::
+cairn terrier::stray::female::high::neutral::5::false::1::54::
+Sealyham terrier::surrendered::female::medium::assertive::12::false::4::55::
+Alaskan Malamute::stray::male::medium::passive::9::false::0::56::
+otterhound::stray::male::high::assertive::1::false::2::57::
+German shorthaired pointer::surrendered::female::low::neutral::5::false::1::58::
+Irish wolfhound::surrendered::female::medium::assertive::9::false::1::59::
+briard::surrendered::female::high::passive::3::false::2::60::
+Yorkshire terrier::surrendered::male::high::neutral::12::false::0::61::
+basset hound::stray::male::medium::passive::1::false::2::62::
+schipperke::stray::female::medium::assertive::8::false::4::63::
+Scottish deerhound::stray::male::low::neutral::4::false::2::64::
+bichon frise::surrendered::female::medium::neutral::2::false::4::65::
+flat-coated retriever::surrendered::male::high::assertive::2::false::0::66::
+Australian terrier::surrendered::male::low::passive::5::false::0::67::
+papillon::surrendered::female::high::assertive::5::false::1::68::
+vizsla::stray::male::medium::assertive::1::false::1::69::
+otterhound::surrendered::female::high::assertive::5::false::4::70::
+German shepherd::surrendered::female::medium::assertive::12::false::3::71::
+Australian cattle dog::surrendered::male::high::passive::1::false::0::72::
+Clumber spaniel::stray::female::medium::passive::1::false::3::73::
+Staffordshire bull terrier::surrendered::female::high::neutral::3::false::3::74::
+Norwich terrier::stray::female::high::assertive::6::false::3::75::
+English toy spaniel::surrendered::male::medium::passive::10::false::1::76::
+pointer::surrendered::female::low::passive::13::false::0::77::
+Clumber spaniel::stray::female::high::assertive::4::false::1::78::
+golden retriever::surrendered::male::medium::passive::9::false::3::79::
+Newfoundland::surrendered::female::low::passive::10::false::0::80::
+Tibetan terrier::stray::male::high::neutral::3::false::1::81::
+Chinese shar-pei::stray::female::low::neutral::9::false::3::82::
+whippet::surrendered::female::low::assertive::6::false::3::83::
+puli::stray::female::high::passive::4::false::0::84::
+whippet::stray::female::medium::neutral::6::false::3::85::
+collie::surrendered::female::high::neutral::12::false::3::86::
+English setter::surrendered::male::low::assertive::1::false::4::87::
+golden retriever::surrendered::male::medium::passive::5::false::2::88::
+basset hound::stray::male::high::passive::12::false::4::89::
+fox terrier::stray::male::low::neutral::5::false::3::90::
+curly-coated retriever::surrendered::male::medium::neutral::2::false::4::91::
+mastiff::stray::female::medium::passive::5::false::4::92::
+Pekingese::surrendered::female::high::assertive::13::false::1::93::
+bull terrier::surrendered::male::high::passive::6::false::1::94::
+Gordon setter::surrendered::female::high::assertive::10::false::3::95::
+bloodhound::stray::male::low::assertive::7::false::2::96::
+West Highland white terrier::stray::female::low::neutral::13::false::0::97::
+Brussels griffon::surrendered::female::medium::neutral::10::false::0::98::
+Labrador retriever::surrendered::female::high::assertive::3::false::0::99::
+Australian shepherd::stray::male::medium::neutral::2::false::0::100::
+Bedlington terrier::stray::female::medium::assertive::9::false::1::101::
+Chinese shar-pei::surrendered::male::medium::assertive::11::false::1::102::
+mastiff::stray::male::medium::assertive::10::false::2::103::
+Staffordshire bull terrier::stray::female::medium::assertive::6::false::0::104::
+borzoi::stray::male::high::neutral::11::false::0::105::
+kuvasz::surrendered::male::medium::passive::4::false::4::106::
+Norwich terrier::stray::male::high::passive::5::false::0::107::
+Akita::stray::male::low::assertive::3::false::4::108::
+Australian shepherd::surrendered::female::medium::assertive::8::false::3::109::
+Lakeland terrier::stray::male::high::assertive::5::false::2::110::
+English toy spaniel::surrendered::male::low::assertive::5::false::2::111::
+Airedale terrier::surrendered::male::high::neutral::7::false::3::112::
+Labrador retriever::surrendered::female::high::passive::7::false::2::113::
+kuvasz::stray::male::medium::neutral::11::false::1::114::
+Chesapeake Bay retriever::stray::female::high::neutral::10::false::1::115::
+bearded collie::surrendered::male::low::neutral::8::false::1::116::
+curly-coated retriever::surrendered::male::low::assertive::8::false::0::117::
+Yorkshire terrier::stray::male::low::neutral::2::false::2::118::
+affenpinscher::stray::male::high::neutral::13::false::3::119::
+Bernese mountain dog::surrendered::male::low::assertive::10::false::4::120::
+papillon::stray::male::low::neutral::4::false::2::121::
+collie::surrendered::female::medium::neutral::8::false::1::122::
+basset hound::surrendered::male::low::assertive::12::false::0::123::
+Welsh terrier::surrendered::male::high::assertive::7::false::4::124::
+German shepherd::stray::female::medium::neutral::2::false::3::125::
+Labrador retriever::stray::female::low::passive::4::false::2::126::
+kuvasz::stray::male::high::assertive::3::false::4::127::
+Newfoundland::surrendered::female::low::neutral::4::false::0::128::
+bearded collie::stray::female::medium::passive::6::false::1::129::
+Labrador retriever::stray::female::low::neutral::5::false::4::130::
+Japanese spaniel::surrendered::male::medium::neutral::9::false::2::131::
+Clumber spaniel::surrendered::male::medium::assertive::5::false::2::132::
+affenpinscher::surrendered::female::low::assertive::11::false::3::133::
+French bulldog::stray::male::high::passive::8::false::1::134::
+Labrador retriever::surrendered::female::high::passive::6::false::2::135::
+border terrier::surrendered::male::low::neutral::13::false::3::136::
+border collie::surrendered::male::low::assertive::13::false::1::137::
+bouvier des Flandres::stray::female::medium::passive::11::false::3::138::
+bouvier des Flandres::surrendered::male::medium::neutral::12::false::1::139::
+German shepherd::surrendered::male::low::assertive::3::false::0::140::
+Doberman pinscher::surrendered::male::medium::passive::11::false::1::141::
+beagle::stray::female::low::passive::7::false::0::142::
+border collie::surrendered::male::low::neutral::13::false::3::143::
+Scottish deerhound::stray::female::medium::passive::6::false::3::144::
+Staffordshire bull terrier::stray::female::low::assertive::2::false::1::145::
+Rhodesian ridgeback::stray::male::high::assertive::1::false::0::146::
+flat-coated retriever::surrendered::female::high::assertive::8::false::0::147::
+whippet::stray::male::low::assertive::7::false::1::148::
+Skye terrier::stray::female::low::assertive::2::false::1::149::
+kuvasz::surrendered::female::medium::passive::6::false::1::150::
+Irish water spaniel::surrendered::male::medium::passive::7::false::3::151::
+basenji::surrendered::male::high::neutral::2::false::3::152::
+Australian shepherd::surrendered::female::low::neutral::5::false::0::153::
+English springer spaniel::surrendered::female::low::neutral::7::false::1::154::
+komondor::stray::female::high::assertive::13::false::0::155::
+cocker spaniel::stray::female::low::passive::2::false::3::156::
+cairn terrier::stray::male::medium::passive::10::false::3::157::
+Chinese shar-pei::stray::male::medium::passive::12::false::3::158::
+American water spaniel::surrendered::female::low::passive::4::false::3::159::
+papillon::surrendered::female::medium::assertive::6::false::4::160::
+bearded collie::surrendered::male::low::assertive::6::false::1::161::
+Yorkshire terrier::surrendered::female::medium::passive::11::false::0::162::
+fox terrier::stray::male::low::assertive::10::false::2::163::
+Manchester terrier::surrendered::male::medium::neutral::5::false::1::164::
+Pomeranian::stray::male::low::passive::2::false::0::165::
+Newfoundland::surrendered::female::medium::assertive::4::false::1::166::
+Norwich terrier::surrendered::female::medium::neutral::6::false::2::167::
+Chinese crested::surrendered::female::medium::passive::13::false::3::168::
+flat-coated retriever::surrendered::female::low::assertive::1::false::0::169::
+American Staffordshire terrier::surrendered::male::medium::neutral::5::false::2::170::
+Gordon setter::surrendered::male::medium::passive::11::false::4::171::
+Brussels griffon::surrendered::male::low::assertive::8::false::3::172::
+French bulldog::surrendered::male::low::assertive::10::false::2::173::
+Chinese crested::surrendered::male::low::neutral::8::false::4::174::
+flat-coated retriever::surrendered::male::low::passive::11::false::4::175::
+flat-coated retriever::stray::female::high::assertive::2::false::3::176::
+Japanese spaniel::surrendered::male::medium::neutral::3::false::2::177::
+Chesapeake Bay retriever::stray::female::high::passive::11::false::2::178::
+Kerry blue terrier::surrendered::female::high::passive::2::false::4::179::
+schipperke::stray::male::high::assertive::12::false::1::180::
+Lhasa apso::surrendered::male::medium::passive::12::false::3::181::
+Chihuahua::surrendered::male::medium::neutral::11::false::2::182::
+Manchester terrier::surrendered::female::medium::neutral::11::false::1::183::
+Scottish deerhound::stray::male::high::passive::9::false::1::184::
+Kerry blue terrier::surrendered::female::medium::assertive::5::false::4::185::
+Tibetan terrier::surrendered::female::medium::neutral::10::false::3::186::
+border terrier::surrendered::female::low::neutral::6::false::4::187::
+bouvier des Flandres::stray::male::high::passive::8::false::2::188::
+keeshond::stray::female::low::passive::1::false::2::189::
+bearded collie::surrendered::female::low::passive::4::false::4::190::
+papillon::surrendered::male::medium::assertive::8::false::0::191::
+Sussex spaniel::stray::female::medium::passive::4::false::3::192::
+boxer::surrendered::female::low::neutral::9::false::1::193::
+basset hound::stray::female::high::passive::1::false::0::194::
+Alaskan Malamute::stray::male::low::passive::7::false::4::195::
+dachshund::stray::male::high::passive::6::false::4::196::
+Rhodesian ridgeback::surrendered::female::low::passive::5::false::1::197::
+Bedlington terrier::surrendered::female::low::passive::10::false::2::198::
+Rhodesian ridgeback::surrendered::female::low::neutral::3::false::0::199::
+Norwich terrier::surrendered::male::low::passive::5::false::1::200::
+English cocker spaniel::surrendered::male::high::assertive::13::false::1::201::
+Canaan dog::stray::female::medium::neutral::3::false::4::202::
+Rottweiler::surrendered::female::high::passive::9::false::1::203::
+basenji::stray::male::medium::passive::4::false::1::204::
+dachshund::surrendered::male::low::passive::12::false::2::205::
+Scottish terrier::stray::female::medium::passive::7::false::3::206::
+shih tzu::stray::male::high::neutral::11::false::4::207::
+basset hound::surrendered::female::high::assertive::12::false::0::208::
+Weimaraner::stray::female::medium::neutral::11::false::4::209::
+Clumber spaniel::stray::female::medium::neutral::13::false::0::210::
+Airedale terrier::surrendered::female::high::passive::1::false::3::211::
+bull terrier::surrendered::male::high::passive::7::false::4::212::
+American Staffordshire terrier::stray::female::low::neutral::11::false::3::213::
+Lakeland terrier::stray::female::low::neutral::5::false::1::214::
+West Highland white terrier::surrendered::male::high::assertive::8::false::2::215::
+pointer::surrendered::male::high::assertive::13::false::0::216::
+Rottweiler::surrendered::male::low::passive::6::false::4::217::
+Norwegian elkhound::stray::male::low::passive::4::false::0::218::
+Rhodesian ridgeback::stray::male::high::assertive::4::false::2::219::
+Scottish deerhound::surrendered::male::medium::neutral::5::false::3::220::
+English cocker spaniel::stray::male::high::neutral::12::false::1::221::
+border collie::surrendered::male::medium::neutral::11::false::0::222::
+Boston terrier::surrendered::female::high::neutral::6::false::2::223::
+Great Dane::stray::male::low::passive::11::false::1::224::
+beagle::stray::male::medium::assertive::4::false::4::225::
+Japanese spaniel::surrendered::male::medium::passive::8::false::1::226::
+Rottweiler::stray::female::low::assertive::11::false::0::227::
+golden retriever::surrendered::male::low::assertive::6::false::2::228::
+Bernese mountain dog::stray::male::medium::neutral::8::false::2::229::
+Gordon setter::surrendered::male::medium::neutral::5::false::2::230::
+Pomeranian::surrendered::female::high::assertive::13::false::1::231::
+Australian cattle dog::stray::male::low::assertive::3::false::0::232::
+briard::surrendered::male::medium::passive::12::false::3::233::
+Scottish terrier::stray::male::low::passive::3::false::2::234::
+Bedlington terrier::surrendered::male::medium::neutral::12::false::2::235::
+Sealyham terrier::surrendered::male::low::neutral::1::false::0::236::
+Sussex spaniel::stray::female::high::neutral::13::false::1::237::
+Pekingese::stray::female::high::assertive::10::false::0::238::
+Norwegian elkhound::stray::female::high::assertive::8::false::1::239::
+border collie::surrendered::female::low::passive::10::false::4::240::
+cocker spaniel::surrendered::female::high::neutral::5::false::3::241::
+English setter::stray::female::medium::assertive::2::false::2::242::
+Lhasa apso::surrendered::male::medium::neutral::12::false::2::243::
+schipperke::surrendered::male::medium::neutral::7::false::0::244::
+briard::surrendered::male::high::neutral::6::false::4::245::
+Maltese::stray::male::high::assertive::11::false::4::246::
+Scottish terrier::stray::female::high::neutral::10::false::0::247::
+West Highland white terrier::stray::male::low::passive::13::false::1::248::
+West Highland white terrier::stray::male::low::neutral::12::false::1::249::
+Pekingese::stray::male::medium::neutral::10::false::1::250::
+Sussex spaniel::surrendered::male::low::neutral::9::false::4::251::
+Brussels griffon::surrendered::male::high::passive::4::false::4::252::
+bichon frise::stray::female::high::neutral::12::false::1::253::
+Mexican hairless::stray::female::medium::neutral::5::false::3::254::
+bichon frise::surrendered::male::high::passive::6::false::1::255::
+Norwegian elkhound::surrendered::female::medium::assertive::6::false::1::256::
+border collie::surrendered::male::low::neutral::6::false::0::257::
+whippet::stray::female::high::assertive::3::false::1::258::
+cairn terrier::stray::female::high::passive::2::false::3::259::
+border terrier::stray::male::high::neutral::6::false::1::260::
+Sussex spaniel::stray::male::medium::neutral::7::false::1::261::
+silky terrier::stray::male::low::assertive::10::false::1::262::
+basset hound::surrendered::female::medium::passive::4::false::0::263::
+cairn terrier::surrendered::male::medium::neutral::4::false::2::264::
+French bulldog::stray::male::medium::assertive::12::false::4::265::
+English toy spaniel::surrendered::male::high::passive::7::false::3::266::
+Lhasa apso::stray::male::medium::assertive::7::false::4::267::
+Boston terrier::stray::male::low::passive::13::false::4::268::
+Labrador retriever::stray::female::low::neutral::1::false::4::269::
+Bedlington terrier::stray::male::low::assertive::3::false::2::270::
+English setter::surrendered::male::high::passive::3::false::2::271::
+Rhodesian ridgeback::stray::female::high::neutral::10::false::1::272::
+cairn terrier::stray::male::high::neutral::1::false::4::273::
+bouvier des Flandres::surrendered::female::high::neutral::6::false::2::274::
+bearded collie::surrendered::female::low::neutral::3::false::0::275::
+foxhound::stray::male::low::assertive::10::false::4::276::
+Jack Russell terrier::surrendered::female::high::neutral::4::false::4::277::
+mastiff::stray::female::medium::assertive::11::false::2::278::
+basset hound::surrendered::male::high::assertive::4::false::4::279::
+Pekingese::stray::female::medium::neutral::7::false::4::280::
+komondor::stray::male::high::passive::2::false::3::281::
+greyhound::stray::female::medium::assertive::4::false::2::282::
+whippet::stray::male::low::neutral::2::false::0::283::
+Kerry blue terrier::surrendered::female::medium::neutral::2::false::2::284::
+Siberian husky::stray::male::low::neutral::4::false::3::285::
+pug::surrendered::male::low::assertive::6::false::3::286::
+Scottish terrier::stray::male::high::passive::11::false::3::287::
+Mexican hairless::stray::male::medium::passive::11::false::4::288::
+Brittany::stray::female::low::passive::12::false::3::289::
+Chihuahua::surrendered::male::low::passive::2::false::4::290::
+Pomeranian::surrendered::male::high::neutral::5::false::0::291::
+English toy spaniel::surrendered::male::medium::neutral::12::false::1::292::
+bichon frise::surrendered::male::low::neutral::1::false::0::293::
+Sussex spaniel::stray::male::low::assertive::6::false::1::294::
+Labrador retriever::stray::female::medium::assertive::13::false::2::295::
+American Staffordshire terrier::surrendered::male::medium::assertive::8::false::2::296::
+English toy spaniel::surrendered::female::low::neutral::1::false::1::297::
+German shorthaired pointer::stray::female::high::assertive::13::false::2::298::
+Shetland sheepdog::stray::male::low::passive::9::false::2::299::
+pointer::surrendered::female::low::neutral::11::false::4::300::
+Norwich terrier::stray::female::medium::neutral::4::false::4::301::
+English toy spaniel::stray::male::low::neutral::12::false::0::302::
+flat-coated retriever::surrendered::female::medium::passive::13::false::2::303::
+West Highland white terrier::surrendered::female::medium::neutral::7::false::1::304::
+Chesapeake Bay retriever::stray::female::high::neutral::11::false::4::305::
+Irish wolfhound::stray::female::high::neutral::3::false::1::306::
+Airedale terrier::stray::female::low::assertive::9::false::3::307::
+Airedale terrier::stray::male::medium::neutral::13::false::2::308::
+German shorthaired pointer::surrendered::male::low::neutral::4::false::2::309::
+Lakeland terrier::stray::male::medium::neutral::8::false::1::310::
+American water spaniel::stray::male::medium::passive::7::false::3::311::
+Scottish deerhound::stray::male::low::assertive::5::false::1::312::
+black and tan coonhound::surrendered::female::medium::assertive::8::false::4::313::
+American Staffordshire terrier::stray::female::high::neutral::8::false::3::314::
+Canaan dog::stray::female::medium::assertive::11::false::3::315::
+schipperke::stray::male::low::assertive::13::false::4::316::
+Lakeland terrier::stray::female::high::neutral::9::false::4::317::
+Sussex spaniel::surrendered::male::high::neutral::13::false::1::318::
+Sussex spaniel::stray::male::medium::passive::1::false::2::319::
+Scottish terrier::stray::female::high::passive::1::false::4::320::
+French bulldog::stray::female::low::assertive::8::false::4::321::
+Kerry blue terrier::stray::female::high::assertive::9::false::2::322::
+schipperke::stray::female::medium::neutral::8::false::3::323::
+Pekingese::stray::male::medium::neutral::6::false::2::324::
+Australian cattle dog::stray::male::high::assertive::7::false::4::325::
+Brittany::surrendered::female::high::neutral::4::false::3::326::
+Labrador retriever::stray::male::high::assertive::6::false::1::327::
+collie::stray::female::high::assertive::1::false::0::328::
+Sealyham terrier::stray::female::low::passive::1::false::0::329::
+Akita::surrendered::female::high::neutral::7::false::2::330::
+bouvier des Flandres::surrendered::female::low::assertive::11::false::3::331::
+Pomeranian::surrendered::male::high::assertive::7::false::1::332::
+boxer::surrendered::male::low::assertive::9::false::3::333::
+schipperke::surrendered::male::medium::neutral::3::false::2::334::
+American water spaniel::stray::male::low::assertive::13::false::0::335::
+kuvasz::stray::female::medium::assertive::6::false::3::336::
+bouvier des Flandres::surrendered::male::low::neutral::12::false::1::337::
+Norwegian elkhound::surrendered::female::medium::assertive::8::false::1::338::
+German shepherd::surrendered::male::low::assertive::11::false::3::339::
+Labrador retriever::surrendered::male::low::assertive::11::false::0::340::
+Australian terrier::stray::male::high::assertive::7::false::3::341::
+English cocker spaniel::stray::female::high::passive::11::false::2::342::
+English toy spaniel::surrendered::male::high::assertive::3::false::1::343::
+Shetland sheepdog::stray::female::high::assertive::9::false::0::344::
+Bernese mountain dog::stray::female::medium::passive::7::false::2::345::
+schnauzer::surrendered::male::low::neutral::5::false::1::346::
+fox terrier::stray::male::low::assertive::4::false::2::347::
+Chihuahua::stray::female::low::passive::8::false::0::348::
+schnauzer::stray::female::high::passive::10::false::0::349::
+Sealyham terrier::stray::male::high::passive::5::false::2::350::
+Irish water spaniel::surrendered::female::low::neutral::5::false::4::351::
+bouvier des Flandres::stray::male::low::passive::5::false::0::352::
+Great Dane::stray::female::low::passive::6::false::4::353::
+Norwegian elkhound::surrendered::female::medium::assertive::8::false::2::354::
+silky terrier::stray::male::medium::passive::3::false::2::355::
+Chinese crested::surrendered::male::low::neutral::8::false::3::356::
+golden retriever::stray::female::medium::neutral::3::false::0::357::
+Finnish spitz::surrendered::female::medium::neutral::11::false::2::358::
+spitz::surrendered::male::low::neutral::12::false::1::359::
+vizsla::stray::male::low::assertive::4::false::2::360::
+Brussels griffon::stray::female::high::assertive::10::false::3::361::
+golden retriever::stray::male::low::passive::10::false::1::362::
+boxer::surrendered::male::low::passive::1::false::0::363::
+Labrador retriever::stray::female::low::neutral::2::false::0::364::
+Brussels griffon::surrendered::male::medium::assertive::1::false::0::365::
+border collie::surrendered::male::medium::passive::8::false::0::366::
+Manchester terrier::surrendered::male::medium::passive::12::false::3::367::
+affenpinscher::stray::female::medium::neutral::11::false::2::368::
+French bulldog::surrendered::male::medium::passive::11::false::4::369::
+basenji::stray::male::high::neutral::2::false::0::370::
+German shorthaired pointer::stray::male::high::passive::5::false::3::371::
+komondor::surrendered::female::medium::passive::11::false::3::372::
+soft-coated wheaten terrier::surrendered::female::low::neutral::9::false::3::373::
+bouvier des Flandres::surrendered::male::low::assertive::2::false::3::374::
+Gordon setter::stray::female::low::passive::12::false::4::375::
+curly-coated retriever::stray::male::high::assertive::9::false::4::376::
+cocker spaniel::surrendered::female::medium::passive::11::false::2::377::
+Weimaraner::stray::female::high::neutral::12::false::0::378::
+Sussex spaniel::surrendered::male::medium::neutral::13::false::4::379::
+Irish water spaniel::stray::female::high::neutral::13::false::1::380::
+border collie::surrendered::female::medium::neutral::2::false::0::381::
+collie::stray::female::high::passive::11::false::4::382::
+Staffordshire bull terrier::surrendered::male::medium::passive::3::false::2::383::
+Australian terrier::surrendered::female::medium::assertive::9::false::1::384::
+Sealyham terrier::stray::male::medium::neutral::4::false::0::385::
+Siberian husky::surrendered::male::low::assertive::5::false::1::386::
+Chinese crested::stray::male::low::passive::4::false::3::387::
+flat-coated retriever::stray::female::high::neutral::1::false::0::388::
+Australian terrier::stray::male::low::neutral::1::false::2::389::
+American Staffordshire terrier::surrendered::male::medium::assertive::7::false::3::390::
+foxhound::stray::male::medium::assertive::1::false::1::391::
+Australian shepherd::surrendered::male::low::assertive::8::false::2::392::
+Samoyed::stray::male::medium::passive::12::false::2::393::
+Brittany::stray::female::low::neutral::11::false::0::394::
+Yorkshire terrier::surrendered::female::high::assertive::8::false::1::395::
+Eskimo dog::stray::male::high::assertive::13::false::4::396::
+Dalmatian::surrendered::male::low::assertive::7::false::2::397::
+dachshund::stray::female::medium::passive::10::false::0::398::
+Brittany::surrendered::male::high::assertive::13::false::0::399::
+French bulldog::stray::female::medium::passive::9::false::2::400::
+saluki::stray::female::high::assertive::4::false::4::401::
+English toy spaniel::surrendered::male::high::neutral::13::false::0::402::
+Manchester terrier::stray::female::high::passive::1::false::1::403::
+mastiff::stray::female::high::passive::7::false::2::404::
+Norwegian elkhound::surrendered::female::medium::passive::5::false::4::405::
+Saint Bernard::surrendered::female::high::assertive::4::false::2::406::
+foxhound::stray::female::low::neutral::5::false::2::407::
+briard::surrendered::female::low::neutral::2::false::3::408::
+keeshond::surrendered::female::low::assertive::11::false::2::409::
+Finnish spitz::stray::male::low::neutral::8::false::1::410::
+black and tan coonhound::surrendered::male::high::assertive::10::false::1::411::
+bull terrier::stray::female::medium::neutral::11::false::2::412::
+papillon::stray::male::medium::neutral::5::false::0::413::
+bulldog::stray::female::medium::neutral::12::false::1::414::
+keeshond::surrendered::male::low::passive::1::false::4::415::
+Rhodesian ridgeback::stray::female::low::assertive::9::false::2::416::
+spitz::stray::male::medium::neutral::11::false::1::417::
+Norwegian elkhound::surrendered::male::medium::assertive::3::false::4::418::
+bloodhound::surrendered::male::high::neutral::4::false::2::419::
+Lakeland terrier::stray::female::low::passive::3::false::1::420::
+silky terrier::surrendered::female::high::neutral::1::false::1::421::
+bloodhound::surrendered::female::low::passive::9::false::1::422::
+Newfoundland::surrendered::male::medium::assertive::1::false::4::423::
+dachshund::surrendered::male::medium::assertive::5::false::4::424::
+Australian shepherd::surrendered::male::medium::assertive::4::false::1::425::
+bouvier des Flandres::surrendered::female::low::neutral::6::false::2::426::
+border terrier::stray::female::medium::neutral::8::false::3::427::
+fox terrier::stray::male::low::neutral::6::false::4::428::
+schnauzer::stray::female::high::passive::3::false::2::429::
+Kerry blue terrier::surrendered::female::low::neutral::5::false::2::430::
+pointer::surrendered::female::high::neutral::2::false::2::431::
+keeshond::surrendered::male::high::assertive::9::false::3::432::
+schnauzer::stray::female::high::passive::8::false::4::433::
+Newfoundland::stray::female::low::passive::12::false::2::434::
+Dalmatian::stray::female::low::assertive::8::false::0::435::
+Dalmatian::stray::male::high::passive::13::false::3::436::
+Brittany::stray::male::medium::passive::13::false::4::437::
+affenpinscher::stray::male::high::assertive::2::false::0::438::
+Staffordshire bull terrier::surrendered::male::low::neutral::1::false::0::439::
+black and tan coonhound::surrendered::male::low::neutral::3::false::3::440::
+Shetland sheepdog::stray::male::medium::passive::9::false::3::441::
+golden retriever::stray::male::medium::neutral::5::false::3::442::
+schnauzer::surrendered::male::high::passive::8::false::2::443::
+briard::surrendered::male::medium::passive::9::false::4::444::
+Afghan hound::stray::female::high::assertive::10::false::3::445::
+Bernese mountain dog::stray::male::low::passive::11::false::4::446::
+Pomeranian::surrendered::female::medium::passive::11::false::2::447::
+basenji::stray::male::low::assertive::9::false::2::448::
+Shetland sheepdog::stray::male::high::assertive::12::false::4::449::
+border collie::stray::male::high::passive::13::false::2::450::
+Chinese crested::surrendered::female::high::neutral::3::false::1::451::
+Rottweiler::stray::female::high::neutral::1::false::2::452::
+English toy spaniel::surrendered::male::high::neutral::5::false::3::453::
+Pomeranian::surrendered::female::medium::passive::11::false::1::454::
+French bulldog::stray::male::low::neutral::13::false::3::455::
+German wirehaired pointer::surrendered::male::high::neutral::13::false::4::456::
+basenji::surrendered::male::medium::passive::4::false::4::457::
+Pomeranian::stray::male::medium::passive::3::false::1::458::
+Airedale terrier::surrendered::female::high::passive::5::false::4::459::
+Japanese spaniel::stray::male::low::neutral::1::false::0::460::
+Skye terrier::stray::male::medium::neutral::12::false::4::461::
+komondor::surrendered::male::high::neutral::12::false::1::462::
+basenji::stray::male::low::passive::13::false::4::463::
+Canaan dog::stray::male::high::neutral::12::false::4::464::
+bulldog::stray::male::high::passive::10::false::1::465::
+Irish water spaniel::stray::female::low::assertive::6::false::4::466::
+English springer spaniel::surrendered::female::medium::neutral::6::false::3::467::
+Great Dane::stray::male::high::assertive::3::false::1::468::
+komondor::surrendered::male::medium::neutral::2::false::2::469::
+Finnish spitz::stray::female::medium::neutral::2::false::2::470::
+Lakeland terrier::surrendered::male::medium::passive::1::false::0::471::
+keeshond::surrendered::male::medium::neutral::6::false::3::472::
+border collie::surrendered::male::low::passive::8::false::4::473::
+Australian shepherd::surrendered::female::high::assertive::12::false::1::474::
+border terrier::stray::male::high::assertive::12::false::3::475::
+Akita::stray::female::low::neutral::7::false::4::476::
+Finnish spitz::surrendered::male::medium::assertive::10::false::0::477::
+border collie::surrendered::female::medium::passive::12::false::3::478::
+mastiff::surrendered::male::high::passive::8::false::2::479::
+boxer::stray::female::low::assertive::7::false::1::480::
+beagle::surrendered::female::low::assertive::1::false::4::481::
+soft-coated wheaten terrier::stray::female::low::assertive::2::false::0::482::
+Skye terrier::surrendered::female::high::passive::12::false::4::483::
+boxer::surrendered::female::high::passive::6::false::4::484::
+collie::surrendered::female::medium::neutral::10::false::4::485::
+bullmastiff::stray::female::low::assertive::1::false::0::486::
+whippet::stray::female::medium::assertive::9::false::1::487::
+Siberian husky::stray::female::high::assertive::11::false::0::488::
+Dalmatian::stray::female::low::neutral::6::false::0::489::
+cocker spaniel::surrendered::male::medium::neutral::4::false::1::490::
+bloodhound::surrendered::female::high::neutral::4::false::3::491::
+English cocker spaniel::surrendered::female::medium::passive::1::false::4::492::
+bullmastiff::stray::male::medium::passive::2::false::4::493::
+Great Dane::stray::female::low::assertive::4::false::1::494::
+whippet::surrendered::female::medium::passive::8::false::1::495::
+Chinese shar-pei::surrendered::male::medium::passive::11::false::1::496::
+border collie::stray::female::low::passive::10::false::2::497::
+Australian terrier::surrendered::female::medium::passive::3::false::4::498::
+chow chow::stray::female::medium::assertive::2::false::3::499::
+French bulldog::stray::female::low::neutral::11::false::4::500::
+Japanese spaniel::surrendered::female::low::passive::7::false::0::501::
+Labrador retriever::surrendered::female::low::passive::12::false::4::502::
+Tibetan terrier::stray::female::medium::neutral::5::false::4::503::
+soft-coated wheaten terrier::stray::female::low::neutral::10::false::4::504::
+briard::surrendered::male::low::assertive::11::false::2::505::
+Samoyed::surrendered::male::high::assertive::7::false::2::506::
+whippet::stray::male::high::neutral::7::false::3::507::
+bloodhound::stray::male::high::neutral::1::false::1::508::
+black and tan coonhound::stray::female::medium::passive::1::false::0::509::
+Irish water spaniel::surrendered::female::low::assertive::4::false::2::510::
+cocker spaniel::stray::female::medium::assertive::9::false::0::511::
+bloodhound::stray::female::high::passive::6::false::0::512::
+briard::surrendered::male::low::neutral::3::false::2::513::
+vizsla::stray::female::low::neutral::4::false::3::514::
+whippet::stray::male::medium::assertive::8::false::4::515::
+basenji::surrendered::male::high::neutral::5::false::0::516::
+Siberian husky::stray::male::high::passive::10::false::3::517::
+Maltese::surrendered::male::high::neutral::2::false::4::518::
+Akita::surrendered::male::high::neutral::13::false::0::519::
+kuvasz::stray::female::medium::passive::2::false::3::520::
+beagle::stray::female::high::assertive::6::false::4::521::
+Bernese mountain dog::stray::female::low::assertive::4::false::1::522::
+Australian terrier::stray::female::high::passive::11::false::3::523::
+mastiff::stray::male::low::assertive::4::false::2::524::
+cairn terrier::surrendered::male::high::neutral::11::false::3::525::
+Rottweiler::stray::female::high::passive::1::false::4::526::
+Siberian husky::surrendered::male::low::neutral::2::false::3::527::
+border collie::stray::male::medium::passive::1::false::0::528::
+Brittany::surrendered::male::high::passive::9::false::0::529::
+Bedlington terrier::surrendered::male::medium::assertive::13::false::0::530::
+greyhound::stray::male::low::neutral::4::false::1::531::
+Scottish terrier::stray::male::medium::passive::12::false::2::532::
+border terrier::stray::male::high::passive::12::false::3::533::
+Welsh terrier::stray::female::high::passive::5::false::2::534::
+beagle::stray::male::medium::assertive::9::false::0::535::
+bullmastiff::surrendered::male::medium::assertive::12::false::2::536::
+borzoi::stray::male::medium::assertive::2::false::3::537::
+Pomeranian::stray::male::medium::passive::8::false::3::538::
+English setter::surrendered::male::medium::assertive::7::false::0::539::
+papillon::surrendered::female::high::passive::2::false::0::540::
+German shorthaired pointer::surrendered::female::high::passive::4::false::0::541::
+Chihuahua::stray::male::high::neutral::7::false::2::542::
+beagle::surrendered::female::high::neutral::11::false::4::543::
+otterhound::surrendered::female::medium::passive::12::false::3::544::
+Saint Bernard::stray::female::high::neutral::12::false::4::545::
+Rhodesian ridgeback::surrendered::male::low::assertive::6::false::4::546::
+schnauzer::surrendered::male::low::neutral::7::false::3::547::
+pointer::stray::male::medium::assertive::1::false::3::548::
+cocker spaniel::stray::female::medium::passive::2::false::4::549::
+Brussels griffon::stray::male::high::neutral::12::false::3::550::
+keeshond::surrendered::male::low::neutral::1::false::1::551::
+puli::surrendered::male::low::assertive::5::false::3::552::
+Australian cattle dog::surrendered::female::high::assertive::3::false::1::553::
+poodle::surrendered::male::low::assertive::5::false::4::554::
+soft-coated wheaten terrier::surrendered::female::medium::neutral::11::false::4::555::
+English toy spaniel::surrendered::female::high::assertive::5::false::4::556::
+Afghan hound::stray::female::medium::passive::6::false::0::557::
+Finnish spitz::surrendered::female::low::passive::3::false::4::558::
+German shorthaired pointer::surrendered::female::high::neutral::8::false::4::559::
+Bernese mountain dog::surrendered::female::medium::assertive::12::false::2::560::
+Dalmatian::surrendered::male::medium::neutral::2::false::2::561::
+Saint Bernard::stray::male::high::assertive::4::false::2::562::
+Lakeland terrier::surrendered::male::high::passive::11::false::0::563::
+black and tan coonhound::surrendered::male::high::assertive::5::false::3::564::
+English cocker spaniel::surrendered::male::medium::neutral::6::false::4::565::
+Brussels griffon::stray::female::high::neutral::13::false::0::566::
+Manchester terrier::surrendered::male::low::passive::5::false::1::567::
+bearded collie::surrendered::female::low::passive::9::false::2::568::
+Jack Russell terrier::surrendered::female::medium::passive::6::false::1::569::
+bulldog::stray::female::low::assertive::7::false::3::570::
+German shepherd::surrendered::male::low::assertive::2::false::2::571::
+golden retriever::surrendered::female::medium::passive::4::false::3::572::
+Rhodesian ridgeback::surrendered::male::low::passive::12::false::3::573::
+Newfoundland::surrendered::male::low::neutral::8::false::0::574::
+golden retriever::surrendered::female::medium::neutral::9::false::2::575::
+Brussels griffon::surrendered::male::medium::passive::13::false::2::576::
+American Staffordshire terrier::surrendered::male::medium::assertive::11::false::2::577::
+pointer::surrendered::female::medium::passive::9::false::0::578::
+bloodhound::surrendered::male::high::assertive::4::false::4::579::
+Australian shepherd::stray::male::low::assertive::5::false::2::580::
+English setter::surrendered::female::high::assertive::8::false::3::581::
+Chihuahua::surrendered::male::low::passive::10::false::3::582::
+poodle::stray::female::high::neutral::8::false::1::583::
+Great Dane::surrendered::female::medium::neutral::11::false::4::584::
+Shetland sheepdog::stray::male::low::assertive::2::false::1::585::
+puli::surrendered::male::high::neutral::6::false::2::586::
+Airedale terrier::stray::female::low::assertive::2::false::2::587::
+Clumber spaniel::surrendered::female::low::passive::11::false::2::588::
+American water spaniel::stray::female::medium::neutral::8::false::1::589::
+English setter::surrendered::male::high::passive::7::false::4::590::
+Mexican hairless::surrendered::female::low::assertive::7::false::0::591::
+bouvier des Flandres::stray::male::high::assertive::11::false::3::592::
+Irish wolfhound::stray::male::high::assertive::6::false::0::593::
+German wirehaired pointer::stray::female::high::neutral::5::false::2::594::
+American water spaniel::stray::male::medium::neutral::6::false::2::595::
+Tibetan terrier::stray::female::low::assertive::7::false::2::596::
+Pomeranian::surrendered::female::medium::neutral::2::false::0::597::
+Alaskan Malamute::stray::male::medium::passive::5::false::1::598::
+silky terrier::stray::female::medium::neutral::7::false::0::599::
+bulldog::surrendered::female::high::passive::13::false::0::600::
+bouvier des Flandres::stray::male::medium::passive::3::false::2::601::
+Siberian husky::stray::female::medium::passive::5::false::0::602::
+puli::stray::male::medium::passive::10::false::1::603::
+schipperke::surrendered::male::low::assertive::1::false::2::604::
+curly-coated retriever::stray::male::medium::neutral::13::false::1::605::
+bull terrier::surrendered::female::low::assertive::10::false::1::606::
+puli::stray::female::low::passive::6::false::2::607::
+saluki::stray::female::low::assertive::7::false::0::608::
+Chihuahua::stray::female::low::passive::3::false::2::609::
+Bernese mountain dog::stray::female::medium::assertive::12::false::0::610::
+Siberian husky::stray::female::low::neutral::3::false::0::611::
+Staffordshire bull terrier::stray::female::medium::passive::8::false::4::612::
+whippet::surrendered::female::high::assertive::12::false::1::613::
+border terrier::surrendered::male::medium::passive::4::false::4::614::
+Pekingese::stray::male::high::assertive::10::false::3::615::
+English cocker spaniel::stray::female::low::assertive::12::false::2::616::
+Samoyed::surrendered::female::high::neutral::2::false::1::617::
+briard::stray::male::medium::assertive::9::false::1::618::
+bull terrier::surrendered::male::low::neutral::2::false::1::619::
+Skye terrier::surrendered::male::low::neutral::10::false::1::620::
+Airedale terrier::surrendered::male::low::assertive::3::false::4::621::
+schnauzer::surrendered::male::medium::neutral::5::false::0::622::
+Rottweiler::stray::male::high::passive::7::false::0::623::
+cairn terrier::stray::female::low::passive::2::false::2::624::
+Norwich terrier::stray::female::low::assertive::3::false::1::625::
+beagle::surrendered::male::low::neutral::4::false::4::626::
+basenji::stray::male::medium::passive::3::false::0::627::
+Dalmatian::stray::male::medium::neutral::10::false::1::628::
+English setter::stray::male::high::neutral::3::false::0::629::
+Australian cattle dog::stray::male::low::neutral::12::false::3::630::
+cocker spaniel::stray::male::low::passive::10::false::3::631::
+Samoyed::surrendered::male::medium::assertive::4::false::1::632::
+poodle::surrendered::female::low::neutral::13::false::2::633::
+flat-coated retriever::surrendered::female::high::neutral::10::false::3::634::
+Australian cattle dog::stray::male::medium::passive::5::false::1::635::
+fox terrier::stray::female::low::passive::1::false::0::636::
+golden retriever::stray::male::low::assertive::6::false::3::637::
+Australian shepherd::stray::male::medium::passive::2::false::1::638::
+Chinese crested::stray::female::medium::assertive::3::false::0::639::
+basenji::surrendered::female::low::neutral::12::false::4::640::
+American water spaniel::surrendered::female::low::passive::7::false::3::641::
+flat-coated retriever::surrendered::female::low::assertive::1::false::2::642::
+Samoyed::stray::female::high::assertive::10::false::3::643::
+Eskimo dog::surrendered::female::medium::assertive::2::false::2::644::
+foxhound::stray::male::high::neutral::10::false::2::645::
+Alaskan Malamute::surrendered::male::high::passive::5::false::1::646::
+foxhound::surrendered::female::high::neutral::5::false::1::647::
+Chesapeake Bay retriever::surrendered::female::high::neutral::13::false::2::648::
+golden retriever::surrendered::male::low::neutral::3::false::3::649::
+West Highland white terrier::stray::male::medium::assertive::1::false::4::650::
+Lakeland terrier::stray::male::low::passive::8::false::2::651::
+Australian cattle dog::surrendered::male::high::assertive::11::false::3::652::
+poodle::stray::female::low::passive::4::false::3::653::
+cocker spaniel::stray::female::low::assertive::3::false::2::654::
+mastiff::stray::female::low::passive::8::false::4::655::
+black and tan coonhound::surrendered::male::high::neutral::9::false::4::656::
+boxer::stray::male::high::passive::10::false::0::657::
+bull terrier::surrendered::female::high::neutral::10::false::4::658::
+cocker spaniel::stray::male::low::neutral::3::false::1::659::
+English toy spaniel::surrendered::male::high::assertive::13::false::2::660::
+flat-coated retriever::stray::female::medium::assertive::13::false::3::661::
+Kerry blue terrier::surrendered::male::high::neutral::9::false::0::662::
+Sealyham terrier::surrendered::female::low::assertive::13::false::2::663::
+bullmastiff::surrendered::female::medium::neutral::6::false::4::664::
+Gordon setter::surrendered::female::high::assertive::13::false::2::665::
+Scottish terrier::stray::male::low::passive::1::false::1::666::
+Chihuahua::stray::female::medium::assertive::1::false::3::667::
+cocker spaniel::surrendered::male::low::neutral::7::false::4::668::
+Australian shepherd::surrendered::male::low::neutral::3::false::4::669::
+Chinese crested::stray::female::high::neutral::6::false::4::670::
+English toy spaniel::stray::male::high::assertive::6::false::4::671::
+dachshund::surrendered::female::high::passive::12::false::4::672::
+keeshond::surrendered::female::low::passive::5::false::2::673::
+papillon::stray::female::high::assertive::4::false::0::674::
+Chinese shar-pei::surrendered::male::low::neutral::10::false::0::675::
+keeshond::surrendered::male::medium::passive::10::false::2::676::
+Australian cattle dog::surrendered::female::low::neutral::8::false::3::677::
+pug::surrendered::male::medium::neutral::6::false::3::678::
+Dalmatian::surrendered::female::medium::passive::11::false::3::679::
+Canaan dog::stray::female::low::neutral::10::false::1::680::
+beagle::stray::male::low::assertive::11::false::0::681::
+Skye terrier::stray::female::high::neutral::10::false::4::682::
+Chihuahua::surrendered::male::medium::passive::13::false::4::683::
+bulldog::surrendered::female::medium::assertive::4::false::2::684::
+schnauzer::surrendered::male::medium::neutral::2::false::2::685::
+border collie::surrendered::male::medium::assertive::8::false::3::686::
+Chihuahua::stray::male::low::assertive::6::false::0::687::
+Australian cattle dog::stray::female::high::assertive::10::false::0::688::
+saluki::surrendered::male::high::neutral::13::false::3::689::
+Rottweiler::stray::male::high::neutral::4::false::0::690::
+shih tzu::stray::male::low::passive::1::false::4::691::
+Siberian husky::surrendered::male::medium::passive::3::false::2::692::
+Shetland sheepdog::stray::male::high::assertive::6::false::0::693::
+German shorthaired pointer::surrendered::female::medium::assertive::10::false::2::694::
+cairn terrier::stray::male::high::passive::7::false::2::695::
+Norwegian elkhound::surrendered::female::low::neutral::1::false::0::696::
+basset hound::surrendered::female::medium::passive::9::false::2::697::
+cocker spaniel::stray::male::low::assertive::7::false::4::698::
+soft-coated wheaten terrier::surrendered::male::low::assertive::12::false::1::699::
+Yorkshire terrier::stray::female::high::passive::4::false::1::700::
+silky terrier::surrendered::male::low::assertive::1::false::4::701::
+borzoi::surrendered::female::high::passive::9::false::3::702::
+Sussex spaniel::surrendered::female::high::assertive::8::false::0::703::
+Irish water spaniel::surrendered::female::medium::neutral::12::false::1::704::
+Skye terrier::surrendered::female::high::assertive::10::false::4::705::
+Bernese mountain dog::stray::female::high::neutral::4::false::3::706::
+Brittany::surrendered::male::low::passive::2::false::0::707::
+vizsla::surrendered::male::medium::assertive::5::false::2::708::
+cairn terrier::surrendered::male::medium::assertive::2::false::0::709::
+Norwich terrier::surrendered::female::low::assertive::2::false::1::710::
+German shepherd::stray::female::low::assertive::8::false::4::711::
+komondor::stray::female::high::neutral::10::false::4::712::
+mastiff::surrendered::male::high::passive::8::false::0::713::
+Lakeland terrier::stray::female::medium::assertive::13::false::2::714::
+border terrier::stray::male::medium::assertive::5::false::1::715::
+affenpinscher::surrendered::female::high::assertive::11::false::2::716::
+silky terrier::surrendered::male::low::passive::11::false::4::717::
+Chinese crested::stray::male::low::passive::3::false::2::718::
+Manchester terrier::stray::male::medium::assertive::7::false::2::719::
+schnauzer::stray::female::high::neutral::9::false::3::720::
+Labrador retriever::surrendered::female::high::assertive::10::false::2::721::
+flat-coated retriever::stray::female::low::passive::13::false::0::722::
+greyhound::stray::female::medium::neutral::7::false::3::723::
+Saint Bernard::surrendered::male::high::passive::8::false::1::724::
+Afghan hound::surrendered::female::low::passive::4::false::2::725::
+schipperke::surrendered::female::low::neutral::6::false::4::726::
+flat-coated retriever::surrendered::male::medium::passive::2::false::4::727::
+Akita::surrendered::female::medium::passive::11::false::2::728::
+bloodhound::surrendered::female::low::assertive::7::false::0::729::
+Scottish terrier::surrendered::female::low::passive::5::false::4::730::
+Finnish spitz::stray::male::high::passive::12::false::1::731::
+Rhodesian ridgeback::surrendered::female::low::neutral::1::false::0::732::
+papillon::surrendered::male::medium::neutral::3::false::2::733::
+golden retriever::surrendered::male::high::neutral::6::false::3::734::
+pug::stray::female::medium::neutral::5::false::2::735::
+English cocker spaniel::stray::female::high::passive::12::false::2::736::
+German wirehaired pointer::surrendered::female::low::neutral::1::false::4::737::
+otterhound::surrendered::female::high::assertive::6::false::2::738::
+bull terrier::surrendered::male::high::assertive::11::false::2::739::
+Kerry blue terrier::stray::male::low::assertive::12::false::3::740::
+Chesapeake Bay retriever::stray::male::low::neutral::9::false::2::741::
+Bernese mountain dog::stray::male::high::assertive::12::false::0::742::
+Chinese crested::stray::male::low::neutral::3::false::0::743::
+Pomeranian::stray::female::high::neutral::8::false::4::744::
+Manchester terrier::stray::female::low::neutral::3::false::1::745::
+Kerry blue terrier::surrendered::male::low::passive::8::false::1::746::
+Rottweiler::stray::male::high::neutral::7::false::0::747::
+Canaan dog::surrendered::male::low::passive::2::false::1::748::
+Australian cattle dog::surrendered::male::medium::passive::9::false::1::749::
+spitz::stray::male::high::neutral::4::false::1::750::
+Chinese crested::surrendered::male::medium::passive::12::false::2::751::
+kuvasz::stray::male::high::passive::10::false::1::752::
+Irish setter::stray::male::low::passive::5::false::4::753::
+Skye terrier::surrendered::female::medium::neutral::7::false::3::754::
+puli::surrendered::male::high::neutral::13::false::3::755::
+Great Dane::stray::female::high::passive::11::false::4::756::
+French bulldog::stray::male::low::assertive::2::false::4::757::
+Welsh terrier::surrendered::male::medium::passive::7::false::0::758::
+Welsh terrier::stray::male::low::neutral::2::false::4::759::
+basset hound::surrendered::female::high::assertive::6::false::1::760::
+Brittany::stray::male::medium::assertive::7::false::1::761::
+Saint Bernard::surrendered::male::high::assertive::11::false::2::762::
+schipperke::stray::male::low::assertive::6::false::1::763::
+Norwich terrier::stray::male::medium::neutral::9::false::3::764::
+English cocker spaniel::stray::female::high::assertive::2::false::1::765::
+Scottish deerhound::stray::female::medium::neutral::3::false::4::766::
+Siberian husky::surrendered::female::low::assertive::2::false::1::767::
+Lakeland terrier::stray::female::low::passive::6::false::2::768::
+Pekingese::stray::male::high::neutral::8::false::3::769::
+black and tan coonhound::stray::female::low::neutral::7::false::0::770::
+beagle::surrendered::female::low::neutral::11::false::2::771::
+Chinese shar-pei::stray::male::medium::assertive::7::false::4::772::
+English cocker spaniel::surrendered::female::high::passive::9::false::2::773::
+Manchester terrier::surrendered::female::high::neutral::1::false::0::774::
+Pomeranian::surrendered::male::medium::neutral::10::false::0::775::
+Mexican hairless::surrendered::female::high::neutral::9::false::2::776::
+Chesapeake Bay retriever::stray::female::medium::neutral::10::false::2::777::
+Bedlington terrier::stray::female::medium::neutral::1::false::1::778::
+Brittany::stray::male::medium::assertive::7::false::3::779::
+Kerry blue terrier::surrendered::female::high::neutral::10::false::2::780::
+bullmastiff::surrendered::male::high::passive::8::false::1::781::
+Brussels griffon::stray::female::low::assertive::8::false::2::782::
+bearded collie::stray::male::low::neutral::13::false::2::783::
+poodle::stray::male::low::passive::6::false::4::784::
+borzoi::surrendered::male::medium::assertive::6::false::0::785::
+pug::surrendered::female::high::assertive::11::false::0::786::
+Eskimo dog::surrendered::male::high::passive::11::false::1::787::
+Norwegian elkhound::stray::female::medium::assertive::10::false::4::788::
+Kerry blue terrier::surrendered::female::low::passive::10::false::4::789::
+West Highland white terrier::surrendered::female::low::neutral::7::false::3::790::
+Rottweiler::stray::female::low::passive::3::false::4::791::
+beagle::stray::female::low::passive::4::false::3::792::
+Irish wolfhound::stray::female::medium::assertive::6::false::2::793::
+poodle::stray::male::low::passive::3::false::1::794::
+Chinese crested::stray::female::medium::passive::10::false::4::795::
+Bedlington terrier::stray::male::medium::assertive::4::false::2::796::
+Gordon setter::stray::female::high::passive::7::false::4::797::
+shih tzu::surrendered::male::high::assertive::3::false::4::798::
+poodle::surrendered::female::low::passive::12::false::3::799::
+Pomeranian::surrendered::male::medium::passive::12::false::0::800::
+whippet::stray::female::high::neutral::11::false::3::801::
+Labrador retriever::stray::female::medium::neutral::3::false::3::802::
+cairn terrier::stray::female::medium::passive::13::false::4::803::
+kuvasz::surrendered::female::high::assertive::3::false::0::804::
+English cocker spaniel::stray::female::medium::assertive::9::false::3::805::
+Rhodesian ridgeback::stray::female::high::passive::2::false::0::806::
+Maltese::stray::male::medium::passive::9::false::3::807::
+Jack Russell terrier::surrendered::male::low::neutral::11::false::2::808::
+schnauzer::surrendered::female::medium::assertive::1::false::2::809::
+Kerry blue terrier::surrendered::male::high::passive::4::false::1::810::
+Labrador retriever::surrendered::female::medium::passive::3::false::4::811::
+Gordon setter::stray::female::high::assertive::8::false::0::812::
+Doberman pinscher::surrendered::female::medium::neutral::10::false::4::813::
+American Staffordshire terrier::stray::female::medium::neutral::5::false::3::814::
+Skye terrier::surrendered::female::medium::neutral::13::false::4::815::
+puli::surrendered::female::medium::assertive::6::false::3::816::
+Finnish spitz::stray::female::high::passive::9::false::0::817::
+border collie::surrendered::female::low::passive::9::false::0::818::
+collie::surrendered::female::high::passive::6::false::1::819::
+collie::stray::male::medium::passive::2::false::1::820::
+cairn terrier::stray::female::medium::assertive::1::false::3::821::
+bloodhound::surrendered::female::low::assertive::10::false::4::822::
+chow chow::surrendered::male::low::neutral::2::false::1::823::
+Gordon setter::surrendered::male::low::passive::13::false::2::824::
+dachshund::surrendered::male::low::assertive::7::false::2::825::
+Irish setter::surrendered::male::medium::passive::9::false::3::826::
+black and tan coonhound::surrendered::male::medium::neutral::8::false::0::827::
+Alaskan Malamute::surrendered::male::high::assertive::5::false::4::828::
+golden retriever::surrendered::female::low::assertive::12::false::3::829::
+puli::surrendered::female::low::passive::11::false::1::830::
+Irish setter::surrendered::female::low::assertive::13::false::3::831::
+spitz::surrendered::male::low::neutral::11::false::0::832::
+otterhound::stray::male::low::assertive::11::false::3::833::
+Chinese crested::stray::male::medium::neutral::9::false::1::834::
+bull terrier::stray::male::high::passive::13::false::0::835::
+komondor::surrendered::female::high::passive::4::false::4::836::
+Rhodesian ridgeback::surrendered::male::medium::assertive::6::false::4::837::
+American water spaniel::stray::female::medium::neutral::7::false::4::838::
+Finnish spitz::stray::male::low::assertive::4::false::2::839::
+beagle::surrendered::female::high::assertive::2::false::3::840::
+shih tzu::stray::female::low::assertive::11::false::2::841::
+Manchester terrier::surrendered::female::medium::assertive::10::false::4::842::
+schnauzer::stray::male::medium::assertive::8::false::1::843::
+Gordon setter::stray::male::medium::passive::10::false::3::844::
+German shepherd::surrendered::male::medium::neutral::4::false::1::845::
+Airedale terrier::stray::female::high::passive::13::false::2::846::
+Eskimo dog::surrendered::female::low::neutral::6::false::2::847::
+pointer::surrendered::female::medium::neutral::12::false::1::848::
+Pomeranian::stray::male::high::passive::11::false::2::849::
+Tibetan terrier::surrendered::female::medium::neutral::4::false::1::850::
+border collie::stray::male::medium::neutral::1::false::1::851::
+bearded collie::stray::male::medium::assertive::3::false::1::852::
+English springer spaniel::surrendered::male::low::assertive::7::false::4::853::
+beagle::surrendered::female::high::assertive::2::false::2::854::
+whippet::stray::male::medium::assertive::2::false::3::855::
+Australian shepherd::stray::male::high::passive::2::false::0::856::
+affenpinscher::surrendered::female::medium::assertive::6::false::2::857::
+curly-coated retriever::surrendered::female::high::neutral::13::false::3::858::
+Pomeranian::stray::male::medium::passive::4::false::1::859::
+bull terrier::surrendered::male::medium::neutral::9::false::2::860::
+Tibetan terrier::stray::female::medium::passive::7::false::3::861::
+English cocker spaniel::surrendered::female::medium::passive::8::false::4::862::
+Yorkshire terrier::stray::female::low::assertive::13::false::1::863::
+keeshond::stray::male::high::neutral::4::false::4::864::
+Sussex spaniel::stray::male::high::assertive::11::false::2::865::
+black and tan coonhound::surrendered::male::high::assertive::9::false::2::866::
+bullmastiff::stray::male::low::neutral::10::false::1::867::
+Staffordshire bull terrier::surrendered::male::low::passive::5::false::1::868::
+Newfoundland::stray::male::medium::neutral::2::false::0::869::
+Lhasa apso::surrendered::male::high::assertive::5::false::0::870::
+Norwich terrier::stray::male::medium::passive::3::false::1::871::
+Brittany::stray::female::medium::assertive::3::false::3::872::
+Bedlington terrier::surrendered::male::medium::passive::8::false::4::873::
+American Staffordshire terrier::stray::male::medium::assertive::12::false::2::874::
+Australian shepherd::stray::female::medium::assertive::6::false::1::875::
+keeshond::stray::male::high::neutral::12::false::1::876::
+boxer::stray::female::medium::passive::3::false::2::877::
+Lakeland terrier::stray::female::medium::assertive::7::false::1::878::
+Irish wolfhound::surrendered::female::low::assertive::9::false::2::879::
+saluki::stray::male::low::neutral::13::false::4::880::
+Pomeranian::surrendered::female::low::passive::1::false::1::881::
+Scottish deerhound::surrendered::female::medium::assertive::10::false::4::882::
+Bedlington terrier::stray::female::high::assertive::2::false::3::883::
+Manchester terrier::surrendered::female::low::assertive::13::false::1::884::
+Sussex spaniel::surrendered::female::medium::passive::10::false::3::885::
+Lhasa apso::surrendered::male::high::neutral::4::false::3::886::
+papillon::surrendered::female::high::passive::3::false::4::887::
+West Highland white terrier::surrendered::male::high::neutral::10::false::3::888::
+Brussels griffon::stray::female::medium::passive::6::false::1::889::
+schipperke::surrendered::male::high::neutral::1::false::3::890::
+bearded collie::surrendered::female::high::neutral::3::false::4::891::
+Yorkshire terrier::surrendered::female::medium::passive::4::false::1::892::
+Siberian husky::surrendered::male::high::passive::3::false::0::893::
+Staffordshire bull terrier::surrendered::female::low::neutral::7::false::1::894::
+border collie::stray::female::low::assertive::4::false::4::895::
+German shorthaired pointer::stray::male::medium::passive::13::false::4::896::
+Mexican hairless::stray::female::high::neutral::12::false::2::897::
+German wirehaired pointer::stray::female::high::neutral::9::false::0::898::
+papillon::surrendered::female::high::assertive::9::false::3::899::
+soft-coated wheaten terrier::stray::male::high::passive::13::false::0::900::
+Australian shepherd::stray::female::medium::passive::1::false::2::901::
+Yorkshire terrier::surrendered::male::high::neutral::6::false::3::902::
+silky terrier::stray::female::medium::assertive::7::false::3::903::
+Newfoundland::stray::female::high::passive::1::false::1::904::
+Great Dane::surrendered::male::low::assertive::1::false::2::905::
+Rottweiler::stray::male::medium::passive::13::false::3::906::
+Weimaraner::stray::male::medium::neutral::13::false::4::907::
+schipperke::surrendered::male::low::passive::9::false::1::908::
+curly-coated retriever::stray::male::low::assertive::2::false::0::909::
+beagle::surrendered::female::low::neutral::6::false::3::910::
+Brittany::surrendered::female::low::passive::9::false::1::911::
+Kerry blue terrier::surrendered::female::low::passive::5::false::1::912::
+English toy spaniel::stray::male::low::neutral::3::false::2::913::
+French bulldog::stray::male::high::assertive::1::false::4::914::
+Manchester terrier::stray::male::low::neutral::4::false::1::915::
+komondor::stray::female::medium::passive::4::false::0::916::
+poodle::stray::female::low::neutral::6::false::3::917::
+Siberian husky::surrendered::male::low::passive::2::false::2::918::
+basset hound::stray::female::low::neutral::8::false::4::919::
+Akita::surrendered::male::medium::passive::9::false::2::920::
+border terrier::surrendered::female::low::neutral::7::false::2::921::
+Afghan hound::stray::male::high::neutral::4::false::1::922::
+border collie::stray::female::low::passive::13::false::0::923::
+English setter::stray::female::low::passive::3::false::1::924::
+German shorthaired pointer::stray::female::low::neutral::3::false::3::925::
+flat-coated retriever::surrendered::female::low::passive::13::false::1::926::
+Yorkshire terrier::surrendered::male::high::neutral::1::false::4::927::
+cocker spaniel::surrendered::female::high::passive::8::false::3::928::
+Irish water spaniel::surrendered::male::low::assertive::1::false::3::929::
+greyhound::stray::female::high::neutral::4::false::4::930::
+Bernese mountain dog::stray::male::high::passive::11::false::1::931::
+collie::stray::male::high::neutral::11::false::3::932::
+Afghan hound::surrendered::male::medium::passive::2::false::2::933::
+Norwegian elkhound::stray::male::high::neutral::8::false::2::934::
+Labrador retriever::surrendered::male::low::neutral::8::false::1::935::
+bichon frise::surrendered::female::low::neutral::6::false::2::936::
+Chesapeake Bay retriever::surrendered::female::low::assertive::1::false::3::937::
+Rhodesian ridgeback::stray::male::high::neutral::3::false::3::938::
+Dalmatian::surrendered::female::low::neutral::5::false::1::939::
+Samoyed::stray::female::low::assertive::13::false::0::940::
+English cocker spaniel::stray::male::low::assertive::5::false::2::941::
+dachshund::stray::female::low::neutral::4::false::3::942::
+mastiff::surrendered::female::high::assertive::4::false::2::943::
+English toy spaniel::surrendered::female::low::passive::12::false::1::944::
+Pomeranian::surrendered::female::high::assertive::4::false::2::945::
+Pomeranian::surrendered::male::low::passive::2::false::3::946::
+Irish wolfhound::stray::female::low::neutral::12::false::3::947::
+silky terrier::surrendered::female::medium::neutral::6::false::2::948::
+Australian shepherd::surrendered::male::high::assertive::4::false::4::949::
+Shetland sheepdog::surrendered::male::high::neutral::7::false::4::950::
+Sealyham terrier::surrendered::male::high::assertive::11::false::0::951::
+black and tan coonhound::surrendered::female::high::assertive::4::false::0::952::
+bloodhound::surrendered::female::low::passive::7::false::3::953::
+border collie::stray::male::low::passive::1::false::3::954::
+Staffordshire bull terrier::stray::female::medium::passive::3::false::4::955::
+Pomeranian::surrendered::male::high::neutral::12::false::2::956::
+bull terrier::surrendered::male::medium::neutral::13::false::0::957::
+Tibetan terrier::stray::female::high::neutral::2::false::2::958::
+Siberian husky::surrendered::male::high::neutral::1::false::3::959::
+puli::stray::male::medium::neutral::7::false::1::960::
+beagle::surrendered::female::medium::neutral::13::false::2::961::
+Norwich terrier::surrendered::male::medium::passive::11::false::2::962::
+Airedale terrier::stray::male::medium::assertive::1::false::4::963::
+French bulldog::stray::female::low::assertive::4::false::4::964::
+silky terrier::surrendered::female::medium::neutral::4::false::3::965::
+Irish setter::surrendered::male::medium::passive::1::false::2::966::
+shih tzu::surrendered::male::medium::passive::13::false::4::967::
+Brussels griffon::surrendered::female::low::neutral::4::false::0::968::
+bullmastiff::stray::female::low::assertive::9::false::1::969::
+Sussex spaniel::surrendered::male::medium::neutral::10::false::0::970::
+schipperke::stray::female::medium::passive::1::false::4::971::
+Lakeland terrier::surrendered::female::medium::neutral::8::false::3::972::
+briard::surrendered::female::high::neutral::6::false::3::973::
+American water spaniel::surrendered::male::low::assertive::9::false::4::974::
+Gordon setter::surrendered::female::medium::passive::1::false::4::975::
+cairn terrier::stray::male::high::assertive::4::false::3::976::
+Afghan hound::stray::male::low::assertive::2::false::1::977::
+shih tzu::surrendered::female::medium::passive::1::false::2::978::
+bichon frise::stray::male::low::neutral::1::false::2::979::
+Rottweiler::stray::female::high::passive::10::false::4::980::
+collie::surrendered::male::medium::passive::1::false::1::981::
+Siberian husky::stray::male::high::passive::7::false::4::982::
+Maltese::surrendered::male::low::neutral::6::false::3::983::
+American Staffordshire terrier::stray::male::high::passive::8::false::0::984::
+Mexican hairless::stray::male::medium::passive::8::false::2::985::
+Brittany::surrendered::female::medium::passive::1::false::3::986::
+Gordon setter::stray::female::low::passive::12::false::4::987::
+Manchester terrier::surrendered::female::medium::assertive::2::false::2::988::
+Scottish terrier::stray::female::high::passive::12::false::1::989::
+border collie::surrendered::female::low::neutral::9::false::3::990::
+Irish wolfhound::surrendered::female::medium::assertive::7::false::4::991::
+German wirehaired pointer::stray::male::medium::neutral::3::false::2::992::
+Canaan dog::stray::male::high::passive::7::false::2::993::
+Brussels griffon::surrendered::female::medium::neutral::10::false::0::994::
+saluki::surrendered::male::medium::passive::13::false::2::995::
+black and tan coonhound::stray::female::high::passive::6::false::0::996::
+saluki::stray::male::high::assertive::5::false::3::997::
+Kerry blue terrier::stray::female::low::neutral::10::false::3::998::
+greyhound::stray::female::low::assertive::6::false::1::999::
