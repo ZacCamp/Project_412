@@ -34,7 +34,7 @@ def loadEmployeeTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int ,shelterID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int);") 
 
     fp = open(filePath, "r")
 
@@ -45,9 +45,8 @@ def loadEmployeeTable(tableName, filePath, openConnection):
 
         name = splitList[0]
         personID = int(splitList[1])
-        shelterID = int(splitList[2])
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s )", (name, personID, shelterID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s )", (name, personID))
 
     fp.close()
 
@@ -173,3 +172,28 @@ def loadLivesInTable(tableName, filePath, openConnection):
 
 
 #################################################################################################################################################
+
+def loadWorksInTable(tableName, filePath, openConnection):
+
+    cursor = openConnection.cursor()
+    
+    # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
+    cursor.execute("CREATE TABLE " + tableName + " ( personID int, shelterID int);") 
+
+    fp = open(filePath, "r")
+
+    dataList = fp.readlines()
+    
+    for i in dataList:
+        splitList = i.split('::')
+
+        personID = splitList[0]
+        shelterID = splitList[1]
+       
+
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s)", (personID,shelterID))
+
+    fp.close()
+
+    cursor.close()
+    openConnection.commit()

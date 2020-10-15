@@ -43,6 +43,7 @@ def startUpDB(dbname):
         loadHelper.loadEmployeeTable('employees', 'employee.txt', connection2)
         loadHelper.loadAdopterTable('adopters', 'adopter.txt', connection2)
         loadHelper.loadLivesInTable('lives_in', 'lives_in.txt', connection2)
+        loadHelper.loadWorksInTable('works_in', 'works_in.txt', connection2)
 
         cursor2 = connection2.cursor()
         cursor2.execute(
