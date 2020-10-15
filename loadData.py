@@ -197,3 +197,31 @@ def loadWorksInTable(tableName, filePath, openConnection):
 
     cursor.close()
     openConnection.commit()
+
+#################################################################################################################################################
+
+def loadPetAdoptionTable(tableName, filePath, openConnection):
+
+
+    cursor = openConnection.cursor()
+    
+    # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
+    cursor.execute("CREATE TABLE " + tableName + " ( contractDate text, contractID int);") 
+
+    fp = open(filePath, "r")
+
+    dataList = fp.readlines()
+    
+    for i in dataList:
+        splitList = i.split('::')
+
+        contractDate = splitList[0]
+        contractID = splitList[1]
+       
+
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s)", (contractDate,contractID))
+
+    fp.close()
+
+    cursor.close()
+    openConnection.commit()

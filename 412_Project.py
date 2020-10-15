@@ -44,10 +44,10 @@ def startUpDB(dbname):
         loadHelper.loadAdopterTable('adopters', 'adopter.txt', connection2)
         loadHelper.loadLivesInTable('lives_in', 'lives_in.txt', connection2)
         loadHelper.loadWorksInTable('works_in', 'works_in.txt', connection2)
-
-        cursor2 = connection2.cursor()
-        cursor2.execute(
-            "CREATE TABLE pet_adoption (adopterID int, employeeID int, date text, contractID int);")
+        loadHelper.loadPetAdoptionTable('pet_adoption', 'pet_adoptions.txt', connection2)
+       # cursor2 = connection2.cursor()
+       # cursor2.execute(
+       #     "CREATE TABLE pet_adoption (adopterID int, employeeID int, date text, contractID int);")
 
     else:
         print('Database was created previously.')
@@ -55,7 +55,7 @@ def startUpDB(dbname):
     connection.commit()
     connection2.commit()
     cursor.close()
-    cursor2.close()
+    #cursor2.close()
     connection.close()
 
 #################################################################################################################################################
