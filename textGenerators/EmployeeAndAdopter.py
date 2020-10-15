@@ -64,12 +64,12 @@ def main():
     with open("person.txt", "r") as fp:
         counter = 0
         for line in fp:
-            randomNum = random.randint(0, 1)
+            randomNum = random.randint(0, 1)# random number to see if person is employee or adopter
             if(randomNum == 0) : #if adopter
                 adopterList.append(line[: len(line) - 1] + zipCode[random.randint(0, len(zipCode) - 1)] + "::" + phones[counter] + "::\n")  #zip code and phone
                 counter+= 1
             elif (randomNum == 1):#if employee
-                employeeList.append(line[: len(line) - 1] + str(random.randint(0,4))  +"::\n") # add adoption center key
+                employeeList.append(line) # add employee to list
 
     
     with open("adopter.txt", "w") as adopterFile:
