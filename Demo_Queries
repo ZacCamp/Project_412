@@ -1,6 +1,11 @@
 sudo -u postgres psql
 DROP DATABASE IF EXISTS project_412;
 
+\\Run
+
+\c project_412;
+\dt
+
 Insert Into person Values ('Willem Dafoe', 70);
 select * from person;
 

@@ -6,7 +6,7 @@ def loadPersonTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int);")
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int, PRIMARY KEY (personID));")
 
     fp = open(filePath, "r")
 
@@ -34,7 +34,7 @@ def loadEmployeeTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int, shelterID int );") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int, shelterID int, PRIMARY KEY (personID));") 
 
     fp = open(filePath, "r")
 
@@ -62,7 +62,7 @@ def loadAdopterTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int, zipCode int, phoneNumber text);") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int, zipCode int, phoneNumber text, PRIMARY KEY (personID));") 
 
     fp = open(filePath, "r")
 
@@ -90,7 +90,7 @@ def loadDogTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (breed text, intakeType text, sex text, maintenanceLevel text, temperament text, age int, adoptionStatus text, shelterID int  , dogID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (breed text, intakeType text, sex text, maintenanceLevel text, temperament text, age int, adoptionStatus text, shelterID int  , dogID int, PRIMARY KEY (dogID));") 
 
     dogFile = open(filePath, "r")
 
@@ -124,7 +124,7 @@ def loadShelterTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, phoneNumber text, address text, shelterID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, phoneNumber text, address text, shelterID int, PRIMARY KEY (shelterID));") 
 
     fp = open(filePath, "r")
 
@@ -152,7 +152,7 @@ def loadPetAdoptionTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (adopterID int, employeeID int, dogID int, date text, contractID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (adopterID int, employeeID int, dogID int, date text, contractID int, PRIMARY KEY (contractID));") 
 
     '''
     fp = open(filePath, "r")
@@ -184,6 +184,7 @@ def loadAppliesForTable(tableName, filePath, openConnection):
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
     cursor.execute("CREATE TABLE " + tableName + " ( desiredBreed text, desiredSex text , desiredTemperament text, maxMaintenanceLevel text, desiredIntakeType text , maxAge int , personID text);") 
 
+    
     fp = open(filePath, "r")
 
     dataList = fp.readlines()
@@ -202,6 +203,7 @@ def loadAppliesForTable(tableName, filePath, openConnection):
         cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s , %s , %s , %s , %s, %s)", (desiredBreed,desiredSex, desiredTemperament, maxMaintenanceLevel, desiredIntakeType, maxAge, personID))
 
     fp.close()
+    
 
     cursor.close()
     openConnection.commit()
