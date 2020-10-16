@@ -34,7 +34,7 @@ def loadEmployeeTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (name text, personID int, shelterID int );") 
 
     fp = open(filePath, "r")
 
@@ -45,8 +45,9 @@ def loadEmployeeTable(tableName, filePath, openConnection):
 
         name = splitList[0]
         personID = int(splitList[1])
+        shelterID = int(splitList[2])
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s )", (name, personID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s )", (name, personID, shelterID))
 
     fp.close()
 
@@ -89,7 +90,7 @@ def loadDogTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " (breed text, intakeType text, sex text, maintenanceLevel text, temperament text, age int, adoptionStatus text, dogID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (breed text, intakeType text, sex text, maintenanceLevel text, temperament text, age int, adoptionStatus text, shelterID int  , dogID int);") 
 
     dogFile = open(filePath, "r")
 
@@ -105,9 +106,10 @@ def loadDogTable(tableName, filePath, openConnection):
         temperament = splitList[4]
         age = int(splitList[5])
         adoptionStatus = splitList[6]
-        dogID = int(splitList[7])
+        shelterID = int(splitList[7])
+        dogID = int(splitList[8])
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s , %s , %s, %s, %s)", (breed, intakeType, sex, maintenanceLevel, temperament, age, adoptionStatus, dogID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s, %s , %s , %s , %s, %s, %s , %s)", (breed, intakeType, sex, maintenanceLevel, temperament, age, adoptionStatus, shelterID,dogID))
 
     dogFile.close()
 
@@ -144,62 +146,6 @@ def loadShelterTable(tableName, filePath, openConnection):
     openConnection.commit()
 
 #################################################################################################################################################
-
-def loadLivesInTable(tableName, filePath, openConnection):
-
-    cursor = openConnection.cursor()
-    
-    # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " ( dogID int, shelterID int);") 
-
-    fp = open(filePath, "r")
-
-    dataList = fp.readlines()
-    
-    for i in dataList:
-        splitList = i.split('::')
-
-        dogID = splitList[0]
-        shelterID = splitList[1]
-       
-
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s)", (dogID,shelterID))
-
-    fp.close()
-
-    cursor.close()
-    openConnection.commit()
-
-
-#################################################################################################################################################
-
-def loadWorksInTable(tableName, filePath, openConnection):
-
-    cursor = openConnection.cursor()
-    
-    # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " ( personID int, shelterID int);") 
-
-    fp = open(filePath, "r")
-
-    dataList = fp.readlines()
-    
-    for i in dataList:
-        splitList = i.split('::')
-
-        personID = splitList[0]
-        shelterID = splitList[1]
-       
-
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s)", (personID,shelterID))
-
-    fp.close()
-
-    cursor.close()
-    openConnection.commit()
-
-#################################################################################################################################################
-
 def loadPetAdoptionTable(tableName, filePath, openConnection):
 
 
@@ -226,16 +172,15 @@ def loadPetAdoptionTable(tableName, filePath, openConnection):
     cursor.close()
     openConnection.commit()
 
-
 #################################################################################################################################################
 
-def loadIsAdoptedTable(tableName, filePath, openConnection):
+def loadAppliesForTable(tableName, filePath, openConnection):
 
 
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " ( dogID int, contractID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " ( desiredBreed text, desiredSex text , desiredTemperament text, maxMaintenanceLevel text, desiredIntakeType text , maxAge int , personID text);") 
 
     fp = open(filePath, "r")
 
@@ -244,11 +189,15 @@ def loadIsAdoptedTable(tableName, filePath, openConnection):
     for i in dataList:
         splitList = i.split('::')
 
-        dogID = splitList[0]
-        contractID = splitList[1]
-       
+        desiredBreed = splitList[0]
+        desiredSex = splitList[1]
+        desiredTemperament = splitList[2]
+        maxMaintenanceLevel = splitList[3]
+        desiredIntakeType = splitList[4]
+        maxAge = splitList[5]
+        personID = splitList[6]
 
-        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s)", (dogID,contractID))
+        cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s , %s , %s , %s , %s, %s)", (desiredBreed,desiredSex, desiredTemperament, maxMaintenanceLevel, desiredIntakeType, maxAge, personID))
 
     fp.close()
 
