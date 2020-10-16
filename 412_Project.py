@@ -42,10 +42,8 @@ def startUpDB(dbname):
         loadHelper.loadPersonTable('person','person.txt', connection2)
         loadHelper.loadEmployeeTable('employees', 'employee.txt', connection2)
         loadHelper.loadAdopterTable('adopters', 'adopter.txt', connection2)
-        loadHelper.loadLivesInTable('lives_in', 'lives_in.txt', connection2)
-        loadHelper.loadWorksInTable('works_in', 'works_in.txt', connection2)
         loadHelper.loadPetAdoptionTable('pet_adoption', 'pet_adoptions.txt', connection2)
-        loadHelper.loadIsAdoptedTable('is_adopted','is_adopted.txt', connection2)
+        loadHelper.loadAppliesForTable('applies_for' , 'applies_for.txt' , connection2)
        # cursor2 = connection2.cursor()
        # cursor2.execute(
        #     "CREATE TABLE pet_adoption (adopterID int, employeeID int, date text, contractID int);")
