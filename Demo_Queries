@@ -1,0 +1,18 @@
+sudo -u postgres psql
+DROP DATABASE IF EXISTS project_412;
+
+Insert Into person Values ('Willem Dafoe', 70);
+select * from person;
+
+INSERT INTO adopters VALUES ('Willem Dafoe', 70, 85044, '735-145-3670');
+select * from adopters;
+
+SELECT * FROM dogs WHERE breed = 'bloodhound' AND intakeType = 'surrendered' AND sex = 'male' AND maintenanceLevel = 'low' AND temperament = 'passive' AND age < 11 AND adoptionStatus = 'false' ;
+
+INSERT INTO pet_adoption VALUES (70, 11, 38, '2020-10-05', 100);
+select * from pet_adoption;
+
+UPDATE dogs SET adoptionStatus = 'true' WHERE dogID = 38;
+select * from dogs;
+
+

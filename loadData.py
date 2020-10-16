@@ -152,8 +152,9 @@ def loadPetAdoptionTable(tableName, filePath, openConnection):
     cursor = openConnection.cursor()
     
     # Be sure to add primary and foreign keys later!!!!!!!!!!!!!
-    cursor.execute("CREATE TABLE " + tableName + " ( contractDate text, contractID int);") 
+    cursor.execute("CREATE TABLE " + tableName + " (adopterID int, employeeID int, dogID int, date text, contractID int);") 
 
+    '''
     fp = open(filePath, "r")
 
     dataList = fp.readlines()
@@ -168,6 +169,7 @@ def loadPetAdoptionTable(tableName, filePath, openConnection):
         cursor.execute("INSERT INTO " + tableName + " VALUES (%s, %s)", (contractDate,contractID))
 
     fp.close()
+    '''
 
     cursor.close()
     openConnection.commit()

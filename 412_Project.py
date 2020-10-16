@@ -41,12 +41,12 @@ def startUpDB(dbname):
         loadHelper.loadShelterTable('shelters', 'shelter_data.txt', connection2)
         loadHelper.loadPersonTable('person','person.txt', connection2)
         loadHelper.loadEmployeeTable('employees', 'employee.txt', connection2)
-        loadHelper.loadAdopterTable('adopters', 'adopter.txt', connection2)
+        loadHelper.loadAdopterTable('adopters', 'adopter.txt', connection2) # Needs additional columns, simply create empty table and populate during runtime
         loadHelper.loadPetAdoptionTable('pet_adoption', 'pet_adoptions.txt', connection2)
         loadHelper.loadAppliesForTable('applies_for' , 'applies_for.txt' , connection2)
-       # cursor2 = connection2.cursor()
-       # cursor2.execute(
-       #     "CREATE TABLE pet_adoption (adopterID int, employeeID int, date text, contractID int);")
+        #cursor2 = connection2.cursor()
+        #cursor2.execute(
+        #    "CREATE TABLE pet_adoption (adopterID int, employeeID int, dogID text, date text, contractID int);")
 
     else:
         print('Database was created previously.')
