@@ -4,31 +4,33 @@ import time
 import os
 from datetime import datetime, timedelta
 
+NUMBER_OF_PEOPLE = 50
+NUMBER_OF_PET_ADOPTIONS = 100
+NUMBER_OF_DOGS = 1000
+NUMBER_OF_PET_APPLICATIONS = 100
+intakeType = ['surrendered', 'stray']
+sex = ['male', 'female']
+maintenanceLevel = ['low', 'medium', 'high']
+temperament = ['assertive', 'neutral', 'passive']
+breed = ['affenpinscher','Afghan hound','Airedale terrier','Akita','Alaskan Malamute','American Staffordshire terrier','American water spaniel','Australian cattle dog','Australian shepherd','Australian terrier','basenji','basset hound','beagle','bearded collie','Bedlington terrier','Bernese mountain dog','bichon frise','black and tan coonhound','bloodhound','border collie','border terrier','borzoi','Boston terrier','bouvier des Flandres','boxer','briard','Brittany','Brussels griffon','bull terrier','bulldog','bullmastiff','cairn terrier','Canaan dog','Chesapeake Bay retriever','Chihuahua','Chinese crested','Chinese shar-pei','chow chow','Clumber spaniel','cocker spaniel','collie','curly-coated retriever','dachshund','Dalmatian','Doberman pinscher','English cocker spaniel','English setter','English springer spaniel','English toy spaniel','Eskimo dog','Finnish spitz','flat-coated retriever','fox terrier','foxhound','French bulldog','German shepherd','German shorthaired pointer','German wirehaired pointer','golden retriever','Gordon setter','Great Dane','greyhound','Irish setter','Irish water spaniel','Irish wolfhound','Jack Russell terrier','Japanese spaniel','keeshond','Kerry blue terrier','komondor','kuvasz','Labrador retriever','Lakeland terrier','Lhasa apso','Maltese','Manchester terrier','mastiff','Mexican hairless','Newfoundland','Norwegian elkhound','Norwich terrier','otterhound','papillon','Pekingese','pointer','Pomeranian','poodle','pug','puli','Rhodesian ridgeback','Rottweiler','Saint Bernard','saluki','Samoyed','schipperke','schnauzer','Scottish deerhound','Scottish terrier','Sealyham terrier','Shetland sheepdog','shih tzu','Siberian husky','silky terrier','Skye terrier','Staffordshire bull terrier','soft-coated wheaten terrier','Sussex spaniel','spitz','Tibetan terrier','vizsla','Weimaraner','Welsh terrier','West Highland white terrier','whippet','Yorkshire terrier']
 #==================================================================================================================
 
-
-
 def createDogFile():
-    intakeType = ['surrendered', 'stray']
-    sex = ['male', 'female']
-    maintenanceLevel = ['low', 'medium', 'high']
-    temperament = ['assertive', 'neutral', 'passive']
-    breed = ['affenpinscher','Afghan hound','Airedale terrier','Akita','Alaskan Malamute','American Staffordshire terrier','American water spaniel','Australian cattle dog','Australian shepherd','Australian terrier','basenji','basset hound','beagle','bearded collie','Bedlington terrier','Bernese mountain dog','bichon frise','black and tan coonhound','bloodhound','border collie','border terrier','borzoi','Boston terrier','bouvier des Flandres','boxer','briard','Brittany','Brussels griffon','bull terrier','bulldog','bullmastiff','cairn terrier','Canaan dog','Chesapeake Bay retriever','Chihuahua','Chinese crested','Chinese shar-pei','chow chow','Clumber spaniel','cocker spaniel','collie','curly-coated retriever','dachshund','Dalmatian','Doberman pinscher','English cocker spaniel','English setter','English springer spaniel','English toy spaniel','Eskimo dog','Finnish spitz','flat-coated retriever','fox terrier','foxhound','French bulldog','German shepherd','German shorthaired pointer','German wirehaired pointer','golden retriever','Gordon setter','Great Dane','greyhound','Irish setter','Irish water spaniel','Irish wolfhound','Jack Russell terrier','Japanese spaniel','keeshond','Kerry blue terrier','komondor','kuvasz','Labrador retriever','Lakeland terrier','Lhasa apso','Maltese','Manchester terrier','mastiff','Mexican hairless','Newfoundland','Norwegian elkhound','Norwich terrier','otterhound','papillon','Pekingese','pointer','Pomeranian','poodle','pug','puli','Rhodesian ridgeback','Rottweiler','Saint Bernard','saluki','Samoyed','schipperke','schnauzer','Scottish deerhound','Scottish terrier','Sealyham terrier','Shetland sheepdog','shih tzu','Siberian husky','silky terrier','Skye terrier','Staffordshire bull terrier','soft-coated wheaten terrier','Sussex spaniel','spitz','Tibetan terrier','vizsla','Weimaraner','Welsh terrier','West Highland white terrier','whippet','Yorkshire terrier']
     dataAsList = []
 
-    for ID in range(1000):
+    for ID in range(NUMBER_OF_DOGS):
 
-        dataAsList.append(breed[random.randint(0, 114)] + "::")
-        dataAsList.append(intakeType[random.randint(0, 1)] + "::")
-        dataAsList.append(sex[random.randint(0, 1)] + "::")
+        dataAsList.append(breed[random.randint(0, 114)] + "::") #breed
+        dataAsList.append(intakeType[random.randint(0, 1)] + "::") #intake type
+        dataAsList.append(sex[random.randint(0, 1)] + "::") #gender
 
-        dataAsList.append(maintenanceLevel[random.randint(0, 2)] + "::")
-        dataAsList.append(temperament[random.randint(0, 2)] + "::")
+        dataAsList.append(maintenanceLevel[random.randint(0, 2)] + "::") #maintenanceLevel
+        dataAsList.append(temperament[random.randint(0, 2)] + "::") #temperament
 
         dataAsList.append(str(random.randint(1, 13)) + "::") # age
 
         dataAsList.append('false' + "::") # adopted status
-
+        dataAsList.append(str(random.randint(0,4)) + "::") #shelterID
         dataAsList.append(str(ID) + "::\n") # sequential id
 
     File = open("dogs_data.txt", "w")
@@ -60,7 +62,7 @@ def createPersonFile():
     Names = ["Beitris Pereira", "Hillary Davidi", "Reinald O'Luney", "Dacia Billanie", "Benson Moatt", "Samantha Briton", "Waldon Klemencic", "Reinhold Rabjohns", "Chantalle Stickel", "Darcy Tredger", "Joel Lowbridge", "Alyssa Barkus", "Tommie Shiel", "Ellen Baglan", "Benedict Gounot", "Hana Schechter", "Venita Kwietek", "Ikey Simkovich", "Margit Abbett", "Berny Cullerne", "Feodora Kee", "Symon Le Pine", "Clayborn Ternault", "Giraud Tweddell", "Pooh Tooke", "Regen Acton", "Milly Miko", "Lennie Klimaszewski", "Pete Finlater", "Kamilah Lingwood", "Raddie Stokey", "Regine Arrowsmith", "Leonora Proudley", "Nollie Lembke", "Lay Kierans", "Linette Waylen", "Stella Chrstine", "Alexander Finicj", "Katrina Blindermann", "Ax Andrysek", "Hill Simyson", "Kimberlyn Pods", "Ivy Pattullo", "Warde Storch", "Julissa Martyns", "Falito O'Scully", "Galven Watkin", "Cordie Huson", "Onofredo Guittet", "Barbee Brunger"]
     dataAsList = []
     namesList =[]
-    for ID in range(50):
+    for ID in range(NUMBER_OF_PEOPLE):
         dataAsList.append(Names[ID]+"::")
         dataAsList.append(str(ID) + "::\n") # sequential id
 
@@ -68,6 +70,8 @@ def createPersonFile():
 
     for line in dataAsList:
         File.write(line)
+
+#==================================================================================================================
 
 def createEmployeeAndAdopterFile(): 
     zipCode = ["85023", "85032", "85002", "85003", "85048", "85064", "85055", "85067", "85026"]
@@ -82,8 +86,9 @@ def createEmployeeAndAdopterFile():
             if(randomNum == 0) : #if adopter
                 adopterList.append(line[: len(line) - 1] + zipCode[random.randint(0, len(zipCode) - 1)] + "::" + phones[counter] + "::\n")  #zip code and phone
                 counter+= 1
-            elif (randomNum == 1):#if employee
-                employeeList.append(line) # add employee to list
+            elif (randomNum == 1):  #if employee
+                shelterID = str(random.randint(0,4))
+                employeeList.append(line[: len(line) - 1] + shelterID + "::\n" ) # add employee to list
 
     
     with open("adopter.txt", "w") as adopterFile:
@@ -93,6 +98,7 @@ def createEmployeeAndAdopterFile():
     with open("employee.txt", "w") as employeeFile:
         for line in employeeList:
             employeeFile.write(line)
+
 #==================================================================================================================
 
 def getRandomTime():#generate random dates 
@@ -100,21 +106,35 @@ def getRandomTime():#generate random dates
     end = start + timedelta(days=random.randint(-100 ,-50))
     random_date = start + (end - start) * random.random()
     return random_date
-#==================================================================================================================
 
+#==================================================================================================================
 
 def createPetAdoptionFile():
     with open('pet_adoptions.txt', 'w') as fp:
-        for i in range(100):
+        for i in range(NUMBER_OF_PET_ADOPTIONS):
             contractID = str(i)  #sequential ID for contract ID
             contactDate = str(getRandomTime().date()) #random date
             fp.write(contactDate + "::" + contractID + "::\n")
+
 #==================================================================================================================
 
 def createAppliesForFile():
-    return
-
-
+    dataList = []
+    with open("adopter.txt", "r") as fp:
+        for line in fp:
+            splitList = line.split('::')
+            dataList.append(splitList[1])#personID
+            
+    with open("applies_for.txt", 'w') as fp:
+        for i in range(NUMBER_OF_PET_APPLICATIONS):
+            desiredSex = sex[random.randint(0, 1)]  #male or female
+            desiredBreed = breed[random.randint(0, len(breed) - 1)]  #
+            desiredTemperament = temperament[random.randint(0,len(temperament)-1)]
+            maxMaintenanceLevel = maintenanceLevel[random.randint(0, len(maintenanceLevel) - 1)]
+            desiredIntakeType = intakeType[random.randint(0, len(intakeType) - 1)]
+            maxAge = str(random.randint(0, 14))
+            personID = str(dataList[random.randint(0,len(dataList)-1)]) #pick one of adopters randomly
+            fp.write( desiredBreed + "::" + desiredSex  + "::"  + desiredTemperament + "::" + maxMaintenanceLevel + "::" + desiredIntakeType + "::" + maxAge + "::" +personID +  "::\n" )
 #==================================================================================================================
 
 def main():
