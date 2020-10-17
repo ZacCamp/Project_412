@@ -20,4 +20,7 @@ select * from pet_adoption;
 UPDATE dogs SET adoptionStatus = 'true' WHERE dogID = 38;
 select * from dogs;
 
+DELETE FROM pet_adoption WHERE contractid = '100';
+select * from pet_adoption;
+
 
