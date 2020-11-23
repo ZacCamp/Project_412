@@ -19,6 +19,9 @@ import Project_412
 class Adoption_Certificate_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
 
+        self.userInfo = kwargs['UserInfo']
+        self.dogInfo = kwargs['dogSelection']
+
         tk.Frame.__init__(self, master)
 
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
@@ -113,7 +116,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.adopterNameLabel.configure(relief="flat")
         self.adopterNameLabel.configure(anchor='w')
         self.adopterNameLabel.configure(justify='left')
-        self.adopterNameLabel.configure(text='''[Info Here]''')
+        self.adopterNameLabel.configure(text=self.userInfo['USERINFO']['name'])
 
         self.adoptionAdminLabel = ttk.Label(master)
         self.adoptionAdminLabel.place(relx=0.483, rely=0.4, height=29, width=296)
@@ -134,7 +137,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.dogIDLabel.configure(relief="flat")
         self.dogIDLabel.configure(anchor='w')
         self.dogIDLabel.configure(justify='left')
-        self.dogIDLabel.configure(text='''[Info Here]''')
+        self.dogIDLabel.configure(text=self.dogInfo[8])     #load dogID
 
         self.shelterNameLabel = ttk.Label(master)
         self.shelterNameLabel.place(relx=0.483, rely=0.644, height=29, width=296)

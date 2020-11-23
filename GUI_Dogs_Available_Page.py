@@ -18,6 +18,10 @@ import Project_412
 class Dogs_Available_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
 
+        self.userInfo = kwargs['UserInfo']  #store the user information
+        self.availableDogs = kwargs['Query']  #grab the results from SQL statement
+        
+        
         tk.Frame.__init__(self, master)
         
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
@@ -84,6 +88,10 @@ class Dogs_Available_Page(tk.Frame):
         self.dogListBox.configure(selectbackground="blue")
         self.dogListBox.configure(selectforeground="white")
 
+        for item in self.availableDogs: #Load the query results into the listbox
+            self.dogListBox.insert(tk.END,item)
+        
+
         self.adoptButton = tk.Button(master)
         self.adoptButton.place(relx=0.5, anchor = 'center', rely=0.93, height=34, width=201)
         self.adoptButton.configure(activebackground="#ff8a15")
@@ -99,4 +107,5 @@ class Dogs_Available_Page(tk.Frame):
         self.adoptButton.configure(command=self.changePage)
 
     def changePage(self):
-        self.master.change(Adoption_Certificate_Page, res='')
+        petSelected = (self.dogListBox.get(self.dogListBox.curselection())) #get the selected dog from listbox
+        self.master.change(Adoption_Certificate_Page, UserInfo= self.userInfo, dogSelection = petSelected )

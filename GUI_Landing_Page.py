@@ -152,7 +152,8 @@ class Landing_Page(tk.Frame):
         self.TSeparator1.place(relx=0.145, rely=0.288, relwidth=0.682)
 
     def changePage(self):
-        self.master.change(Application_Page, res ='')
+        userInfo = {'name': self.nameEntry.get(), 'phone': self.phoneEntry.get(), 'zip':self.zipEntry.get()}
+        self.master.change(Application_Page, USERINFO =userInfo)
         
 
 
