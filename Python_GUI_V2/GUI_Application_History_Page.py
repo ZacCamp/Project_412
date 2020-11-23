@@ -43,8 +43,8 @@ class Application_History_Page(tk.Frame):
         master.configure(highlightcolor="black")
 
         self.Application_History = tk.Label(master)
-        self.Application_History.place(relx=0.283, rely=0.089, height=41
-                , width=259)
+        self.Application_History.place(relx=0.5, rely=0.089, anchor = 'center', height=41
+                , width=700)
         self.Application_History.configure(activebackground="#f9f9f9")
         self.Application_History.configure(activeforeground="black")
         self.Application_History.configure(background="#2291ff")
@@ -56,7 +56,7 @@ class Application_History_Page(tk.Frame):
         self.Application_History.configure(text='''Application History''')
 
         self.infoApLabel = tk.Label(master)
-        self.infoApLabel.place(relx=0.117, rely=0.222, height=22, width=459)
+        self.infoApLabel.place(relx=0.5, rely=0.222, anchor = 'center', height=22, width=700)
         self.infoApLabel.configure(activebackground="#f9f9f9")
         self.infoApLabel.configure(activeforeground="black")
         self.infoApLabel.configure(background="#2291ff")
@@ -70,7 +70,7 @@ class Application_History_Page(tk.Frame):
         self.TSeparator1.place(relx=0.117, rely=0.311, relwidth=0.783)
 
         self.applicationListBox = tk.Listbox(master)
-        self.applicationListBox.place(relx=0.067, rely=0.378, relheight=0.449
+        self.applicationListBox.place(relx=0.5, rely=0.6, anchor = 'center', relheight=0.449
                 , relwidth=0.89)
         self.applicationListBox.configure(background="white")
         self.applicationListBox.configure(disabledforeground="#a3a3a3")
@@ -82,7 +82,7 @@ class Application_History_Page(tk.Frame):
         self.applicationListBox.configure(selectforeground="white")
 
         self.deleteButton = tk.Button(master)
-        self.deleteButton.place(relx=0.617, rely=0.867, height=34, width=201)
+        self.deleteButton.place(relx=0.25, rely=0.93, anchor = 'center', height=34, width=201)
         self.deleteButton.configure(activebackground="#ff8a15")
         self.deleteButton.configure(activeforeground="#000000")
         self.deleteButton.configure(background="#f47a00")
@@ -95,7 +95,7 @@ class Application_History_Page(tk.Frame):
         self.deleteButton.configure(text='''Delete''')
 
         self.exitButton = tk.Button(master)
-        self.exitButton.place(relx=0.067, rely=0.867, height=34, width=201)
+        self.exitButton.place(relx=0.75, rely=0.93, height=34, anchor = 'center', width=201)
         self.exitButton.configure(activebackground="#ff8a15")
         self.exitButton.configure(activeforeground="#000000")
         self.exitButton.configure(background="#f47a00")

@@ -50,7 +50,7 @@ class Application_Page(tk.Frame):
         master.configure(highlightcolor="black")
 
         self.applicationLabel = tk.Label(master)
-        self.applicationLabel.place(relx=0.2, rely=0.088, height=31, width=338)
+        self.applicationLabel.place(relx=0.5, rely=0.088, anchor = 'center', height=31, width=338)
         self.applicationLabel.configure(activebackground="#f9f9f9")
         self.applicationLabel.configure(activeforeground="black")
         self.applicationLabel.configure(background="#2291ff")
@@ -62,7 +62,7 @@ class Application_Page(tk.Frame):
         self.applicationLabel.configure(text='''Pet Application''')
 
         self.infoApLabel = tk.Label(master)
-        self.infoApLabel.place(relx=0.1, rely=0.199, height=22, width=459)
+        self.infoApLabel.place(relx=0.5, rely=0.199, anchor = 'center', height=22, width=700)
         self.infoApLabel.configure(activebackground="#f9f9f9")
         self.infoApLabel.configure(activeforeground="black")
         self.infoApLabel.configure(background="#2291ff")
@@ -130,7 +130,7 @@ class Application_Page(tk.Frame):
         self.intakeCBox['values'] = ('[any]', 'surrendered', 'stray') 
 
         self.nameLabel_7 = ttk.Label(master)
-        self.nameLabel_7.place(relx=0.097, rely=0.619, height=29, width=216)
+        self.nameLabel_7.place(relx=0.097, rely=0.619, height=29, width=230)
         self.nameLabel_7.configure(background="#2291ff")
         self.nameLabel_7.configure(foreground="#ffffff")
         self.nameLabel_7.configure(font="-family SimSun -size 13 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -164,7 +164,7 @@ class Application_Page(tk.Frame):
         self.maintenenceCBox['values'] = ('[any]','low', 'medium', 'high') 
 
         self.nameLabel_9 = ttk.Label(master)
-        self.nameLabel_9.place(relx=0.097, rely=0.796, height=29, width=116)
+        self.nameLabel_9.place(relx=0.097, rely=0.796, height=29, width=230)
         self.nameLabel_9.configure(background="#2291ff")
         self.nameLabel_9.configure(foreground="#ffffff")
         self.nameLabel_9.configure(font="-family SimSun -size 13 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -181,7 +181,7 @@ class Application_Page(tk.Frame):
         self.ageCBox['values'] = ('[any]', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13')
 
         self.searchButton = tk.Button(master)
-        self.searchButton.place(relx=0.317, rely=0.885, height=34, width=201)
+        self.searchButton.place(relx=0.5, rely=0.93, anchor = 'center', height=34, width=201)
         self.searchButton.configure(activebackground="#ff8a15")
         self.searchButton.configure(activeforeground="#000000")
         self.searchButton.configure(background="#f47a00")

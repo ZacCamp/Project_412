@@ -44,7 +44,7 @@ class Adoption_Certificate_Page(tk.Frame):
         master.configure(highlightcolor="black")
 
         self.nameLabel = ttk.Label(master)
-        self.nameLabel.place(relx=0.05, rely=0.333, height=29, width=136)
+        self.nameLabel.place(relx=0.05, rely=0.333, height=29, width=300)
         self.nameLabel.configure(background="#2291ff")
         self.nameLabel.configure(foreground="#ffffff")
         self.nameLabel.configure(font="-family SimSun -size 15 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -54,7 +54,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.nameLabel.configure(text='''Adopter Name:''')
 
         self.nameLabel_1 = ttk.Label(master)
-        self.nameLabel_1.place(relx=0.05, rely=0.4, height=29, width=236)
+        self.nameLabel_1.place(relx=0.05, rely=0.4, height=29, width=300)
         self.nameLabel_1.configure(background="#2291ff")
         self.nameLabel_1.configure(foreground="#ffffff")
         self.nameLabel_1.configure(font="-family SimSun -size 15 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -64,7 +64,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.nameLabel_1.configure(text='''Adoption Administrator:''')
 
         self.nameLabel_2 = ttk.Label(master)
-        self.nameLabel_2.place(relx=0.05, rely=0.467, height=29, width=236)
+        self.nameLabel_2.place(relx=0.05, rely=0.467, height=32, width=236)
         self.nameLabel_2.configure(background="#2291ff")
         self.nameLabel_2.configure(foreground="#ffffff")
         self.nameLabel_2.configure(font="-family SimSun -size 15 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -169,7 +169,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.adopterNameLabel_9.configure(text='''[Info Here]''')
 
         self.newAdoptButton = tk.Button(master)
-        self.newAdoptButton.place(relx=0.083, rely=0.889, height=34, width=231)
+        self.newAdoptButton.place(relx=0.25, rely=0.93, anchor = 'center', height=34, width=240)
         self.newAdoptButton.configure(activebackground="#ff8a15")
         self.newAdoptButton.configure(activeforeground="#000000")
         self.newAdoptButton.configure(background="#f47a00")
@@ -183,7 +183,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.newAdoptButton.configure(command=self.changePage)
 
         self.manageButton = tk.Button(master)
-        self.manageButton.place(relx=0.533, rely=0.889, height=34, width=231)
+        self.manageButton.place(relx=0.75, rely=0.93, anchor = 'center', height=34, width=240)
         self.manageButton.configure(activebackground="#ff8a15")
         self.manageButton.configure(activeforeground="#000000")
         self.manageButton.configure(background="#f47a00")
@@ -197,7 +197,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.manageButton.configure(command=self.changePage2)
 
         self.Label1 = tk.Label(master)
-        self.Label1.place(relx=0.317, rely=0.067, height=41, width=229)
+        self.Label1.place(relx=0.5, rely=0.067, anchor = 'center', height=41, width=700)
         self.Label1.configure(activebackground="#f9f9f9")
         self.Label1.configure(activeforeground="black")
         self.Label1.configure(background="#2291ff")
@@ -209,7 +209,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.Label1.configure(text='''Adoption Certificate''')
 
         self.infoApLabel = tk.Label(master)
-        self.infoApLabel.place(relx=0.117, rely=0.178, height=22, width=459)
+        self.infoApLabel.place(relx=0.5, rely=0.178, anchor = 'center', height=22, width=700)
         self.infoApLabel.configure(activebackground="#f9f9f9")
         self.infoApLabel.configure(activeforeground="black")
         self.infoApLabel.configure(background="#2291ff")

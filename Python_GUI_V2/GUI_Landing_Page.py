@@ -44,7 +44,7 @@ class Landing_Page(tk.Frame):
         master.configure(highlightcolor="black")
 
         self.welcomeLabel = tk.Label(master)
-        self.welcomeLabel.place(relx=0.247, rely=0.111, height=21, width=338)
+        self.welcomeLabel.place(relx=.5, rely=0.111, anchor = 'center', height=26, width=400)
         self.welcomeLabel.configure(activebackground="#f9f9f9")
         self.welcomeLabel.configure(activeforeground="black")
         self.welcomeLabel.configure(background="#2291ff")
@@ -56,7 +56,7 @@ class Landing_Page(tk.Frame):
         self.welcomeLabel.configure(text='''Welcome To Pet Finder!''')
 
         self.infoLabel = tk.Label(master)
-        self.infoLabel.place(relx=0.232, rely=0.199, height=21, width=359)
+        self.infoLabel.place(relx=0.5, rely=0.199, anchor = 'center', height=21, width=500)
         self.infoLabel.configure(activebackground="#f9f9f9")
         self.infoLabel.configure(activeforeground="black")
         self.infoLabel.configure(background="#2291ff")
@@ -67,7 +67,7 @@ class Landing_Page(tk.Frame):
         self.infoLabel.configure(text='''Please provide us with some basic information before we continue.''')
 
         self.nameLabel = ttk.Label(master)
-        self.nameLabel.place(relx=0.131, rely=0.42, height=19, width=56)
+        self.nameLabel.place(relx=0.131, rely=0.42, height=30, width=70)
         self.nameLabel.configure(background="#2291ff")
         self.nameLabel.configure(foreground="#ffffff")
         self.nameLabel.configure(font="-family SimSun -size 15 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -77,7 +77,7 @@ class Landing_Page(tk.Frame):
         self.nameLabel.configure(text='''Name:''')
 
         self.numberLabel = ttk.Label(master)
-        self.numberLabel.place(relx=0.131, rely=0.553, height=19, width=145)
+        self.numberLabel.place(relx=0.131, rely=0.553, height=30, width=170)
         self.numberLabel.configure(background="#2291ff")
         self.numberLabel.configure(foreground="#ffffff")
         self.numberLabel.configure(font="-family SimSun -size 15 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -87,7 +87,7 @@ class Landing_Page(tk.Frame):
         self.numberLabel.configure(text='''Phone Number:''')
 
         self.zipLabel = ttk.Label(master)
-        self.zipLabel.place(relx=0.131, rely=0.686, height=29, width=102)
+        self.zipLabel.place(relx=0.131, rely=0.686, height=30, width=102)
         self.zipLabel.configure(background="#2291ff")
         self.zipLabel.configure(foreground="#ffffff")
         self.zipLabel.configure(font="-family SimSun -size 15 -weight normal -slant roman -underline 0 -overstrike 0")
@@ -133,7 +133,7 @@ class Landing_Page(tk.Frame):
         self.zipEntry.configure(selectforeground="white")
 
         self.beginApplicationButton = tk.Button(master)
-        self.beginApplicationButton.place(relx=0.363, rely=0.841, height=34
+        self.beginApplicationButton.place(relx=0.5, rely=0.841, anchor = 'center', height=34
                 , width=201)
         self.beginApplicationButton.configure(activebackground="#ff8a15")
         self.beginApplicationButton.configure(activeforeground="#000000")

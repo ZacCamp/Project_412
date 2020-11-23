@@ -46,7 +46,7 @@ class Dogs_Available_Page(tk.Frame):
         master.configure(menu = self.menubar)
 
         self.Label1 = tk.Label(master)
-        self.Label1.place(relx=0.35, rely=0.089, height=41, width=189)
+        self.Label1.place(relx=0.5, rely=0.089, anchor = 'center', height=41, width=700)
         self.Label1.configure(activebackground="#f9f9f9")
         self.Label1.configure(activeforeground="black")
         self.Label1.configure(background="#2291ff")
@@ -58,7 +58,7 @@ class Dogs_Available_Page(tk.Frame):
         self.Label1.configure(text='''Available Dogs''')
 
         self.infoApLabel = tk.Label(master)
-        self.infoApLabel.place(relx=0.117, rely=0.222, height=22, width=459)
+        self.infoApLabel.place(relx=0.5, rely=0.222, anchor = 'center', height=22, width=700)
         self.infoApLabel.configure(activebackground="#f9f9f9")
         self.infoApLabel.configure(activeforeground="black")
         self.infoApLabel.configure(background="#2291ff")
@@ -84,7 +84,7 @@ class Dogs_Available_Page(tk.Frame):
         self.dogListBox.configure(selectforeground="white")
 
         self.adoptButton = tk.Button(master)
-        self.adoptButton.place(relx=0.333, rely=0.867, height=34, width=201)
+        self.adoptButton.place(relx=0.5, anchor = 'center', rely=0.93, height=34, width=201)
         self.adoptButton.configure(activebackground="#ff8a15")
         self.adoptButton.configure(activeforeground="#000000")
         self.adoptButton.configure(background="#f47a00")
