@@ -21,6 +21,7 @@ class Adoption_Certificate_Page(tk.Frame):
 
         self.userInfo = kwargs['UserInfo']
         self.dogInfo = kwargs['dogSelection']
+        self.shelterInfo = kwargs['shelterInfo']
 
         tk.Frame.__init__(self, master)
 
@@ -116,7 +117,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.adopterNameLabel.configure(relief="flat")
         self.adopterNameLabel.configure(anchor='w')
         self.adopterNameLabel.configure(justify='left')
-        self.adopterNameLabel.configure(text=self.userInfo['USERINFO']['name'])
+        self.adopterNameLabel.configure(text=self.userInfo['USERINFO']['name']) #SET person name
 
         self.adoptionAdminLabel = ttk.Label(master)
         self.adoptionAdminLabel.place(relx=0.483, rely=0.4, height=29, width=296)
@@ -148,7 +149,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.shelterNameLabel.configure(relief="flat")
         self.shelterNameLabel.configure(anchor='w')
         self.shelterNameLabel.configure(justify='left')
-        self.shelterNameLabel.configure(text='''[Info Here]''')
+        self.shelterNameLabel.configure(text=self.shelterInfo[0][0])
 
         self.shelterAddressLabel = ttk.Label(master)
         self.shelterAddressLabel.place(relx=0.483, rely=0.711, height=29
@@ -159,7 +160,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.shelterAddressLabel.configure(relief="flat")
         self.shelterAddressLabel.configure(anchor='w')
         self.shelterAddressLabel.configure(justify='left')
-        self.shelterAddressLabel.configure(text='''[Info Here]''')
+        self.shelterAddressLabel.configure(text=self.shelterInfo[0][2])
 
         self.adopterNameLabel_9 = ttk.Label(master)
         self.adopterNameLabel_9.place(relx=0.483, rely=0.778, height=29
@@ -170,7 +171,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.adopterNameLabel_9.configure(relief="flat")
         self.adopterNameLabel_9.configure(anchor='w')
         self.adopterNameLabel_9.configure(justify='left')
-        self.adopterNameLabel_9.configure(text='''[Info Here]''')
+        self.adopterNameLabel_9.configure(text=self.shelterInfo[0][1])
 
         self.newAdoptButton = tk.Button(master)
         self.newAdoptButton.place(relx=0.25, rely=0.93, anchor = 'center', height=34, width=240)

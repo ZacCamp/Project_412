@@ -85,7 +85,7 @@ def insertAdopter(name, ID, zip, phone):
     
 #################################################################################################################################################
 
-def getDogs(breed, intakeType, sex, maintenanceLevel, temperment, age):
+def getDogs(breed, intakeType, sex, maintenanceLevel, temperament, age):
     
     any = '[any]'
 
@@ -112,13 +112,13 @@ def getDogs(breed, intakeType, sex, maintenanceLevel, temperment, age):
     else:
         maintenanceLevel = "= " + "'" + maintenanceLevel + "'"
 
-    if any == temperment:
-        temperment = "LIKE '%'"
+    if any == temperament:
+        temperament = "LIKE '%'"
     else:
-        temperment = "= " + "'" + temperment + "'"
+        temperament = "= " + "'" + temperament + "'"
 
 
-    cursor.execute("SELECT * FROM dogs WHERE breed "+breed+" AND intakeType "+intakeType+" AND sex "+sex+"AND maintenanceLevel "+maintenanceLevel+" AND temperament "+temperment+" AND age <= "+age+" AND adoptionStatus = 'false';")
+    cursor.execute("SELECT * FROM dogs WHERE breed "+breed+" AND intakeType "+intakeType+" AND sex "+sex+"AND maintenanceLevel "+maintenanceLevel+" AND temperament "+temperament+" AND age <= "+age+" AND adoptionStatus = 'false';")
     
     results = cursor.fetchall()
     
@@ -127,6 +127,10 @@ def getDogs(breed, intakeType, sex, maintenanceLevel, temperment, age):
 
 #################################################################################################################################################
 
+def getShelters(shelterID):
+    cursor.execute("SELECT * FROM shelters WHERE shelterid=" + str(shelterID) + ' ;')
+    
+    return cursor.fetchall()
 
 #################################################################################################################################################
 

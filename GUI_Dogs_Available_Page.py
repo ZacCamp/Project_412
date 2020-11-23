@@ -107,5 +107,6 @@ class Dogs_Available_Page(tk.Frame):
         self.adoptButton.configure(command=self.changePage)
 
     def changePage(self):
-        petSelected = (self.dogListBox.get(self.dogListBox.curselection())) #get the selected dog from listbox
-        self.master.change(Adoption_Certificate_Page, UserInfo= self.userInfo, dogSelection = petSelected )
+        petSelected = (self.dogListBox.get(self.dogListBox.curselection()))  #get the selected dog from listbox
+        ShelterInfo = Project_412.getShelters(1)
+        self.master.change(Adoption_Certificate_Page, UserInfo= self.userInfo, dogSelection = petSelected, shelterInfo = ShelterInfo )
