@@ -19,7 +19,7 @@ import Project_412
 class Adoption_Certificate_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
 
-        tk.Frame.__init__(self, master, **kwargs)
+        tk.Frame.__init__(self, master)
 
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
         _fgcolor = '#000000'  # X11 color: 'black'

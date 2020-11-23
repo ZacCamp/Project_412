@@ -22,9 +22,10 @@ class Mainframe(tk.Tk):
 
     def change(self, frame, **kwargs):
         list = self.place_slaves()
+        #print(kwargs)
         for l in list:
             l.destroy()
-        self.frame = frame(self)
+        self.frame = frame(self, **kwargs)
 
 
 if __name__ == "__main__":

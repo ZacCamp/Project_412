@@ -19,7 +19,7 @@ from GUI_Application_Page import Application_Page
 class Landing_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
 
-        tk.Frame.__init__(self, master, **kwargs)
+        tk.Frame.__init__(self, master)
         
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
         _fgcolor = '#000000'  # X11 color: 'black'
@@ -152,7 +152,7 @@ class Landing_Page(tk.Frame):
         self.TSeparator1.place(relx=0.145, rely=0.288, relwidth=0.682)
 
     def changePage(self):
-        self.master.change(Application_Page)
+        self.master.change(Application_Page, res ='')
         
 
 

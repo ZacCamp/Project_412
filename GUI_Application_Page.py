@@ -17,8 +17,7 @@ import Project_412
 
 class Application_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
-
-        tk.Frame.__init__(self, master, **kwargs)
+        tk.Frame.__init__(self, master)
 
         self.comboboxSex = tk.StringVar()
         self.comboboxBreed = tk.StringVar()
@@ -209,8 +208,8 @@ class Application_Page(tk.Frame):
     def changePage(self):
         result = Project_412.getDogs(self.breedCBox.get(), self.intakeCBox.get(), self.sexCBox.get(),
                                     self.maintenenceCBox.get(), self.temperamentCBox.get(), self.ageCBox.get())
-        print(result)
+        #print(result)
         #print(self.breedCBox.get())
-        self.master.change(Dogs_Available_Page)
+        self.master.change(Dogs_Available_Page, res = result)
 
     
