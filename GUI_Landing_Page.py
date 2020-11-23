@@ -45,7 +45,7 @@ class Landing_Page(tk.Frame):
         master.configure(highlightcolor="black")
 
         self.welcomeLabel = tk.Label(master)
-        self.welcomeLabel.place(relx=.5, rely=0.111, anchor = 'center', height=26, width=400)
+        self.welcomeLabel.place(relx=.5, rely=0.111, anchor = 'center', height=41, width=400)
         self.welcomeLabel.configure(activebackground="#f9f9f9")
         self.welcomeLabel.configure(activeforeground="black")
         self.welcomeLabel.configure(background="#2291ff")
