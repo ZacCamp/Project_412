@@ -20,12 +20,12 @@ class Application_Page(tk.Frame):
 
         tk.Frame.__init__(self, master, **kwargs)
 
-        comboboxSex = tk.StringVar()
-        comboboxBreed = tk.StringVar()
-        comboboxMaint = tk.StringVar()
-        comboboxIntake = tk.StringVar()
-        comboboxAge = tk.StringVar()
-        comboboxTemp = tk.StringVar()
+        self.comboboxSex = tk.StringVar()
+        self.comboboxBreed = tk.StringVar()
+        self.comboboxMaint = tk.StringVar()
+        self.comboboxIntake = tk.StringVar()
+        self.comboboxAge = tk.StringVar()
+        self.comboboxTemp = tk.StringVar()
 
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
         _fgcolor = '#000000'  # X11 color: 'black'
@@ -79,10 +79,10 @@ class Application_Page(tk.Frame):
         self.menubar = tk.Menu(master,font="TkMenuFont",bg=_bgcolor,fg=_fgcolor)
         master.configure(menu = self.menubar)
 
-        self.sexCBox = ttk.Combobox(master)
+        self.sexCBox = ttk.Combobox(master, state='readonly')
         self.sexCBox.place(relx=0.533, rely=0.354, relheight=0.046
                 , relwidth=0.288)
-        self.sexCBox.configure(textvariable=comboboxSex)
+        self.sexCBox.configure(textvariable=self.comboboxSex)
         self.sexCBox.configure(takefocus="")
         self.sexCBox['values'] = ('[any]','male', 'female') 
 
@@ -106,10 +106,10 @@ class Application_Page(tk.Frame):
         self.nameLabel_5.configure(justify='left')
         self.nameLabel_5.configure(text='''Breed Preference:''')
 
-        self.breedCBox = ttk.Combobox(master)
+        self.breedCBox = ttk.Combobox(master, state='readonly')
         self.breedCBox.place(relx=0.533, rely=0.442, relheight=0.046
                 , relwidth=0.288)
-        self.breedCBox.configure(textvariable=comboboxBreed)
+        self.breedCBox.configure(textvariable=self.comboboxBreed)
         self.breedCBox.configure(takefocus="")
         self.breedCBox['values'] = ('[any]','affenpinscher','Afghan hound','Airedale terrier','Akita','Alaskan Malamute','American Staffordshire terrier','American water spaniel','Australian cattle dog','Australian shepherd','Australian terrier','basenji','basset hound','beagle','bearded collie','Bedlington terrier','Bernese mountain dog','bichon frise','black and tan coonhound','bloodhound','border collie','border terrier','borzoi','Boston terrier','bouvier des Flandres','boxer','briard','Brittany','Brussels griffon','bull terrier','bulldog','bullmastiff','cairn terrier','Canaan dog','Chesapeake Bay retriever','Chihuahua','Chinese crested','Chinese shar-pei','chow chow','Clumber spaniel','cocker spaniel','collie','curly-coated retriever','dachshund','Dalmatian','Doberman pinscher','English cocker spaniel','English setter','English springer spaniel','English toy spaniel','Eskimo dog','Finnish spitz','flat-coated retriever','fox terrier','foxhound','French bulldog','German shepherd','German shorthaired pointer','German wirehaired pointer','golden retriever','Gordon setter','Great Dane','greyhound','Irish setter','Irish water spaniel','Irish wolfhound','Jack Russell terrier','Japanese spaniel','keeshond','Kerry blue terrier','komondor','kuvasz','Labrador retriever','Lakeland terrier','Lhasa apso','Maltese','Manchester terrier','mastiff','Mexican hairless','Newfoundland','Norwegian elkhound','Norwich terrier','otterhound','papillon','Pekingese','pointer','Pomeranian','poodle','pug','puli','Rhodesian ridgeback','Rottweiler','Saint Bernard','saluki','Samoyed','schipperke','schnauzer','Scottish deerhound','Scottish terrier','Sealyham terrier','Shetland sheepdog','shih tzu','Siberian husky','silky terrier','Skye terrier','Staffordshire bull terrier','soft-coated wheaten terrier','Sussex spaniel','spitz','Tibetan terrier','vizsla','Weimaraner','Welsh terrier','West Highland white terrier','whippet','Yorkshire terrier') 
 
@@ -123,10 +123,10 @@ class Application_Page(tk.Frame):
         self.nameLabel_6.configure(justify='left')
         self.nameLabel_6.configure(text='''Intake Type Preference:''')
 
-        self.intakeCBox = ttk.Combobox(master)
+        self.intakeCBox = ttk.Combobox(master, state='readonly')
         self.intakeCBox.place(relx=0.533, rely=0.531, relheight=0.046
                 , relwidth=0.288)
-        self.intakeCBox.configure(textvariable=comboboxIntake)
+        self.intakeCBox.configure(textvariable=self.comboboxIntake)
         self.intakeCBox.configure(takefocus="")
         self.intakeCBox['values'] = ('[any]', 'surrendered', 'stray') 
 
@@ -140,10 +140,10 @@ class Application_Page(tk.Frame):
         self.nameLabel_7.configure(justify='left')
         self.nameLabel_7.configure(text='''Temperament Preference:''')
 
-        self.temperamentCBox = ttk.Combobox(master)
+        self.temperamentCBox = ttk.Combobox(master, state='readonly')
         self.temperamentCBox.place(relx=0.533, rely=0.619, relheight=0.046
                 , relwidth=0.288)
-        self.temperamentCBox.configure(textvariable=comboboxTemp)
+        self.temperamentCBox.configure(textvariable=self.comboboxTemp)
         self.temperamentCBox.configure(takefocus="")
         self.temperamentCBox['values'] = ('[any]', 'assertive', 'neutral', 'passive') 
 
@@ -157,12 +157,12 @@ class Application_Page(tk.Frame):
         self.nameLabel_8.configure(justify='left')
         self.nameLabel_8.configure(text='''Maintenence Level:''')
 
-        self.maintenenceCBox = ttk.Combobox(master)
+        self.maintenenceCBox = ttk.Combobox(master, state='readonly')
         self.maintenenceCBox.place(relx=0.533, rely=0.708, relheight=0.046
                 , relwidth=0.288)
-        self.maintenenceCBox.configure(textvariable=comboboxMaint)
+        self.maintenenceCBox.configure(textvariable=self.comboboxMaint)
         self.maintenenceCBox.configure(takefocus="")
-        self.maintenenceCBox['values'] = ('[any]','low', 'medium', 'high') 
+        self.maintenenceCBox['values'] = ('[any]','low', 'medium', 'high')
 
         self.nameLabel_9 = ttk.Label(master)
         self.nameLabel_9.place(relx=0.097, rely=0.796, height=29, width=230)
@@ -174,10 +174,10 @@ class Application_Page(tk.Frame):
         self.nameLabel_9.configure(justify='left')
         self.nameLabel_9.configure(text='''Maximum Age:''')
 
-        self.ageCBox = ttk.Combobox(master)
+        self.ageCBox = ttk.Combobox(master, state='readonly')
         self.ageCBox.place(relx=0.533, rely=0.796, relheight=0.046
                 , relwidth=0.288)
-        self.ageCBox.configure(textvariable=comboboxAge)
+        self.ageCBox.configure(textvariable=self.comboboxAge)
         self.ageCBox.configure(takefocus="")
         self.ageCBox['values'] = ('[any]', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13')
 
@@ -195,5 +195,22 @@ class Application_Page(tk.Frame):
         self.searchButton.configure(text='''Search Dogs''')
         self.searchButton.configure(command=self.changePage)
 
+        self.setDefaults()
+        
+    def setDefaults(self):
+        #print("ran")
+        self.maintenenceCBox.set('[any]')
+        self.sexCBox.set('[any]')
+        self.intakeCBox.set('[any]')
+        self.temperamentCBox.set('[any]')
+        self.breedCBox.set('[any]')
+        self.ageCBox.set('[any]')
+
     def changePage(self):
+        result = Project_412.getDogs(self.breedCBox.get(), self.intakeCBox.get(), self.sexCBox.get(),
+                                    self.maintenenceCBox.get(), self.temperamentCBox.get(), self.ageCBox.get())
+        print(result)
+        #print(self.breedCBox.get())
         self.master.change(Dogs_Available_Page)
+
+    

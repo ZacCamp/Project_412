@@ -56,6 +56,7 @@ def startUpDB(dbname):
     cursor.close()
     #cursor2.close()
     connection.close()
+    connection2.close()
 
 #################################################################################################################################################
 
@@ -66,6 +67,74 @@ def main():
 
 #################################################################################################################################################
 
+connectionSupport = getOpenConnection(dbname=DB_NAME)
+cursor = connectionSupport.cursor()
+
+#################################################################################################################################################
+
+def insertPerson(name, ID):
+    ID = int(ID)
+
+    cursor.execute("INSERT INTO person VALUES (%s, %s)", (name, ID))
+
+def insertAdopter(name, ID, zip, phone):
+    ID = int(ID)
+    zip = int(zip)
+
+    cursor.execute("INSERT INTO adopters VALUES (%s, %s, %s, %s)", (name, ID, zip, phone))
+    
+#################################################################################################################################################
+
+def getDogs(breed, intakeType, sex, maintenanceLevel, temperment, age):
+    
+    any = '[any]'
+
+    if any == age:
+        age = '100'
+
+    if any == breed:
+        breed = "LIKE '%'"
+    else:
+        breed = "= " + "'" + breed + "'"
+
+    if any == intakeType:
+        intakeType = "LIKE '%'"
+    else:
+        intakeType = "= " + "'" + intakeType + "'"
+
+    if any == sex:
+        sex = "LIKE '%'"
+    else:
+        sex = "= " + "'" + sex + "'"
+
+    if any == maintenanceLevel:
+        maintenanceLevel = "LIKE '%'"
+    else:
+        maintenanceLevel = "= " + "'" + maintenanceLevel + "'"
+
+    if any == temperment:
+        temperment = "LIKE '%'"
+    else:
+        temperment = "= " + "'" + temperment + "'"
+
+
+    cursor.execute("SELECT * FROM dogs WHERE breed "+breed+" AND intakeType "+intakeType+" AND sex "+sex+"AND maintenanceLevel "+maintenanceLevel+" AND temperament "+temperment+" AND age <= "+age+" AND adoptionStatus = 'false';")
+    
+    results = cursor.fetchall()
+    
+    return results
+    
+
+#################################################################################################################################################
+
+
+#################################################################################################################################################
+
+
+#################################################################################################################################################
+
+
+#################################################################################################################################################
 
 # if __name__ == '__main__':
 #     main()
