@@ -13,12 +13,13 @@ except ImportError:
     py3 = True
 
 from GUI_Adoption_Certificate_Page import Adoption_Certificate_Page
+import Project_412
 
 class Dogs_Available_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
 
         tk.Frame.__init__(self, master, **kwargs)
-
+        
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
         _fgcolor = '#000000'  # X11 color: 'black'
         _compcolor = '#d9d9d9' # X11 color: 'gray85'
