@@ -19,7 +19,9 @@ class Application_History_Page(tk.Frame):
   
     def __init__(self, master=None, **kwargs):
         
-        self.userHistory = kwargs['history']
+        self.contractList = kwargs['contractList']
+        self.dogList = kwargs['dogList']
+
         tk.Frame.__init__(self, master)
 
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
@@ -83,9 +85,24 @@ class Application_History_Page(tk.Frame):
         self.applicationListBox.configure(highlightcolor="black")
         self.applicationListBox.configure(selectbackground="blue")
         self.applicationListBox.configure(selectforeground="white")
+        
+        formattedList = zip(self.dogList,self.contractList) #concatenate lists
+        formattedList = list(formattedList)
+        for item in formattedList:
+            row = [item[0][0], '-', item[0][1], '-', item[0][2], '-', item[0][3], '-', item[0][4], '-', item[0][5], '-', item[1][4]]  #grab needed info for displaying
+            self.applicationListBox.insert(tk.END,row)
 
-        for items in self.userHistory:
-            self.applicationListBox.insert(tk.END,items)
+        self.temperamenLabel = tk.Label(master)
+        self.temperamenLabel.place(relx=0.5, rely=0.351, anchor = 'center', height=31, width=700)
+        self.temperamenLabel.configure(activebackground="#f9f9f9")
+        self.temperamenLabel.configure(activeforeground="black")
+        self.temperamenLabel.configure(background="#2291ff")
+        self.temperamenLabel.configure(disabledforeground="#a3a3a3")
+        self.temperamenLabel.configure(font="-family {Tw Cen MT Condensed Extra Bold} -size 10 -weight normal -slant roman -underline 0 -overstrike 0")
+        self.temperamenLabel.configure(foreground="#ffffff")
+        self.temperamenLabel.configure(highlightbackground="#d9d9d9")
+        self.temperamenLabel.configure(highlightcolor="black")
+        self.temperamenLabel.configure(text='''Breed - Intake type - Sex - Maintenance - Temperament - Age - ContractID''')
 
         self.deleteButton = tk.Button(master)
         self.deleteButton.place(relx=0.25, rely=0.93, anchor = 'center', height=34, width=201)
@@ -99,6 +116,7 @@ class Application_History_Page(tk.Frame):
         self.deleteButton.configure(highlightcolor="black")
         self.deleteButton.configure(pady="0")
         self.deleteButton.configure(text='''Delete''')
+        self.deleteButton.configure(command=self.deleteEntry)
 
         self.exitButton = tk.Button(master)
         self.exitButton.place(relx=0.75, rely=0.93, height=34, anchor = 'center', width=201)
@@ -115,4 +133,8 @@ class Application_History_Page(tk.Frame):
         self.exitButton.configure(command=self.changePage)
 
     def changePage(self):
-        self.master.change(GUI_Application_Page.Application_Page)        
+        self.master.change(GUI_Application_Page.Application_Page)
+    
+    def deleteEntry(self):
+        petSelected = (self.applicationListBox.get(self.applicationListBox.curselection()))  #get the selected dog from listbox
+        print(petSelected)

@@ -231,6 +231,8 @@ class Adoption_Certificate_Page(tk.Frame):
     def changePage(self):
         self.master.change(GUI_Application_Page.Application_Page , userInfo =  self.userInfo)   
     def changePage2(self):
-        history = Project_412.getAdopterHistory(self.userInfo['USERINFO']['personID'])
-        #dogsDetails = Project_412.getDogWithID(self.dogInfo[8])#get 
-        self.master.change(Application_History_Page, history = history, dogList = dogsDetails)      
+        history = Project_412.getAdopterHistory(self.userInfo['USERINFO']['personID'])  #get list of pet_adoptions that were done by user
+        dogsList = []
+        for item in history:
+            dogsList.append(Project_412.getDogWithID(item[2]))#get the dog info 
+        self.master.change(Application_History_Page, contractList=history,dogList = dogsList)      

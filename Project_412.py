@@ -99,7 +99,7 @@ def insertAdopter(name, ID, zip, phone):
 def insertAdoption(adopterID, employeeID, dogID):
     time = datetime.now()
     contractID = getLargestContractID() + 1
-    cursor.execute('INSERT INTO pet_adoption VALUES (%s, %s, %s, %s , %s)', (adopterID, employeeID, dogID, time.strftime("%d-%m-%Y"), contractID)) #create new pet adoption
+    cursor.execute('INSERT INTO pet_adoption VALUES (%s, %s, %s, %s , %s)', (adopterID, employeeID, dogID, time.strftime("%m-%d-%Y"), contractID)) #create new pet adoption
     cursor.execute('UPDATE dogs SET adoptionStatus=true WHERE  dogID=' + str(dogID) + ' ;' ) #update dog adoption status for said dog in dogs table
     connectionSupport.commit()
     print("REGISTERED ADOPTION AND UPDATED DOG ADOPTION STATUS")
