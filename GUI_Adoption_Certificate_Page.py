@@ -18,12 +18,12 @@ import Project_412
 
 class Adoption_Certificate_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
-
+        #=================================================================================
         self.userInfo = kwargs['UserInfo']
         self.dogInfo = kwargs['dogSelection']
         self.shelterInfo = kwargs['shelterInfo']
         self.shelterAdmin = kwargs['shelterAdmin']
-
+        #=================================================================================
         tk.Frame.__init__(self, master)
 
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
@@ -172,7 +172,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.adopterNameLabel_9.configure(relief="flat")
         self.adopterNameLabel_9.configure(anchor='w')
         self.adopterNameLabel_9.configure(justify='left')
-        self.adopterNameLabel_9.configure(text=self.shelterInfo[0][1])
+        self.adopterNameLabel_9.configure(text=self.shelterInfo[0][1]) #load shelter name
 
         self.newAdoptButton = tk.Button(master)
         self.newAdoptButton.place(relx=0.25, rely=0.93, anchor = 'center', height=34, width=240)
@@ -229,7 +229,8 @@ class Adoption_Certificate_Page(tk.Frame):
         self.TSeparator1.place(relx=0.1, rely=0.267, relwidth=0.783)
 
     def changePage(self):
-        self.master.change(GUI_Application_Page.Application_Page)   
+        self.master.change(GUI_Application_Page.Application_Page , userInfo =  self.userInfo)   
     def changePage2(self):
         history = Project_412.getAdopterHistory(self.userInfo['USERINFO']['personID'])
-        self.master.change(Application_History_Page, history = history)      
+        #dogsDetails = Project_412.getDogWithID(self.dogInfo[8])#get 
+        self.master.change(Application_History_Page, history = history, dogList = dogsDetails)      
