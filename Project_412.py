@@ -83,21 +83,27 @@ def insertPerson(name, ID):
     cursor.execute("INSERT INTO person VALUES (%s, %s)", (name, ID))
     connectionSupport.commit()
 
+#################################################################################################################################################
+
+
 def insertAdopter(name, ID, zip, phone):
     ID = int(ID)
     zip = int(zip)
 
     cursor.execute("INSERT INTO adopters VALUES (%s, %s, %s, %s)", (name, ID, zip, phone))
     connectionSupport.commit()
+    
+#################################################################################################################################################
+
 
 def insertAdoption(adopterID, employeeID, dogID):
     time = datetime.now()
     contractID = getLargestContractID() + 1
-    cursor.execute('INSERT INTO pet_adoption VALUES (%s, %s, %s, %s , %s)', (adopterID, employeeID, dogID, time.strftime("%d-%m-%Y") , contractID))
+    cursor.execute('INSERT INTO pet_adoption VALUES (%s, %s, %s, %s , %s)', (adopterID, employeeID, dogID, time.strftime("%d-%m-%Y"), contractID)) #create new pet adoption
+    cursor.execute('UPDATE dogs SET adoptionStatus=true WHERE  dogID=' + str(dogID) + ' ;' ) #update dog adoption status for said dog in dogs table
     connectionSupport.commit()
-    print("REGISTERED ADOPTION")
-    #TO DO MAKE SURE TO GO IN AND CHANGE THE DOGS ADOPTION STATUS TO BE TRUE
-
+    print("REGISTERED ADOPTION AND UPDATED DOG ADOPTION STATUS")
+    
 #################################################################################################################################################
 
 def getDogs(breed, intakeType, sex, maintenanceLevel, temperament, age):
@@ -156,25 +162,34 @@ def getShelterEmployee(shelterID):
 
 
 #################################################################################################################################################
+
 def getLargestPersonID():
     cursor.execute("SELECT MAX(personID) FROM person ;") #get largest personID so we can add 1 and make new unique personID
     max = cursor.fetchone()
     return int(max[0])
 
+#################################################################################################################################################
+
 def getLargestContractID():
     cursor.execute('SELECT MAX(contractID) FROM pet_adoption ;')
-    max = cursor.fetchone()
+    max = cursor.fetchone() #get largest value for contractID currently set
     if max[0] is None:
         return 0
     else:
         return max[0]
 
+#################################################################################################################################################
+
 def getAdopterHistory(personID):
     cursor.execute('SELECT * FROM pet_adoption WHERE adopterID=' + str(personID) + ' ;')
     return cursor.fetchall()
 
+#################################################################################################################################################
+
 def getDogWithID(dogID):
-    cursor.execute('SELECT * FROM dogs WHERE dogID=')
+    cursor.execute('SELECT * FROM dogs WHERE dogID=' + str(dogID) + ' ;')
+    return cursor.fetchone()
+
 #################################################################################################################################################
 
 # if __name__ == '__main__':
