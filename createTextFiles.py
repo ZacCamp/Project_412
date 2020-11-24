@@ -108,13 +108,13 @@ def getRandomTime():#generate random dates
     return random_date
 
 #==================================================================================================================
-
-def createPetAdoptionFile():
-    with open('pet_adoptions.txt', 'w') as fp:
-        for i in range(NUMBER_OF_PET_ADOPTIONS):
-            contractID = str(i)  #sequential ID for contract ID
-            contactDate = str(getRandomTime().date()) #random date
-            fp.write(contactDate + "::" + contractID + "::\n")
+#
+#def createPetAdoptionFile():
+#    with open('pet_adoptions.txt', 'w') as fp:
+#        for i in range(NUMBER_OF_PET_ADOPTIONS):
+#            contractID = str(i)  #sequential ID for contract ID
+#            contactDate = str(getRandomTime().date()) #random date
+#            fp.write(contactDate + "::" + contractID + "::\n")
 
 #==================================================================================================================
 
