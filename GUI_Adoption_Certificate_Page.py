@@ -231,4 +231,5 @@ class Adoption_Certificate_Page(tk.Frame):
     def changePage(self):
         self.master.change(GUI_Application_Page.Application_Page)   
     def changePage2(self):
-        self.master.change(Application_History_Page)      
+        history = Project_412.getAdopterHistory(self.userInfo['USERINFO']['personID'])
+        self.master.change(Application_History_Page, history = history)      

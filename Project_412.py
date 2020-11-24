@@ -96,6 +96,7 @@ def insertAdoption(adopterID, employeeID, dogID):
     cursor.execute('INSERT INTO pet_adoption VALUES (%s, %s, %s, %s , %s)', (adopterID, employeeID, dogID, time.strftime("%d-%m-%Y") , contractID))
     connectionSupport.commit()
     print("REGISTERED ADOPTION")
+    #TO DO MAKE SURE TO GO IN AND CHANGE THE DOGS ADOPTION STATUS TO BE TRUE
 
 #################################################################################################################################################
 
@@ -168,7 +169,12 @@ def getLargestContractID():
     else:
         return max[0]
 
+def getAdopterHistory(personID):
+    cursor.execute('SELECT * FROM pet_adoption WHERE adopterID=' + str(personID) + ' ;')
+    return cursor.fetchall()
 
+def getDogWithID(dogID):
+    cursor.execute('SELECT * FROM dogs WHERE dogID=')
 #################################################################################################################################################
 
 # if __name__ == '__main__':

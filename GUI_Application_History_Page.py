@@ -16,8 +16,10 @@ import GUI_Application_Page
 import Project_412
 
 class Application_History_Page(tk.Frame):
+  
     def __init__(self, master=None, **kwargs):
-
+        
+        self.userHistory = kwargs['history']
         tk.Frame.__init__(self, master)
 
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
@@ -81,6 +83,9 @@ class Application_History_Page(tk.Frame):
         self.applicationListBox.configure(highlightcolor="black")
         self.applicationListBox.configure(selectbackground="blue")
         self.applicationListBox.configure(selectforeground="white")
+
+        for items in self.userHistory:
+            self.applicationListBox.insert(tk.END,items)
 
         self.deleteButton = tk.Button(master)
         self.deleteButton.place(relx=0.25, rely=0.93, anchor = 'center', height=34, width=201)
