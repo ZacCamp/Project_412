@@ -108,5 +108,6 @@ class Dogs_Available_Page(tk.Frame):
 
     def changePage(self):
         petSelected = (self.dogListBox.get(self.dogListBox.curselection()))  #get the selected dog from listbox
-        ShelterInfo = Project_412.getShelters(1)
-        self.master.change(Adoption_Certificate_Page, UserInfo= self.userInfo, dogSelection = petSelected, shelterInfo = ShelterInfo )
+        ShelterInfo = Project_412.getShelters(petSelected[7])                 #get shelter info
+        ShelterAdmin = Project_412.getShelterEmployee(petSelected[7])           #get admin info
+        self.master.change(Adoption_Certificate_Page, UserInfo= self.userInfo, dogSelection = petSelected, shelterInfo = ShelterInfo , shelterAdmin = ShelterAdmin)

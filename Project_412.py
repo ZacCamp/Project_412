@@ -3,6 +3,7 @@ import os
 import shutil
 import psycopg2
 import sys
+import random
 import loadData as loadHelper #import all load statements
 
 DB_NAME = 'project_412'
@@ -133,6 +134,11 @@ def getShelters(shelterID):
     return cursor.fetchall()
 
 #################################################################################################################################################
+
+def getShelterEmployee(shelterID):
+    cursor.execute("SELECT name FROM employees WHERE shelterid=" + str(shelterID) + ";")
+    allResults = cursor.fetchall()
+    return allResults[random.randint(0,len(allResults) -1)] #return random person from results
 
 
 #################################################################################################################################################

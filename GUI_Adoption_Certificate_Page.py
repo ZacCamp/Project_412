@@ -22,6 +22,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.userInfo = kwargs['UserInfo']
         self.dogInfo = kwargs['dogSelection']
         self.shelterInfo = kwargs['shelterInfo']
+        self.shelterAdmin = kwargs['shelterAdmin']
 
         tk.Frame.__init__(self, master)
 
@@ -128,7 +129,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.adoptionAdminLabel.configure(relief="flat")
         self.adoptionAdminLabel.configure(anchor='w')
         self.adoptionAdminLabel.configure(justify='left')
-        self.adoptionAdminLabel.configure(text='''[Info Here]''')
+        self.adoptionAdminLabel.configure(text=self.shelterAdmin[0])
 
         self.dogIDLabel = ttk.Label(master)
         self.dogIDLabel.place(relx=0.483, rely=0.467, height=29, width=296)
