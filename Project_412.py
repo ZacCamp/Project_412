@@ -4,7 +4,8 @@ import shutil
 import psycopg2
 import sys
 import random
-import loadData as loadHelper #import all load statements
+import loadData as loadHelper  #import all load statements
+from datetime import datetime
 
 DB_NAME = 'project_412'
 
@@ -66,6 +67,9 @@ def main():
 
     startUpDB(DB_NAME)
 
+if __name__ == '__main__':
+    main()
+
 #################################################################################################################################################
 
 connectionSupport = getOpenConnection(dbname=DB_NAME)
@@ -77,13 +81,22 @@ def insertPerson(name, ID):
     ID = int(ID)
 
     cursor.execute("INSERT INTO person VALUES (%s, %s)", (name, ID))
+    connectionSupport.commit()
 
 def insertAdopter(name, ID, zip, phone):
     ID = int(ID)
     zip = int(zip)
 
     cursor.execute("INSERT INTO adopters VALUES (%s, %s, %s, %s)", (name, ID, zip, phone))
-    
+    connectionSupport.commit()
+
+def insertAdoption(adopterID, employeeID, dogID):
+    time = datetime.now()
+    contractID = getLargestContractID() + 1
+    cursor.execute('INSERT INTO pet_adoption VALUES (%s, %s, %s, %s , %s)', (adopterID, employeeID, dogID, time.strftime("%d-%m-%Y") , contractID))
+    connectionSupport.commit()
+    print("REGISTERED ADOPTION")
+
 #################################################################################################################################################
 
 def getDogs(breed, intakeType, sex, maintenanceLevel, temperament, age):
@@ -136,12 +149,24 @@ def getShelters(shelterID):
 #################################################################################################################################################
 
 def getShelterEmployee(shelterID):
-    cursor.execute("SELECT name FROM employees WHERE shelterid=" + str(shelterID) + ";")
+    cursor.execute("SELECT * FROM employees WHERE shelterid=" + str(shelterID) + ";")
     allResults = cursor.fetchall()
     return allResults[random.randint(0,len(allResults) -1)] #return random person from results
 
 
 #################################################################################################################################################
+def getLargestPersonID():
+    cursor.execute("SELECT MAX(personID) FROM person ;") #get largest personID so we can add 1 and make new unique personID
+    max = cursor.fetchone()
+    return int(max[0])
+
+def getLargestContractID():
+    cursor.execute('SELECT MAX(contractID) FROM pet_adoption ;')
+    max = cursor.fetchone()
+    if max[0] is None:
+        return 0
+    else:
+        return max[0]
 
 
 #################################################################################################################################################

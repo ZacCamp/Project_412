@@ -152,7 +152,12 @@ class Landing_Page(tk.Frame):
         self.TSeparator1.place(relx=0.145, rely=0.288, relwidth=0.682)
 
     def changePage(self):
-        userInfo = {'name': self.nameEntry.get(), 'phone': self.phoneEntry.get(), 'zip':self.zipEntry.get()}
+        userInfo = {'name': self.nameEntry.get(), 'phone': self.phoneEntry.get(), 'zip': self.zipEntry.get()}
+        personID = Project_412.getLargestPersonID() + 1
+        userInfo['personID'] = personID
+        Project_412.insertPerson(userInfo['name'], personID)
+        Project_412.insertAdopter(userInfo['name'], personID, userInfo['zip'], userInfo['phone'])
+        print('INSERTED ', userInfo['name'],' with personID ',personID )
         self.master.change(Application_Page, USERINFO =userInfo)
         
 

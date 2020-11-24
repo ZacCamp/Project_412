@@ -12,8 +12,6 @@ except ImportError:
 
 from GUI_Landing_Page import Landing_Page
 
-
-
 class Mainframe(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
