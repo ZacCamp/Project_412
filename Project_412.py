@@ -192,5 +192,13 @@ def getDogWithID(dogID):
 
 #################################################################################################################################################
 
+def deletePetAdoption(dogID, contractID):
+    cursor.execute('DELETE FROM pet_adoption WHERE contractID=' + str(contractID) + ' ;')
+    cursor.execute('UPDATE dogs SET adoptionStatus=false WHERE  dogID=' + str(dogID) + ' ;')
+    connectionSupport.commit()
+    print('Successfully deleted contract and updated dog adoption status')
+
+    
+
 # if __name__ == '__main__':
 #     main()

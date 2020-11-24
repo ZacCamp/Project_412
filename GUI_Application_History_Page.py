@@ -21,6 +21,7 @@ class Application_History_Page(tk.Frame):
         
         self.contractList = kwargs['contractList']
         self.dogList = kwargs['dogList']
+        self.userInfo = kwargs['userInfo']
 
         tk.Frame.__init__(self, master)
 
@@ -86,10 +87,10 @@ class Application_History_Page(tk.Frame):
         self.applicationListBox.configure(selectbackground="blue")
         self.applicationListBox.configure(selectforeground="white")
         
-        formattedList = zip(self.dogList,self.contractList) #concatenate lists
-        formattedList = list(formattedList)
-        for item in formattedList:
-            row = [item[0][0], '-', item[0][1], '-', item[0][2], '-', item[0][3], '-', item[0][4], '-', item[0][5], '-', item[1][4]]  #grab needed info for displaying
+        self.formattedList = zip(self.dogList,self.contractList) #concatenate lists
+        self.formattedList = list(self.formattedList)
+        for item in self.formattedList:
+            row = [item[0][0], '-', item[0][1], '-', item[0][2], '-', item[0][3], '-', item[0][4], '-', item[0][5], '-', item[0][8], '-', item[1][4]]  #grab needed info for displaying
             self.applicationListBox.insert(tk.END,row)
 
         self.temperamenLabel = tk.Label(master)
@@ -102,7 +103,7 @@ class Application_History_Page(tk.Frame):
         self.temperamenLabel.configure(foreground="#ffffff")
         self.temperamenLabel.configure(highlightbackground="#d9d9d9")
         self.temperamenLabel.configure(highlightcolor="black")
-        self.temperamenLabel.configure(text='''Breed - Intake type - Sex - Maintenance - Temperament - Age - ContractID''')
+        self.temperamenLabel.configure(text='''Breed - Intake type - Sex - Maintenance - Temperament - Age - DogID -  ContractID''')
 
         self.deleteButton = tk.Button(master)
         self.deleteButton.place(relx=0.25, rely=0.93, anchor = 'center', height=34, width=201)
@@ -133,8 +134,12 @@ class Application_History_Page(tk.Frame):
         self.exitButton.configure(command=self.changePage)
 
     def changePage(self):
-        self.master.change(GUI_Application_Page.Application_Page)
+        self.master.change(GUI_Application_Page.Application_Page, userInfo = self.userInfo)
     
     def deleteEntry(self):
-        petSelected = (self.applicationListBox.get(self.applicationListBox.curselection()))  #get the selected dog from listbox
-        print(petSelected)
+        try:
+            petSelected = (self.applicationListBox.get(self.applicationListBox.curselection()))  #get the selected dog from listbox
+            self.applicationListBox.delete(self.applicationListBox.curselection())
+            Project_412.deletePetAdoption(petSelected[12],petSelected[14])
+        except:
+            print('ERROR occurred while trying to delete')
