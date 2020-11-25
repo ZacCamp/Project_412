@@ -19,7 +19,7 @@ import Project_412
 class Adoption_Certificate_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
         #=================================================================================
-        self.userInfo = kwargs['UserInfo']
+        self.userInfo = kwargs['userInfo']
         self.dogInfo = kwargs['dogSelection']
         self.shelterInfo = kwargs['shelterInfo']
         self.shelterAdmin = kwargs['shelterAdmin']
@@ -118,7 +118,7 @@ class Adoption_Certificate_Page(tk.Frame):
         self.adopterNameLabel.configure(relief="flat")
         self.adopterNameLabel.configure(anchor='w')
         self.adopterNameLabel.configure(justify='left')
-        self.adopterNameLabel.configure(text=self.userInfo['USERINFO']['name']) #SET person name
+        self.adopterNameLabel.configure(text=self.userInfo['name']) #SET person name
 
         self.adoptionAdminLabel = ttk.Label(master)
         self.adoptionAdminLabel.place(relx=0.483, rely=0.4, height=29, width=296)
@@ -231,7 +231,7 @@ class Adoption_Certificate_Page(tk.Frame):
     def changePage(self):
         self.master.change(GUI_Application_Page.Application_Page , userInfo =  self.userInfo)   
     def changePage2(self):
-        history = Project_412.getAdopterHistory(self.userInfo['USERINFO']['personID'])  #get list of pet_adoptions that were done by user
+        history = Project_412.getAdopterHistory(self.userInfo['personID'])  #get list of pet_adoptions that were done by user
         dogsList = []
         for item in history: #loop through all of the adoptions that the user has done
             dogsList.append(Project_412.getDogWithID(item[2]))#get the dog info 

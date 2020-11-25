@@ -18,7 +18,7 @@ import Project_412
 class Dogs_Available_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
 
-        self.userInfo = kwargs['UserInfo']  #store the user information
+        self.userInfo = kwargs['userInfo']  #store the user information
         self.availableDogs = kwargs['Query']  #grab the results from SQL statement
         
         
@@ -77,7 +77,7 @@ class Dogs_Available_Page(tk.Frame):
         self.TSeparator1.place(relx=0.117, rely=0.311, relwidth=0.783)
 
         self.breedLabel = tk.Label(master)
-        self.breedLabel.place(relx=0.117, rely=0.351, anchor = 'center', height=31, width=70)
+        self.breedLabel.place(relx=0.5, rely=0.351, anchor = 'center', height=31, width=700)
         self.breedLabel.configure(activebackground="#f9f9f9")
         self.breedLabel.configure(activeforeground="black")
         self.breedLabel.configure(background="#2291ff")
@@ -86,68 +86,9 @@ class Dogs_Available_Page(tk.Frame):
         self.breedLabel.configure(foreground="#ffffff")
         self.breedLabel.configure(highlightbackground="#d9d9d9")
         self.breedLabel.configure(highlightcolor="black")
-        self.breedLabel.configure(text='''Breed''')
+        self.breedLabel.configure(text='''Breed , Intake type, Sex , Maintenance , Temperament , Age , Adoption Status , Shelter ID , Pet ID ''')
 
-        self.intakeLabel = tk.Label(master)
-        self.intakeLabel.place(relx=0.267, rely=0.351, anchor = 'center', height=31, width=95)
-        self.intakeLabel.configure(activebackground="#f9f9f9")
-        self.intakeLabel.configure(activeforeground="black")
-        self.intakeLabel.configure(background="#2291ff")
-        self.intakeLabel.configure(disabledforeground="#a3a3a3")
-        self.intakeLabel.configure(font="-family {Tw Cen MT Condensed Extra Bold} -size 7 -weight normal -slant roman -underline 0 -overstrike 0")
-        self.intakeLabel.configure(foreground="#ffffff")
-        self.intakeLabel.configure(highlightbackground="#d9d9d9")
-        self.intakeLabel.configure(highlightcolor="black")
-        self.intakeLabel.configure(text='''Intake type''')
-
-        self.sexLabel = tk.Label(master)
-        self.sexLabel.place(relx=0.417, rely=0.351, anchor = 'center', height=31, width=95)
-        self.sexLabel.configure(activebackground="#f9f9f9")
-        self.sexLabel.configure(activeforeground="black")
-        self.sexLabel.configure(background="#2291ff")
-        self.sexLabel.configure(disabledforeground="#a3a3a3")
-        self.sexLabel.configure(font="-family {Tw Cen MT Condensed Extra Bold} -size 7 -weight normal -slant roman -underline 0 -overstrike 0")
-        self.sexLabel.configure(foreground="#ffffff")
-        self.sexLabel.configure(highlightbackground="#d9d9d9")
-        self.sexLabel.configure(highlightcolor="black")
-        self.sexLabel.configure(text='''Sex''')
-
-        self.maintenanceLabel = tk.Label(master)
-        self.maintenanceLabel.place(relx=0.567, rely=0.351, anchor = 'center', height=31, width=95)
-        self.maintenanceLabel.configure(activebackground="#f9f9f9")
-        self.maintenanceLabel.configure(activeforeground="black")
-        self.maintenanceLabel.configure(background="#2291ff")
-        self.maintenanceLabel.configure(disabledforeground="#a3a3a3")
-        self.maintenanceLabel.configure(font="-family {Tw Cen MT Condensed Extra Bold} -size 7 -weight normal -slant roman -underline 0 -overstrike 0")
-        self.maintenanceLabel.configure(foreground="#ffffff")
-        self.maintenanceLabel.configure(highlightbackground="#d9d9d9")
-        self.maintenanceLabel.configure(highlightcolor="black")
-        self.maintenanceLabel.configure(text='''Maintenance''')
-
-        self.temperamenLabel = tk.Label(master)
-        self.temperamenLabel.place(relx=0.717, rely=0.351, anchor = 'center', height=31, width=95)
-        self.temperamenLabel.configure(activebackground="#f9f9f9")
-        self.temperamenLabel.configure(activeforeground="black")
-        self.temperamenLabel.configure(background="#2291ff")
-        self.temperamenLabel.configure(disabledforeground="#a3a3a3")
-        self.temperamenLabel.configure(font="-family {Tw Cen MT Condensed Extra Bold} -size 7 -weight normal -slant roman -underline 0 -overstrike 0")
-        self.temperamenLabel.configure(foreground="#ffffff")
-        self.temperamenLabel.configure(highlightbackground="#d9d9d9")
-        self.temperamenLabel.configure(highlightcolor="black")
-        self.temperamenLabel.configure(text='''Temperament''')
-        
-        self.ageLabel = tk.Label(master)
-        self.ageLabel.place(relx=0.867, rely=0.351, anchor = 'center', height=31, width=95)
-        self.ageLabel.configure(activebackground="#f9f9f9")
-        self.ageLabel.configure(activeforeground="black")
-        self.ageLabel.configure(background="#2291ff")
-        self.ageLabel.configure(disabledforeground="#a3a3a3")
-        self.ageLabel.configure(font="-family {Tw Cen MT Condensed Extra Bold} -size 7 -weight normal -slant roman -underline 0 -overstrike 0")
-        self.ageLabel.configure(foreground="#ffffff")
-        self.ageLabel.configure(highlightbackground="#d9d9d9")
-        self.ageLabel.configure(highlightcolor="black")
-        self.ageLabel.configure(text='''Age''')
-
+       
         self.dogListBox = tk.Listbox(master)
         self.dogListBox.place(relx=0.067, rely=0.378, relheight=0.449
                 , relwidth=0.89)
@@ -182,5 +123,5 @@ class Dogs_Available_Page(tk.Frame):
         petSelected = (self.dogListBox.get(self.dogListBox.curselection()))         #get the selected dog from listbox
         ShelterInfo = Project_412.getShelters(petSelected[7])                       #get shelter info
         ShelterAdmin = Project_412.getShelterEmployee(petSelected[7])               #get admin info
-        Project_412.insertAdoption(self.userInfo['USERINFO']['personID'],ShelterAdmin[1],petSelected[8] )   #create the new entry in the adoptions table
-        self.master.change(Adoption_Certificate_Page, UserInfo= self.userInfo, dogSelection = petSelected, shelterInfo = ShelterInfo , shelterAdmin = ShelterAdmin)
+        Project_412.insertAdoption(self.userInfo['personID'],ShelterAdmin[1],petSelected[8] )   #create the new entry in the adoptions table
+        self.master.change(Adoption_Certificate_Page, userInfo= self.userInfo, dogSelection = petSelected, shelterInfo = ShelterInfo , shelterAdmin = ShelterAdmin)

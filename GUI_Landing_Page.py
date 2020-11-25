@@ -158,7 +158,7 @@ class Landing_Page(tk.Frame):
         Project_412.insertPerson(userInfo['name'], personID)
         Project_412.insertAdopter(userInfo['name'], personID, userInfo['zip'], userInfo['phone'])
         print('INSERTED ', userInfo['name'],' with personID ',personID )
-        self.master.change(Application_Page, USERINFO =userInfo)
+        self.master.change(Application_Page, userInfo =userInfo)
         
 
 

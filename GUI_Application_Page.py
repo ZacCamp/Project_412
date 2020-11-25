@@ -20,7 +20,7 @@ class Application_Page(tk.Frame):
 
         tk.Frame.__init__(self, master)
 
-        self.USERINFO = kwargs # store user info from landing page
+        self.userInfo = kwargs['userInfo'] # store user info from landing page
 
         self.comboboxSex = tk.StringVar()
         self.comboboxBreed = tk.StringVar()
@@ -213,6 +213,6 @@ class Application_Page(tk.Frame):
                                     self.maintenenceCBox.get(), self.temperamentCBox.get(), self.ageCBox.get())
        
         #print(self.breedCBox.get())
-        self.master.change(Dogs_Available_Page, Query = result , UserInfo = self.USERINFO )
+        self.master.change(Dogs_Available_Page, Query = result , userInfo = self.userInfo )
 
     
