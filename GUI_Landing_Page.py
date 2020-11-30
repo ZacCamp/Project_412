@@ -1,6 +1,6 @@
 
 import sys
-import Project_412
+import SQL_Support as Project_412
 
 try:
     import Tkinter as tk

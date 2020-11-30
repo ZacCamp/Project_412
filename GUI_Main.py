@@ -10,7 +10,10 @@ except ImportError:
     import tkinter.ttk as ttk
     py3 = True
 
+import time
+
 from GUI_Landing_Page import Landing_Page
+import Project_412
 
 class Mainframe(tk.Tk):
     def __init__(self):
@@ -27,5 +30,7 @@ class Mainframe(tk.Tk):
 
 
 if __name__ == "__main__":
+    Project_412.main()
+
     app = Mainframe()
     app.mainloop()

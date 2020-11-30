@@ -14,7 +14,7 @@ except ImportError:
 
 import GUI_Application_Page
 from GUI_Application_History_Page import Application_History_Page
-import Project_412
+import SQL_Support as Project_412
 
 class Adoption_Certificate_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):

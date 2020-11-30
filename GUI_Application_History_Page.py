@@ -13,7 +13,7 @@ except ImportError:
     py3 = True
 
 import GUI_Application_Page
-import Project_412
+import SQL_Support as Project_412
 
 class Application_History_Page(tk.Frame):
   

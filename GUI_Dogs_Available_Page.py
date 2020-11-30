@@ -13,7 +13,7 @@ except ImportError:
     py3 = True
 
 from GUI_Adoption_Certificate_Page import Adoption_Certificate_Page
-import Project_412
+import SQL_Support as Project_412
 
 class Dogs_Available_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):

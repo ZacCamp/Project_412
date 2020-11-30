@@ -13,7 +13,7 @@ except ImportError:
     py3 = True
 
 from GUI_Dogs_Available_Page import Dogs_Available_Page
-import Project_412
+import SQL_Support as Project_412
 
 class Application_Page(tk.Frame):
     def __init__(self, master=None, **kwargs):
