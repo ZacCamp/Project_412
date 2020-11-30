@@ -6,6 +6,7 @@ import sys
 import random
 import loadData as loadHelper  #import all load statements
 from datetime import datetime
+import SQL_Support
 
 DB_NAME = 'project_412'
 
@@ -69,8 +70,6 @@ def startUpDB(dbname):
 def main():
 
     startUpDB(DB_NAME)
+    SQL_Support.initConnection()
 
-    
 
-# if __name__ == '__main__':
-#     main()

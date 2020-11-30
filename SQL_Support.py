@@ -14,15 +14,23 @@ def getOpenConnection(user='postgres', password='1234', dbname='Project_412'):
     return psycopg2.connect("dbname='" + dbname + "' user='" + user + "' host='localhost' password='" + password + "'")
 
 #################################################################################################################################################
+connectionSupport = None
+cursor3 = None
 
+def initConnection():
+    try:
+        global connectionSupport 
+        connectionSupport = getOpenConnection(dbname=DB_NAME)
+        global cursor3 
+        cursor3 = connectionSupport.cursor()
+    except Exception:
+        print("Error: Database not created yet.")
+        # main()
 
 
 #################################################################################################################################################
 
 def insertPerson(name, ID):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     ID = int(ID)
 
     cursor3.execute("INSERT INTO person VALUES (%s, %s)", (name, ID))
@@ -32,10 +40,6 @@ def insertPerson(name, ID):
 
 
 def insertAdopter(name, ID, zip, phone):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
-
     ID = int(ID)
     zip = int(zip)
 
@@ -46,9 +50,6 @@ def insertAdopter(name, ID, zip, phone):
 
 
 def insertAdoption(adopterID, employeeID, dogID):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     time = datetime.now()
     contractID = getLargestContractID() + 1
     cursor3.execute('INSERT INTO pet_adoption VALUES (%s, %s, %s, %s , %s)', (adopterID, employeeID, dogID, time.strftime("%m-%d-%Y"), contractID)) #create new pet adoption
@@ -59,8 +60,6 @@ def insertAdoption(adopterID, employeeID, dogID):
 #################################################################################################################################################
 
 def getDogs(breed, intakeType, sex, maintenanceLevel, temperament, age):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
     
     any = '[any]'
 
@@ -103,9 +102,6 @@ def getDogs(breed, intakeType, sex, maintenanceLevel, temperament, age):
 #################################################################################################################################################
 
 def getShelters(shelterID):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     cursor3.execute("SELECT * FROM shelters WHERE shelterid=" + str(shelterID) + ' ;')
     
     return cursor3.fetchall()
@@ -113,9 +109,6 @@ def getShelters(shelterID):
 #################################################################################################################################################
 
 def getShelterEmployee(shelterID):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     cursor3.execute("SELECT * FROM employees WHERE shelterid=" + str(shelterID) + ";")
     allResults = cursor3.fetchall()
     return allResults[random.randint(0,len(allResults) -1)] #return random person from results
@@ -124,9 +117,6 @@ def getShelterEmployee(shelterID):
 #################################################################################################################################################
 
 def getLargestPersonID():
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     cursor3.execute("SELECT MAX(personID) FROM person ;") #get largest personID so we can add 1 and make new unique personID
     max = cursor3.fetchone()
     return int(max[0])
@@ -134,9 +124,6 @@ def getLargestPersonID():
 #################################################################################################################################################
 
 def getLargestContractID():
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     cursor3.execute('SELECT MAX(contractID) FROM pet_adoption ;')
     max = cursor3.fetchone() #get largest value for contractID currently set
     if max[0] is None:
@@ -147,27 +134,18 @@ def getLargestContractID():
 #################################################################################################################################################
 
 def getAdopterHistory(personID):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     cursor3.execute('SELECT * FROM pet_adoption WHERE adopterID=' + str(personID) + ' ;')
     return cursor3.fetchall()
 
 #################################################################################################################################################
 
 def getDogWithID(dogID):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     cursor3.execute('SELECT * FROM dogs WHERE dogID=' + str(dogID) + ' ;')
     return cursor3.fetchone()
 
 #################################################################################################################################################
 
 def deletePetAdoption(dogID, contractID):
-    connectionSupport = getOpenConnection(dbname=DB_NAME)
-    cursor3 = connectionSupport.cursor()
-
     cursor3.execute('DELETE FROM pet_adoption WHERE contractID=' + str(contractID) + ' ;')
     cursor3.execute('UPDATE dogs SET adoptionStatus=false WHERE  dogID=' + str(dogID) + ' ;')
     connectionSupport.commit()
