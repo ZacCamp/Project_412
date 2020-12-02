@@ -1,0 +1,1453 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.5 (Ubuntu 12.5-0ubuntu0.20.04.1)
+-- Dumped by pg_dump version 12.5 (Ubuntu 12.5-0ubuntu0.20.04.1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: adopters; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.adopters (
+    name text,
+    personid integer NOT NULL,
+    zipcode integer,
+    phonenumber text
+);
+
+
+ALTER TABLE public.adopters OWNER TO postgres;
+
+--
+-- Name: applies_for; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.applies_for (
+    desiredbreed text,
+    desiredsex text,
+    desiredtemperament text,
+    maxmaintenancelevel text,
+    desiredintaketype text,
+    maxage integer,
+    personid text
+);
+
+
+ALTER TABLE public.applies_for OWNER TO postgres;
+
+--
+-- Name: dogs; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.dogs (
+    breed text,
+    intaketype text,
+    sex text,
+    maintenancelevel text,
+    temperament text,
+    age integer,
+    adoptionstatus text,
+    shelterid integer,
+    dogid integer NOT NULL
+);
+
+
+ALTER TABLE public.dogs OWNER TO postgres;
+
+--
+-- Name: employees; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.employees (
+    name text,
+    personid integer NOT NULL,
+    shelterid integer
+);
+
+
+ALTER TABLE public.employees OWNER TO postgres;
+
+--
+-- Name: person; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.person (
+    name text,
+    personid integer NOT NULL
+);
+
+
+ALTER TABLE public.person OWNER TO postgres;
+
+--
+-- Name: pet_adoption; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.pet_adoption (
+    adopterid integer,
+    employeeid integer,
+    dogid integer,
+    date text,
+    contractid integer NOT NULL
+);
+
+
+ALTER TABLE public.pet_adoption OWNER TO postgres;
+
+--
+-- Name: shelters; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.shelters (
+    name text,
+    phonenumber text,
+    address text,
+    shelterid integer NOT NULL
+);
+
+
+ALTER TABLE public.shelters OWNER TO postgres;
+
+--
+-- Data for Name: adopters; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.adopters (name, personid, zipcode, phonenumber) FROM stdin;
+Beitris Pereira	0	85032	303-561-1772
+Dacia Billanie	3	85064	127-155-3630
+Samantha Briton	5	85055	530-686-3980
+Waldon Klemencic	6	85023	491-266-9936
+Joel Lowbridge	10	85003	968-389-8023
+Hana Schechter	15	85067	928-854-3130
+Margit Abbett	18	85055	242-811-0549
+Berny Cullerne	19	85048	403-501-3816
+Feodora Kee	20	85002	893-238-0755
+Symon Le Pine	21	85002	567-566-1601
+Pooh Tooke	24	85023	923-119-4415
+Regen Acton	25	85067	671-789-2165
+Lennie Klimaszewski	27	85023	242-250-0794
+Pete Finlater	28	85023	167-656-2415
+Kamilah Lingwood	29	85032	828-934-5952
+Raddie Stokey	30	85055	982-198-5617
+Regine Arrowsmith	31	85003	559-588-4022
+Leonora Proudley	32	85067	902-560-1980
+Nollie Lembke	33	85048	734-666-0238
+Lay Kierans	34	85032	994-942-8710
+Linette Waylen	35	85026	153-500-7399
+Ax Andrysek	39	85002	952-789-6137
+Kimberlyn Pods	41	85002	566-907-9841
+Ivy Pattullo	42	85032	996-278-0828
+Falito O'Scully	45	85055	828-891-0950
+Galven Watkin	46	85003	936-799-5177
+Cordie Huson	47	85067	198-283-0427
+Onofredo Guittet	48	85026	653-931-4874
+Barbee Brunger	49	85048	308-992-9310
+molly	50	85281	4806945782
+m	51	85281	6231231234
+Molly	52	85281	480-694-5782
+afdfdfda	53	12345	1234567890
+Molly	54	85281	1234567890
+\.
+
+
+--
+-- Data for Name: applies_for; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.applies_for (desiredbreed, desiredsex, desiredtemperament, maxmaintenancelevel, desiredintaketype, maxage, personid) FROM stdin;
+bullmastiff	male	passive	high	stray	11	41
+collie	male	passive	low	surrendered	3	24
+Shetland sheepdog	male	passive	medium	surrendered	3	46
+Clumber spaniel	male	neutral	high	stray	7	10
+Newfoundland	female	assertive	high	stray	4	45
+borzoi	female	passive	medium	surrendered	14	30
+Samoyed	male	assertive	low	surrendered	1	25
+Australian shepherd	female	neutral	low	surrendered	10	27
+curly-coated retriever	female	neutral	low	surrendered	5	42
+German shorthaired pointer	male	assertive	low	surrendered	3	15
+Tibetan terrier	male	neutral	medium	stray	12	0
+Manchester terrier	male	assertive	low	surrendered	2	18
+bichon frise	female	neutral	low	stray	7	33
+Australian shepherd	male	assertive	medium	surrendered	7	29
+otterhound	female	assertive	high	stray	7	0
+whippet	female	neutral	high	stray	13	42
+Great Dane	male	assertive	high	stray	7	21
+Bedlington terrier	male	passive	low	surrendered	7	46
+komondor	female	passive	high	surrendered	2	35
+whippet	female	passive	low	surrendered	4	30
+Siberian husky	male	assertive	medium	surrendered	8	3
+Scottish deerhound	female	passive	medium	stray	10	46
+English cocker spaniel	female	neutral	high	stray	0	29
+English springer spaniel	male	passive	low	surrendered	7	42
+chow chow	female	assertive	high	stray	5	49
+Manchester terrier	male	assertive	high	surrendered	8	18
+Great Dane	female	assertive	high	surrendered	3	10
+curly-coated retriever	female	neutral	high	surrendered	13	39
+Clumber spaniel	male	passive	high	stray	14	19
+Yorkshire terrier	male	assertive	low	stray	8	5
+Norwich terrier	male	passive	medium	surrendered	0	34
+foxhound	female	assertive	low	surrendered	14	6
+golden retriever	male	neutral	medium	surrendered	9	15
+bearded collie	male	passive	medium	surrendered	4	34
+Labrador retriever	male	assertive	high	stray	5	19
+Alaskan Malamute	female	passive	low	surrendered	0	45
+Brittany	female	assertive	medium	stray	14	49
+kuvasz	female	neutral	medium	stray	6	18
+bulldog	male	passive	medium	surrendered	3	25
+Newfoundland	male	passive	medium	stray	2	49
+basset hound	male	passive	high	stray	7	33
+Chinese crested	male	neutral	high	surrendered	9	39
+Maltese	male	passive	medium	surrendered	2	5
+basset hound	male	neutral	high	stray	12	49
+Skye terrier	male	neutral	medium	stray	5	39
+vizsla	male	neutral	low	surrendered	10	20
+boxer	male	passive	low	stray	10	29
+mastiff	male	neutral	low	surrendered	4	48
+Mexican hairless	female	assertive	medium	stray	7	47
+schnauzer	male	neutral	high	stray	0	39
+fox terrier	male	assertive	low	surrendered	6	18
+poodle	female	assertive	low	stray	12	39
+Scottish deerhound	female	passive	medium	surrendered	14	46
+black and tan coonhound	male	neutral	low	surrendered	0	6
+keeshond	male	passive	low	surrendered	12	29
+Australian cattle dog	female	passive	low	stray	1	6
+West Highland white terrier	female	neutral	high	stray	12	18
+Tibetan terrier	male	passive	low	stray	10	5
+Doberman pinscher	female	assertive	medium	surrendered	9	39
+Airedale terrier	male	assertive	high	stray	6	0
+Newfoundland	female	assertive	high	stray	6	39
+French bulldog	male	passive	medium	stray	0	29
+kuvasz	male	assertive	low	stray	6	28
+Chinese shar-pei	female	neutral	high	surrendered	12	30
+Chihuahua	male	neutral	high	stray	12	46
+Airedale terrier	male	passive	high	stray	5	27
+puli	male	neutral	low	stray	4	32
+Chihuahua	female	passive	medium	stray	5	42
+Kerry blue terrier	male	assertive	low	surrendered	6	27
+Australian terrier	female	neutral	medium	stray	8	39
+Staffordshire bull terrier	female	passive	high	surrendered	2	34
+Finnish spitz	male	neutral	low	stray	7	47
+chow chow	male	neutral	high	surrendered	14	48
+Brittany	male	neutral	high	surrendered	9	29
+Airedale terrier	male	neutral	low	surrendered	14	49
+kuvasz	male	passive	high	surrendered	2	3
+keeshond	female	neutral	medium	surrendered	5	34
+whippet	female	assertive	high	stray	13	47
+whippet	male	assertive	high	stray	2	30
+border terrier	female	assertive	high	surrendered	4	27
+bouvier des Flandres	male	assertive	medium	stray	0	15
+English toy spaniel	female	passive	low	stray	12	0
+collie	male	neutral	low	surrendered	4	19
+puli	female	neutral	medium	stray	10	42
+Samoyed	female	neutral	low	stray	1	21
+American Staffordshire terrier	female	passive	medium	stray	7	20
+Scottish terrier	female	neutral	low	stray	4	41
+Alaskan Malamute	male	neutral	medium	surrendered	2	45
+Samoyed	female	assertive	medium	surrendered	1	45
+schnauzer	male	neutral	low	surrendered	10	3
+Australian terrier	male	passive	medium	stray	14	46
+chow chow	female	assertive	low	surrendered	2	47
+Bernese mountain dog	male	neutral	low	stray	9	24
+Jack Russell terrier	female	neutral	medium	surrendered	12	0
+Labrador retriever	female	assertive	high	surrendered	1	45
+American water spaniel	male	neutral	low	surrendered	1	25
+beagle	female	assertive	medium	stray	2	3
+German shorthaired pointer	female	neutral	high	surrendered	5	45
+soft-coated wheaten terrier	female	passive	low	surrendered	1	32
+Lakeland terrier	male	passive	high	stray	2	18
+\.
+
+
+--
+-- Data for Name: dogs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.dogs (breed, intaketype, sex, maintenancelevel, temperament, age, adoptionstatus, shelterid, dogid) FROM stdin;
+Newfoundland	stray	male	medium	assertive	7	false	2	0
+Manchester terrier	stray	male	high	assertive	1	false	3	1
+Australian terrier	surrendered	male	high	passive	13	false	0	2
+French bulldog	stray	male	high	assertive	5	false	1	3
+pug	stray	female	low	passive	11	false	3	4
+schnauzer	stray	female	low	neutral	7	false	1	5
+boxer	surrendered	male	medium	passive	4	false	1	6
+bulldog	surrendered	male	low	assertive	8	false	4	7
+bulldog	surrendered	male	high	neutral	11	false	0	8
+keeshond	surrendered	female	low	assertive	13	false	0	9
+flat-coated retriever	stray	male	low	neutral	7	false	0	11
+Alaskan Malamute	surrendered	female	medium	neutral	10	false	0	12
+English springer spaniel	stray	female	medium	passive	6	false	0	13
+Samoyed	stray	female	medium	neutral	9	false	0	14
+greyhound	stray	male	high	passive	13	false	4	15
+Mexican hairless	surrendered	male	high	assertive	13	false	0	16
+keeshond	surrendered	male	low	assertive	11	false	0	17
+curly-coated retriever	surrendered	male	high	neutral	11	false	2	18
+Weimaraner	stray	male	low	passive	11	false	0	19
+komondor	surrendered	male	medium	neutral	1	false	4	20
+Gordon setter	stray	male	low	neutral	12	false	1	21
+Rottweiler	stray	male	high	assertive	13	false	0	22
+Finnish spitz	surrendered	female	low	assertive	11	false	4	23
+Scottish terrier	stray	male	high	neutral	2	false	0	24
+Airedale terrier	surrendered	female	high	assertive	8	false	3	25
+border collie	stray	female	high	neutral	7	false	3	26
+Maltese	stray	male	medium	assertive	2	false	3	27
+border collie	surrendered	female	low	assertive	12	false	3	28
+Chinese shar-pei	surrendered	female	medium	neutral	8	false	0	29
+Chesapeake Bay retriever	stray	female	high	neutral	9	false	3	31
+Sussex spaniel	surrendered	male	medium	passive	4	false	0	33
+Bernese mountain dog	stray	male	high	assertive	1	false	2	34
+golden retriever	surrendered	male	high	passive	4	false	4	35
+Great Dane	stray	female	medium	neutral	12	false	4	36
+kuvasz	stray	female	medium	passive	2	false	0	37
+bloodhound	surrendered	male	low	passive	10	false	1	38
+Japanese spaniel	surrendered	female	low	passive	9	false	2	39
+Australian shepherd	surrendered	male	low	neutral	9	false	3	40
+Norwich terrier	stray	female	low	neutral	7	false	1	41
+Jack Russell terrier	surrendered	male	high	assertive	7	false	2	42
+boxer	surrendered	male	low	assertive	11	false	1	43
+English springer spaniel	stray	female	high	neutral	2	false	2	44
+Pomeranian	stray	female	low	neutral	4	false	4	45
+chow chow	stray	male	high	neutral	5	false	1	46
+Lhasa apso	stray	female	high	assertive	3	false	4	48
+bichon frise	stray	male	high	neutral	3	false	2	49
+affenpinscher	surrendered	male	low	neutral	11	false	0	50
+schipperke	stray	female	low	assertive	4	false	2	51
+keeshond	stray	male	high	passive	11	false	1	52
+Irish wolfhound	surrendered	female	high	assertive	12	false	0	53
+Norwich terrier	surrendered	female	low	assertive	1	false	0	54
+bichon frise	stray	male	low	passive	12	false	0	55
+Maltese	stray	female	low	assertive	1	false	3	56
+schnauzer	surrendered	female	high	passive	6	false	1	57
+bull terrier	stray	female	high	passive	1	false	1	58
+Saint Bernard	stray	male	high	passive	13	false	4	59
+English cocker spaniel	stray	male	low	neutral	5	false	3	60
+Weimaraner	stray	female	medium	neutral	10	false	2	61
+cocker spaniel	surrendered	male	high	neutral	6	false	1	62
+Irish setter	surrendered	female	low	neutral	13	false	4	63
+Pomeranian	stray	female	low	passive	13	false	2	64
+dachshund	surrendered	male	medium	passive	9	false	3	65
+Mexican hairless	stray	male	medium	neutral	3	false	0	66
+beagle	stray	male	low	assertive	5	false	2	67
+Lakeland terrier	stray	male	high	passive	5	false	2	68
+spitz	stray	male	low	passive	9	false	1	69
+Lakeland terrier	surrendered	male	low	assertive	12	false	4	70
+schipperke	surrendered	male	high	assertive	1	false	4	71
+saluki	surrendered	male	medium	neutral	10	false	3	72
+Bedlington terrier	surrendered	male	medium	assertive	8	false	4	73
+borzoi	stray	male	low	assertive	7	false	4	74
+Chesapeake Bay retriever	stray	female	medium	neutral	9	false	1	75
+bull terrier	stray	male	medium	passive	10	false	0	76
+Clumber spaniel	surrendered	female	medium	passive	11	false	3	77
+pug	surrendered	male	low	assertive	1	false	2	78
+komondor	surrendered	female	low	assertive	7	false	2	79
+basenji	surrendered	female	high	assertive	5	false	4	80
+dachshund	surrendered	female	low	neutral	3	false	1	81
+bull terrier	surrendered	male	high	neutral	13	false	0	82
+dachshund	surrendered	female	low	passive	7	false	3	83
+Skye terrier	surrendered	female	medium	passive	7	false	2	84
+Doberman pinscher	stray	female	medium	passive	10	false	3	85
+pointer	stray	female	medium	passive	2	false	1	86
+soft-coated wheaten terrier	stray	male	low	passive	3	true	2	47
+Dalmatian	surrendered	female	high	assertive	8	true	4	30
+Chihuahua	stray	female	medium	neutral	3	true	4	32
+basenji	stray	male	low	passive	6	false	0	87
+dachshund	stray	male	high	neutral	3	false	4	88
+Tibetan terrier	surrendered	male	low	neutral	7	false	2	89
+boxer	stray	female	medium	assertive	4	false	1	90
+Shetland sheepdog	surrendered	male	medium	assertive	2	false	4	91
+Yorkshire terrier	surrendered	male	high	assertive	2	false	0	92
+Scottish terrier	stray	male	low	passive	5	false	0	93
+bearded collie	stray	male	medium	assertive	12	false	3	94
+Australian cattle dog	stray	male	low	passive	11	false	2	95
+West Highland white terrier	surrendered	male	medium	passive	7	false	4	96
+Australian cattle dog	stray	female	medium	assertive	4	false	0	97
+foxhound	surrendered	female	high	passive	12	false	4	98
+English cocker spaniel	stray	female	high	neutral	3	false	3	99
+greyhound	stray	female	medium	passive	1	false	4	100
+Welsh terrier	stray	male	low	passive	2	false	0	101
+English toy spaniel	surrendered	male	high	assertive	1	false	1	102
+Doberman pinscher	stray	male	high	passive	10	false	3	103
+Alaskan Malamute	surrendered	female	medium	passive	13	false	1	104
+Lakeland terrier	surrendered	female	low	neutral	12	false	3	105
+Australian terrier	surrendered	female	high	neutral	10	false	2	106
+foxhound	stray	female	high	neutral	7	false	0	107
+Australian cattle dog	surrendered	male	medium	passive	4	false	0	108
+borzoi	stray	female	high	neutral	9	false	2	109
+dachshund	surrendered	male	high	passive	5	false	2	110
+pointer	stray	female	low	assertive	2	false	3	111
+border terrier	stray	male	low	neutral	3	false	1	112
+puli	surrendered	female	high	assertive	13	false	2	113
+Gordon setter	stray	female	medium	neutral	10	false	3	114
+Finnish spitz	stray	male	high	assertive	4	false	0	115
+American water spaniel	surrendered	male	medium	neutral	2	false	4	116
+Australian cattle dog	stray	male	medium	passive	7	false	4	117
+Kerry blue terrier	stray	female	medium	neutral	2	false	4	118
+cocker spaniel	stray	female	low	passive	8	false	1	119
+Manchester terrier	stray	male	medium	assertive	12	false	4	120
+kuvasz	stray	female	medium	passive	3	false	4	121
+French bulldog	surrendered	female	high	neutral	7	false	0	122
+dachshund	stray	female	low	passive	2	false	0	123
+Mexican hairless	surrendered	male	low	neutral	7	false	4	124
+spitz	stray	female	high	neutral	9	false	4	125
+Great Dane	surrendered	male	high	neutral	2	false	2	126
+spitz	stray	female	medium	neutral	6	false	3	127
+bichon frise	stray	male	high	passive	2	false	3	128
+fox terrier	surrendered	male	high	neutral	11	false	3	129
+otterhound	stray	male	medium	assertive	12	false	3	130
+English cocker spaniel	stray	female	high	neutral	4	false	0	131
+English springer spaniel	surrendered	male	high	neutral	12	false	0	132
+spitz	surrendered	male	low	passive	12	false	2	133
+papillon	stray	female	high	assertive	5	false	1	134
+Newfoundland	surrendered	male	low	neutral	4	false	3	135
+Norwegian elkhound	surrendered	male	medium	assertive	10	false	4	136
+bullmastiff	stray	male	high	passive	6	false	0	137
+komondor	stray	female	high	assertive	3	false	4	138
+affenpinscher	surrendered	female	high	passive	11	false	2	139
+Samoyed	surrendered	female	high	neutral	12	false	1	140
+black and tan coonhound	stray	female	high	neutral	12	false	4	141
+spitz	surrendered	male	low	assertive	10	false	2	142
+soft-coated wheaten terrier	stray	male	low	neutral	1	false	2	143
+pointer	surrendered	male	high	assertive	7	false	1	144
+Yorkshire terrier	stray	male	medium	assertive	2	false	4	145
+Irish wolfhound	stray	male	high	assertive	8	false	0	146
+border collie	stray	female	low	assertive	2	false	2	147
+English setter	stray	male	high	assertive	1	false	1	148
+pug	stray	female	medium	neutral	12	false	2	149
+greyhound	stray	female	low	assertive	4	false	3	150
+Shetland sheepdog	surrendered	male	low	assertive	12	false	3	151
+French bulldog	surrendered	female	high	neutral	7	false	2	152
+greyhound	surrendered	male	high	assertive	4	false	4	153
+Boston terrier	surrendered	male	medium	assertive	7	false	1	154
+borzoi	stray	female	medium	passive	11	false	2	155
+Rhodesian ridgeback	surrendered	male	medium	assertive	3	false	0	156
+shih tzu	surrendered	male	medium	assertive	7	false	4	157
+Eskimo dog	stray	female	low	assertive	12	false	2	158
+Mexican hairless	stray	male	high	neutral	11	false	3	159
+Brittany	surrendered	male	low	passive	10	false	2	160
+chow chow	stray	male	high	neutral	9	false	2	161
+kuvasz	stray	male	high	neutral	8	false	0	162
+Akita	stray	male	high	passive	3	false	3	163
+whippet	surrendered	female	high	neutral	8	false	0	164
+mastiff	surrendered	female	medium	assertive	5	false	3	165
+German wirehaired pointer	stray	female	high	assertive	13	false	2	166
+mastiff	stray	female	medium	passive	3	false	4	167
+Bedlington terrier	stray	male	high	passive	7	false	1	168
+boxer	stray	male	medium	passive	9	false	1	169
+kuvasz	surrendered	male	high	passive	4	false	2	170
+shih tzu	surrendered	male	high	assertive	3	false	4	171
+Great Dane	stray	male	medium	passive	4	false	3	172
+Mexican hairless	surrendered	male	medium	assertive	13	false	0	173
+Samoyed	stray	female	medium	assertive	10	false	1	174
+borzoi	stray	male	high	neutral	11	false	3	175
+Australian cattle dog	surrendered	female	medium	passive	6	false	3	176
+Australian shepherd	stray	female	high	passive	6	false	1	177
+Australian terrier	surrendered	female	high	assertive	4	false	3	178
+Japanese spaniel	stray	male	medium	neutral	7	false	3	179
+Australian shepherd	stray	male	medium	neutral	12	false	2	180
+schnauzer	surrendered	male	medium	neutral	6	false	2	181
+English springer spaniel	stray	female	high	assertive	1	false	3	182
+basenji	surrendered	male	medium	assertive	12	false	3	183
+basenji	stray	female	high	passive	1	false	1	184
+Chihuahua	stray	female	medium	passive	1	false	4	185
+Canaan dog	stray	male	low	neutral	6	false	1	186
+German wirehaired pointer	surrendered	male	high	neutral	5	false	4	187
+cairn terrier	stray	male	medium	neutral	8	false	1	188
+Lakeland terrier	surrendered	female	low	neutral	11	false	2	189
+Irish setter	stray	female	high	assertive	5	false	1	190
+cocker spaniel	stray	male	low	passive	13	false	2	191
+schnauzer	surrendered	male	low	passive	2	false	1	192
+American water spaniel	surrendered	male	low	assertive	5	false	4	193
+chow chow	stray	male	low	neutral	12	false	4	194
+Labrador retriever	surrendered	female	medium	passive	4	false	1	195
+schipperke	surrendered	female	medium	passive	9	false	2	196
+Boston terrier	stray	female	low	assertive	1	false	1	197
+chow chow	surrendered	male	low	assertive	5	false	0	198
+curly-coated retriever	stray	female	low	neutral	6	false	0	199
+Saint Bernard	stray	male	low	passive	13	false	1	200
+Australian shepherd	stray	male	low	neutral	2	false	4	201
+English cocker spaniel	surrendered	male	low	passive	7	false	1	202
+fox terrier	stray	male	low	assertive	12	false	3	203
+German shorthaired pointer	surrendered	male	medium	neutral	12	false	0	204
+keeshond	stray	female	high	assertive	1	false	2	205
+bullmastiff	surrendered	female	high	assertive	12	false	2	206
+Canaan dog	surrendered	female	medium	neutral	3	false	0	207
+basset hound	surrendered	female	medium	neutral	13	false	0	208
+German shorthaired pointer	surrendered	female	high	passive	3	false	3	209
+Afghan hound	stray	female	low	passive	7	false	0	210
+Boston terrier	surrendered	male	low	neutral	10	false	0	211
+pug	stray	male	medium	neutral	5	false	1	212
+Brittany	surrendered	male	low	assertive	12	false	2	213
+Bedlington terrier	stray	male	medium	passive	1	false	1	214
+Dalmatian	stray	male	high	passive	3	false	4	215
+collie	surrendered	male	medium	assertive	11	false	2	216
+black and tan coonhound	surrendered	male	high	passive	10	false	1	217
+American water spaniel	surrendered	male	medium	neutral	5	false	2	218
+Maltese	surrendered	male	medium	neutral	4	false	2	219
+Doberman pinscher	surrendered	female	medium	passive	1	false	3	220
+Lakeland terrier	stray	female	medium	assertive	9	false	0	221
+Chinese crested	surrendered	male	high	passive	13	false	1	222
+Staffordshire bull terrier	stray	female	low	neutral	3	false	4	223
+English springer spaniel	stray	female	low	passive	6	false	0	224
+beagle	surrendered	female	low	passive	10	false	2	225
+Chesapeake Bay retriever	stray	male	medium	passive	7	false	0	226
+English cocker spaniel	surrendered	male	high	neutral	7	false	2	227
+kuvasz	stray	female	medium	passive	5	false	0	228
+basset hound	stray	male	high	assertive	9	false	0	229
+bichon frise	surrendered	female	high	neutral	2	false	2	230
+Boston terrier	surrendered	female	medium	assertive	13	false	2	231
+affenpinscher	stray	female	medium	neutral	12	false	0	232
+Rottweiler	stray	male	medium	neutral	7	false	1	233
+German shepherd	surrendered	male	medium	passive	7	false	3	234
+Airedale terrier	surrendered	female	high	neutral	2	false	2	235
+keeshond	surrendered	female	low	neutral	8	false	4	236
+Siberian husky	surrendered	male	low	passive	5	false	2	237
+Irish wolfhound	surrendered	male	high	assertive	6	false	0	238
+Akita	surrendered	female	low	neutral	5	false	4	239
+English springer spaniel	surrendered	male	low	neutral	9	false	4	240
+golden retriever	surrendered	male	high	assertive	3	false	2	241
+Australian shepherd	stray	female	high	neutral	6	false	0	242
+border terrier	stray	male	medium	assertive	2	false	0	243
+Pekingese	surrendered	female	medium	neutral	3	false	1	244
+border collie	surrendered	male	low	assertive	11	false	2	245
+Welsh terrier	stray	male	low	assertive	9	false	4	246
+Irish setter	stray	male	medium	passive	11	false	0	247
+keeshond	stray	male	low	neutral	1	false	3	248
+German shepherd	stray	female	low	passive	6	false	3	249
+Newfoundland	stray	female	high	passive	5	false	4	250
+German wirehaired pointer	stray	female	medium	passive	9	false	3	251
+French bulldog	stray	male	low	neutral	7	false	3	252
+Saint Bernard	surrendered	female	high	assertive	3	false	1	253
+Sealyham terrier	surrendered	male	medium	assertive	5	false	3	254
+Sussex spaniel	surrendered	female	high	assertive	5	false	1	255
+Brittany	surrendered	male	low	neutral	8	false	3	256
+bearded collie	surrendered	female	medium	passive	13	false	3	257
+Chesapeake Bay retriever	surrendered	male	medium	neutral	12	false	2	258
+Irish water spaniel	stray	male	medium	assertive	7	false	4	259
+bichon frise	stray	male	high	neutral	5	false	0	260
+spitz	stray	male	low	passive	3	false	1	261
+curly-coated retriever	stray	male	high	assertive	9	false	2	262
+Australian terrier	stray	male	high	assertive	2	false	3	263
+Siberian husky	surrendered	female	medium	neutral	13	false	4	264
+Chinese crested	surrendered	male	high	passive	13	false	0	265
+bichon frise	surrendered	female	low	assertive	8	false	2	266
+Rottweiler	surrendered	female	low	passive	9	false	4	267
+shih tzu	surrendered	male	high	passive	12	false	4	268
+Norwegian elkhound	surrendered	male	low	passive	10	false	4	269
+Yorkshire terrier	stray	male	low	passive	8	false	4	270
+Clumber spaniel	surrendered	female	high	neutral	11	false	3	271
+Sealyham terrier	surrendered	male	low	neutral	3	false	3	272
+English toy spaniel	stray	male	medium	neutral	1	false	4	273
+Norwich terrier	surrendered	male	medium	assertive	12	false	0	274
+bulldog	surrendered	male	medium	neutral	4	false	2	275
+kuvasz	surrendered	female	low	passive	8	false	2	276
+silky terrier	surrendered	male	medium	passive	4	false	2	277
+Chinese crested	surrendered	male	low	passive	12	false	3	278
+golden retriever	surrendered	female	low	assertive	9	false	3	279
+Brittany	surrendered	female	high	neutral	12	false	0	280
+soft-coated wheaten terrier	stray	female	low	neutral	4	false	4	281
+Norwegian elkhound	stray	male	medium	passive	1	false	2	282
+Lhasa apso	surrendered	male	low	neutral	5	false	1	283
+collie	stray	female	medium	neutral	9	false	3	284
+border collie	surrendered	male	high	passive	6	false	1	285
+Scottish terrier	stray	male	medium	passive	1	false	4	286
+Gordon setter	surrendered	female	high	neutral	2	false	4	287
+Irish wolfhound	stray	male	high	passive	4	false	4	288
+spitz	stray	male	high	neutral	7	false	4	289
+briard	surrendered	female	high	assertive	13	false	0	290
+Maltese	surrendered	male	medium	neutral	4	false	3	291
+American Staffordshire terrier	surrendered	female	medium	neutral	6	false	2	292
+Chinese crested	stray	male	high	assertive	12	false	2	293
+Scottish deerhound	surrendered	female	high	neutral	9	false	4	294
+Australian cattle dog	stray	male	low	passive	12	false	1	295
+bullmastiff	stray	male	medium	assertive	2	false	2	296
+Bernese mountain dog	stray	female	medium	neutral	8	false	2	297
+Bedlington terrier	stray	male	low	assertive	8	false	1	298
+Pekingese	stray	female	high	assertive	4	false	1	299
+Labrador retriever	stray	male	low	passive	10	false	3	300
+bull terrier	stray	male	high	neutral	1	false	0	301
+Sealyham terrier	surrendered	female	low	assertive	11	false	3	302
+otterhound	stray	female	high	assertive	2	false	2	303
+pug	surrendered	male	low	assertive	12	false	4	304
+Lhasa apso	surrendered	female	medium	passive	1	false	0	305
+Newfoundland	surrendered	female	medium	passive	8	false	2	306
+briard	stray	male	medium	assertive	5	false	1	307
+Chinese shar-pei	surrendered	male	low	assertive	4	false	4	308
+Tibetan terrier	stray	male	high	neutral	8	false	3	309
+bouvier des Flandres	stray	male	high	passive	3	false	1	310
+bearded collie	surrendered	female	medium	assertive	9	false	3	311
+Manchester terrier	surrendered	female	high	passive	11	false	3	312
+Gordon setter	stray	female	high	assertive	4	false	3	313
+Chinese crested	surrendered	female	low	neutral	5	false	2	314
+Jack Russell terrier	stray	female	medium	passive	11	false	4	315
+Alaskan Malamute	stray	male	low	neutral	4	false	3	316
+Finnish spitz	surrendered	female	medium	assertive	9	false	4	317
+foxhound	stray	male	high	passive	2	false	3	318
+Sussex spaniel	stray	male	medium	assertive	13	false	0	319
+bulldog	surrendered	male	high	passive	4	false	0	320
+schnauzer	surrendered	male	high	assertive	2	false	1	321
+greyhound	stray	female	low	passive	7	false	4	322
+Irish setter	stray	male	low	passive	2	false	0	323
+Shetland sheepdog	surrendered	male	high	passive	10	false	4	324
+Irish water spaniel	surrendered	male	medium	neutral	3	false	2	325
+otterhound	stray	male	low	assertive	5	false	3	326
+flat-coated retriever	surrendered	male	low	neutral	4	false	2	327
+Boston terrier	stray	female	low	assertive	4	false	1	328
+dachshund	stray	male	high	passive	6	false	4	329
+Australian terrier	surrendered	female	low	passive	11	false	4	330
+flat-coated retriever	surrendered	male	high	neutral	1	false	3	331
+briard	stray	female	medium	assertive	1	false	3	332
+Scottish deerhound	surrendered	female	medium	passive	2	false	4	333
+Canaan dog	surrendered	female	high	passive	3	false	0	334
+English cocker spaniel	surrendered	female	low	assertive	12	false	4	335
+Newfoundland	surrendered	male	high	assertive	1	false	2	336
+poodle	stray	female	high	assertive	9	false	3	337
+Lhasa apso	stray	male	medium	neutral	4	false	3	338
+Jack Russell terrier	stray	male	low	assertive	13	false	0	339
+Irish setter	surrendered	male	low	assertive	9	false	1	340
+German wirehaired pointer	stray	female	medium	passive	7	false	1	341
+Australian shepherd	stray	male	high	neutral	11	false	3	342
+papillon	surrendered	female	low	assertive	12	false	2	343
+schipperke	surrendered	male	medium	assertive	3	false	1	344
+Clumber spaniel	stray	male	high	assertive	6	false	0	345
+Bedlington terrier	surrendered	male	low	neutral	5	false	0	346
+Rottweiler	surrendered	male	low	passive	4	false	2	347
+mastiff	surrendered	male	low	assertive	4	false	0	348
+Weimaraner	stray	female	low	neutral	11	false	0	349
+foxhound	surrendered	female	high	neutral	10	false	2	350
+Siberian husky	surrendered	female	medium	assertive	10	false	4	351
+Boston terrier	stray	female	medium	assertive	10	false	1	352
+bearded collie	surrendered	male	medium	assertive	4	false	0	353
+Siberian husky	surrendered	female	high	neutral	8	false	0	354
+Norwegian elkhound	surrendered	female	high	passive	10	false	0	356
+Boston terrier	surrendered	male	low	assertive	9	false	1	357
+greyhound	surrendered	female	low	passive	8	false	0	358
+bulldog	surrendered	female	medium	neutral	12	false	0	359
+bull terrier	surrendered	female	low	neutral	12	false	2	360
+vizsla	surrendered	female	medium	assertive	8	false	0	361
+bulldog	stray	male	high	neutral	4	false	4	362
+American Staffordshire terrier	surrendered	male	low	neutral	7	false	1	363
+American water spaniel	surrendered	male	high	neutral	12	false	1	364
+Gordon setter	stray	male	high	passive	8	false	1	365
+Chinese crested	stray	female	low	neutral	1	false	3	366
+Australian cattle dog	surrendered	male	medium	passive	1	false	4	367
+Chinese crested	surrendered	female	low	passive	3	false	3	368
+Staffordshire bull terrier	stray	male	low	neutral	5	false	3	369
+mastiff	stray	female	high	passive	11	false	1	370
+Pekingese	stray	male	high	passive	10	false	0	371
+Jack Russell terrier	surrendered	female	medium	assertive	6	false	2	372
+otterhound	surrendered	male	low	passive	7	false	1	373
+poodle	stray	male	medium	passive	3	false	3	374
+Afghan hound	surrendered	male	low	passive	8	false	1	375
+Australian shepherd	surrendered	male	medium	assertive	10	false	1	376
+Eskimo dog	surrendered	male	high	neutral	13	false	2	377
+Akita	stray	female	medium	neutral	9	false	1	378
+Canaan dog	stray	male	medium	passive	7	false	3	379
+Clumber spaniel	surrendered	male	low	assertive	9	false	1	380
+papillon	stray	male	medium	neutral	2	false	2	381
+Yorkshire terrier	stray	female	low	assertive	5	false	2	382
+bloodhound	surrendered	female	high	passive	3	false	4	383
+English springer spaniel	stray	male	high	neutral	11	false	2	384
+Australian terrier	surrendered	female	low	neutral	6	false	0	385
+Australian cattle dog	surrendered	female	high	assertive	5	false	4	386
+kuvasz	stray	female	high	neutral	5	false	0	387
+collie	surrendered	female	low	neutral	5	false	0	388
+chow chow	stray	male	medium	neutral	11	false	3	389
+Pekingese	stray	female	low	assertive	12	false	4	390
+Mexican hairless	stray	male	high	neutral	2	false	2	391
+vizsla	surrendered	male	medium	assertive	9	false	2	392
+Dalmatian	surrendered	female	low	neutral	3	false	2	393
+briard	surrendered	female	high	passive	3	false	4	394
+Bedlington terrier	stray	male	low	neutral	11	false	4	395
+American water spaniel	stray	male	high	neutral	1	false	0	396
+Eskimo dog	stray	female	low	passive	5	false	4	397
+Siberian husky	surrendered	male	medium	passive	9	false	2	398
+schnauzer	surrendered	female	high	neutral	6	false	4	399
+schipperke	stray	female	medium	passive	8	false	3	400
+puli	surrendered	female	medium	passive	11	false	3	401
+Mexican hairless	surrendered	male	medium	assertive	13	false	1	402
+Yorkshire terrier	stray	female	low	passive	12	false	2	403
+vizsla	stray	female	high	passive	10	false	1	404
+Kerry blue terrier	surrendered	female	medium	assertive	2	false	0	405
+Scottish terrier	surrendered	male	high	passive	9	false	1	406
+briard	stray	male	low	assertive	6	false	1	407
+Australian shepherd	surrendered	male	high	passive	12	false	2	408
+Newfoundland	stray	male	medium	passive	5	false	0	409
+papillon	stray	female	low	assertive	9	false	2	410
+Kerry blue terrier	stray	female	medium	neutral	11	false	1	411
+Clumber spaniel	stray	male	low	passive	1	false	4	412
+English springer spaniel	stray	male	medium	neutral	3	false	3	413
+Scottish terrier	stray	female	high	passive	11	false	3	414
+English springer spaniel	stray	male	high	passive	1	false	3	415
+Irish water spaniel	stray	male	medium	passive	9	false	1	416
+Pekingese	surrendered	female	low	passive	8	false	0	417
+border collie	surrendered	female	high	passive	7	false	1	418
+bulldog	stray	female	high	neutral	4	false	1	419
+Airedale terrier	stray	female	low	assertive	8	false	3	420
+English toy spaniel	stray	female	low	neutral	11	false	2	421
+Japanese spaniel	stray	male	low	assertive	3	false	1	422
+puli	surrendered	male	medium	neutral	4	false	4	423
+schnauzer	stray	male	low	assertive	10	false	3	424
+Mexican hairless	surrendered	male	high	passive	8	false	4	425
+Irish wolfhound	stray	female	medium	passive	5	false	0	426
+whippet	surrendered	male	low	assertive	3	false	2	427
+basenji	surrendered	female	high	passive	5	false	4	428
+Lakeland terrier	stray	female	low	neutral	5	false	4	429
+schnauzer	stray	male	low	assertive	12	false	1	430
+Tibetan terrier	surrendered	male	high	neutral	5	false	2	431
+black and tan coonhound	surrendered	male	medium	assertive	7	false	1	432
+poodle	stray	male	high	passive	6	false	0	433
+Chinese shar-pei	stray	male	medium	assertive	10	false	2	434
+affenpinscher	surrendered	male	medium	passive	9	false	4	435
+English setter	surrendered	female	high	passive	3	false	2	436
+Gordon setter	stray	male	high	assertive	11	false	0	437
+foxhound	stray	male	high	passive	7	false	3	438
+basset hound	surrendered	male	low	neutral	2	false	2	439
+flat-coated retriever	surrendered	male	medium	neutral	12	false	1	440
+flat-coated retriever	surrendered	female	high	assertive	8	false	3	441
+Rottweiler	surrendered	female	medium	passive	11	false	1	443
+Scottish terrier	stray	female	low	passive	4	false	1	444
+border terrier	surrendered	male	high	assertive	10	false	1	445
+Kerry blue terrier	stray	female	medium	passive	10	false	2	446
+English setter	surrendered	male	high	neutral	3	false	3	447
+basset hound	stray	female	medium	neutral	13	false	0	448
+golden retriever	surrendered	male	high	assertive	8	false	4	449
+basset hound	surrendered	female	medium	passive	6	false	3	450
+Brussels griffon	surrendered	female	medium	passive	9	false	4	451
+Bernese mountain dog	stray	male	low	assertive	1	false	4	452
+Skye terrier	stray	female	low	passive	8	false	0	453
+Irish wolfhound	stray	male	low	neutral	10	false	1	454
+cairn terrier	stray	male	low	neutral	4	false	1	455
+Airedale terrier	surrendered	female	medium	passive	11	false	3	456
+Labrador retriever	stray	female	high	passive	10	false	3	457
+cairn terrier	stray	male	medium	passive	12	false	2	458
+bloodhound	surrendered	male	low	neutral	9	false	1	459
+Siberian husky	surrendered	female	high	assertive	9	false	4	460
+borzoi	stray	female	high	assertive	3	false	0	461
+Sealyham terrier	surrendered	female	medium	neutral	8	false	1	462
+Afghan hound	surrendered	female	low	passive	1	false	4	463
+border terrier	surrendered	female	high	passive	2	false	3	464
+West Highland white terrier	stray	female	medium	assertive	12	false	0	465
+English toy spaniel	surrendered	male	high	passive	12	false	1	466
+borzoi	stray	male	medium	neutral	3	false	0	467
+Boston terrier	stray	male	low	passive	10	false	3	468
+black and tan coonhound	surrendered	male	low	neutral	5	false	2	469
+Norwich terrier	surrendered	male	high	neutral	7	false	4	470
+Chesapeake Bay retriever	surrendered	male	medium	assertive	6	false	1	471
+Akita	surrendered	male	high	assertive	13	false	4	472
+Boston terrier	stray	female	low	passive	12	false	4	473
+Finnish spitz	surrendered	male	low	passive	13	false	0	474
+briard	stray	male	medium	passive	3	false	0	475
+poodle	stray	male	low	neutral	1	false	4	476
+West Highland white terrier	stray	male	medium	passive	4	false	1	477
+Irish wolfhound	surrendered	female	low	neutral	1	false	1	478
+boxer	stray	male	medium	assertive	3	false	1	479
+Canaan dog	stray	female	medium	assertive	5	false	1	480
+poodle	surrendered	female	high	passive	4	false	1	481
+beagle	stray	female	medium	passive	1	false	3	482
+Irish water spaniel	stray	male	low	assertive	2	false	1	483
+Newfoundland	stray	male	high	assertive	5	false	1	484
+Rottweiler	stray	female	high	passive	13	false	0	485
+Welsh terrier	surrendered	female	low	assertive	13	false	2	486
+Bernese mountain dog	surrendered	male	high	neutral	2	false	0	487
+Eskimo dog	surrendered	female	high	neutral	7	false	1	488
+poodle	surrendered	male	high	neutral	1	false	2	489
+Doberman pinscher	stray	female	medium	assertive	9	false	2	490
+Chinese crested	stray	female	medium	assertive	3	false	0	491
+Finnish spitz	stray	male	high	neutral	8	false	1	492
+Japanese spaniel	surrendered	female	high	assertive	4	false	1	493
+Sealyham terrier	stray	female	high	assertive	4	false	4	494
+Rhodesian ridgeback	stray	female	medium	neutral	11	false	4	495
+Bedlington terrier	stray	male	high	passive	7	false	4	496
+English toy spaniel	surrendered	male	medium	passive	11	false	0	497
+cocker spaniel	stray	female	high	assertive	4	false	1	498
+Skye terrier	stray	female	medium	assertive	8	false	1	499
+Pekingese	stray	female	low	passive	8	false	0	500
+Dalmatian	surrendered	female	medium	assertive	9	false	2	501
+Norwegian elkhound	surrendered	male	high	passive	10	false	2	502
+Australian cattle dog	stray	female	high	neutral	12	false	1	503
+golden retriever	stray	female	medium	passive	1	false	1	504
+bulldog	stray	male	high	neutral	3	false	1	505
+curly-coated retriever	surrendered	female	low	passive	8	false	1	506
+Gordon setter	surrendered	female	high	passive	7	false	3	507
+Labrador retriever	surrendered	male	high	assertive	10	false	4	508
+schipperke	stray	female	high	assertive	9	false	2	509
+American water spaniel	stray	male	high	neutral	1	false	3	510
+bichon frise	stray	male	medium	passive	10	false	4	511
+German shepherd	stray	male	medium	neutral	6	false	0	512
+beagle	stray	male	medium	assertive	10	false	2	513
+spitz	stray	female	medium	neutral	12	false	2	514
+bichon frise	surrendered	male	medium	passive	10	false	4	515
+Australian terrier	surrendered	female	medium	assertive	3	false	0	516
+Welsh terrier	surrendered	male	high	neutral	1	false	1	517
+schnauzer	stray	male	high	passive	7	false	2	518
+shih tzu	surrendered	male	low	assertive	5	false	1	519
+komondor	surrendered	male	low	passive	12	false	2	520
+Sealyham terrier	stray	female	high	neutral	13	false	4	521
+Brittany	surrendered	male	high	neutral	6	false	4	522
+black and tan coonhound	stray	male	high	neutral	2	false	3	523
+Siberian husky	surrendered	female	high	assertive	11	false	1	524
+Labrador retriever	stray	female	low	neutral	8	false	4	525
+Australian cattle dog	surrendered	female	high	passive	4	false	4	526
+French bulldog	stray	female	high	assertive	5	false	3	527
+Shetland sheepdog	surrendered	female	low	neutral	4	false	1	528
+black and tan coonhound	stray	female	medium	neutral	8	false	2	529
+Brussels griffon	surrendered	male	low	neutral	8	false	3	530
+Australian cattle dog	stray	female	low	neutral	1	false	1	531
+Australian terrier	surrendered	female	high	assertive	3	false	1	532
+Norwich terrier	surrendered	female	medium	neutral	1	false	3	533
+poodle	surrendered	male	low	neutral	2	false	3	534
+German wirehaired pointer	stray	female	high	assertive	8	false	1	535
+greyhound	stray	female	high	passive	11	false	2	536
+Norwich terrier	surrendered	female	high	passive	2	false	1	537
+English springer spaniel	surrendered	male	low	passive	10	false	0	538
+schnauzer	surrendered	female	medium	assertive	8	false	0	539
+foxhound	stray	female	low	neutral	1	false	0	540
+Norwegian elkhound	stray	female	medium	assertive	8	false	4	541
+American water spaniel	stray	female	low	neutral	12	false	4	542
+flat-coated retriever	stray	male	low	neutral	4	false	0	543
+West Highland white terrier	surrendered	male	high	assertive	2	false	3	544
+Akita	surrendered	female	high	passive	9	false	4	545
+bull terrier	stray	male	low	neutral	3	false	3	546
+bouvier des Flandres	surrendered	male	low	neutral	13	false	0	547
+Yorkshire terrier	stray	female	low	assertive	11	false	2	548
+Australian shepherd	stray	male	high	passive	2	false	2	549
+borzoi	stray	female	low	neutral	9	false	0	550
+English springer spaniel	stray	female	medium	passive	6	false	4	551
+Samoyed	stray	female	medium	passive	11	false	4	552
+cocker spaniel	surrendered	female	low	assertive	13	false	2	553
+Skye terrier	surrendered	male	medium	passive	7	false	1	554
+border collie	surrendered	female	low	assertive	1	false	2	555
+cairn terrier	surrendered	male	medium	passive	12	false	1	556
+komondor	surrendered	female	low	assertive	13	false	1	557
+Sealyham terrier	surrendered	male	medium	neutral	13	false	3	558
+spitz	stray	male	low	passive	12	false	3	559
+American Staffordshire terrier	stray	male	medium	passive	6	false	1	560
+briard	surrendered	male	low	passive	5	false	3	561
+American water spaniel	stray	female	low	assertive	4	false	4	562
+Saint Bernard	surrendered	male	low	passive	6	false	1	563
+Scottish terrier	stray	female	medium	passive	8	false	2	564
+curly-coated retriever	surrendered	female	high	neutral	11	false	0	565
+spitz	stray	female	low	assertive	4	false	4	566
+Staffordshire bull terrier	surrendered	male	low	assertive	10	false	3	567
+Great Dane	stray	female	medium	passive	12	false	3	568
+Newfoundland	surrendered	male	medium	passive	12	false	0	569
+bearded collie	stray	female	low	assertive	8	false	3	570
+German shepherd	surrendered	female	medium	neutral	1	false	3	571
+keeshond	stray	female	low	assertive	6	false	1	572
+bearded collie	surrendered	female	low	assertive	2	false	4	573
+poodle	surrendered	male	medium	neutral	8	false	3	574
+briard	surrendered	female	low	passive	5	false	3	575
+Japanese spaniel	surrendered	female	low	assertive	12	false	2	576
+Australian shepherd	surrendered	male	low	neutral	9	false	3	577
+Saint Bernard	surrendered	male	high	passive	10	false	1	578
+kuvasz	surrendered	female	low	neutral	3	false	2	579
+affenpinscher	stray	female	low	neutral	2	false	2	580
+Australian terrier	surrendered	male	medium	neutral	10	false	4	581
+Great Dane	surrendered	female	medium	neutral	1	false	2	582
+spitz	stray	male	medium	assertive	13	false	1	583
+golden retriever	surrendered	female	medium	passive	11	false	1	584
+chow chow	stray	female	low	neutral	1	false	1	585
+Australian cattle dog	surrendered	female	low	assertive	3	false	3	586
+border terrier	stray	male	low	neutral	10	false	2	587
+Chinese shar-pei	surrendered	male	low	assertive	10	false	0	588
+papillon	stray	female	medium	neutral	8	false	3	589
+Pomeranian	stray	male	high	passive	10	false	1	590
+Norwich terrier	surrendered	female	medium	passive	12	false	3	591
+collie	stray	male	low	neutral	9	false	4	592
+Irish wolfhound	stray	male	high	passive	9	false	0	593
+Staffordshire bull terrier	surrendered	male	medium	neutral	2	false	1	594
+Welsh terrier	surrendered	male	high	neutral	5	false	1	595
+basset hound	stray	male	low	assertive	5	false	0	596
+English setter	surrendered	male	high	neutral	7	false	1	597
+border collie	surrendered	female	low	neutral	2	false	0	598
+kuvasz	surrendered	female	low	assertive	13	false	3	599
+Irish wolfhound	stray	male	medium	assertive	10	false	4	600
+keeshond	surrendered	female	high	neutral	5	false	1	601
+Lakeland terrier	surrendered	male	high	assertive	13	false	3	602
+border terrier	surrendered	female	medium	passive	2	false	2	603
+pug	stray	male	medium	neutral	9	false	2	604
+Gordon setter	surrendered	male	medium	passive	4	false	3	605
+Afghan hound	stray	male	medium	passive	9	false	2	606
+Saint Bernard	surrendered	female	medium	passive	9	false	0	607
+German shepherd	surrendered	female	medium	assertive	5	false	0	608
+beagle	stray	female	medium	passive	13	false	2	609
+Jack Russell terrier	surrendered	male	high	assertive	11	false	2	610
+Australian shepherd	surrendered	female	low	neutral	1	false	2	611
+spitz	stray	female	low	passive	10	false	2	612
+English toy spaniel	surrendered	female	low	passive	3	false	3	613
+Weimaraner	surrendered	male	low	assertive	6	false	0	614
+Irish wolfhound	stray	female	medium	assertive	5	false	4	615
+English setter	surrendered	female	medium	passive	10	false	2	616
+Rhodesian ridgeback	stray	male	medium	passive	10	false	1	617
+Airedale terrier	surrendered	male	low	passive	9	false	2	618
+West Highland white terrier	stray	female	high	assertive	9	false	0	619
+Maltese	stray	male	high	assertive	9	false	0	620
+Jack Russell terrier	stray	female	medium	passive	3	false	2	621
+Bedlington terrier	stray	female	medium	assertive	7	false	2	622
+Siberian husky	surrendered	male	low	assertive	7	false	4	623
+whippet	stray	male	low	neutral	10	false	0	624
+schnauzer	stray	male	low	assertive	4	false	1	625
+Finnish spitz	surrendered	female	high	passive	11	false	1	626
+Pekingese	surrendered	female	high	neutral	4	false	1	627
+Yorkshire terrier	surrendered	female	low	neutral	11	false	3	628
+bearded collie	surrendered	female	low	neutral	7	false	4	629
+German wirehaired pointer	surrendered	female	medium	passive	2	false	2	630
+whippet	stray	male	medium	assertive	4	false	2	631
+Brittany	surrendered	male	low	assertive	1	false	0	632
+Rottweiler	stray	male	low	passive	3	false	2	633
+Kerry blue terrier	stray	female	low	assertive	6	false	4	634
+golden retriever	stray	male	high	assertive	10	false	3	635
+cairn terrier	stray	male	high	neutral	12	false	2	636
+pug	stray	female	medium	neutral	10	false	3	637
+chow chow	surrendered	male	low	assertive	8	false	2	638
+affenpinscher	surrendered	female	high	assertive	4	false	4	639
+French bulldog	stray	female	high	passive	10	false	0	640
+silky terrier	stray	male	low	assertive	2	false	1	641
+Sealyham terrier	stray	male	low	assertive	13	false	3	642
+silky terrier	stray	female	high	neutral	2	false	0	643
+Sealyham terrier	surrendered	female	medium	neutral	6	false	1	644
+puli	stray	male	high	passive	9	false	2	645
+silky terrier	stray	male	low	assertive	13	false	1	646
+bulldog	surrendered	male	medium	neutral	4	false	3	647
+English toy spaniel	surrendered	male	medium	assertive	12	false	4	648
+Airedale terrier	surrendered	male	low	assertive	2	false	4	649
+Australian shepherd	stray	female	low	assertive	3	false	0	650
+French bulldog	surrendered	female	medium	passive	8	false	4	651
+silky terrier	surrendered	female	high	passive	9	false	2	652
+vizsla	surrendered	female	low	neutral	8	false	0	653
+Eskimo dog	surrendered	female	medium	assertive	2	false	0	654
+Labrador retriever	surrendered	female	medium	passive	6	false	3	655
+German shepherd	stray	female	medium	neutral	10	false	3	656
+Jack Russell terrier	stray	male	low	assertive	4	false	3	657
+Yorkshire terrier	stray	male	low	passive	2	false	3	658
+bulldog	stray	female	high	passive	12	false	0	659
+Irish water spaniel	stray	male	high	passive	5	false	0	660
+Shetland sheepdog	surrendered	female	low	passive	9	false	4	661
+kuvasz	surrendered	female	high	passive	10	false	4	662
+Jack Russell terrier	surrendered	female	high	neutral	10	false	1	663
+Rhodesian ridgeback	stray	female	low	assertive	12	false	4	664
+English cocker spaniel	surrendered	female	medium	passive	4	false	4	665
+Chinese shar-pei	surrendered	male	medium	passive	7	false	1	666
+Norwegian elkhound	surrendered	female	medium	neutral	2	false	1	667
+Lakeland terrier	stray	female	high	passive	13	false	4	668
+komondor	surrendered	female	low	passive	2	false	2	669
+Chihuahua	stray	male	high	neutral	4	false	2	670
+West Highland white terrier	stray	female	low	passive	9	false	1	671
+Maltese	surrendered	male	medium	neutral	5	false	0	672
+Lhasa apso	stray	female	high	neutral	9	false	1	673
+pointer	surrendered	female	low	assertive	10	false	0	674
+Norwegian elkhound	surrendered	female	low	passive	4	false	0	675
+Chinese shar-pei	stray	female	low	assertive	3	false	1	676
+curly-coated retriever	surrendered	female	high	passive	5	false	2	677
+poodle	surrendered	female	low	passive	10	false	3	678
+Shetland sheepdog	surrendered	female	low	passive	12	false	0	679
+Irish setter	stray	male	medium	assertive	6	false	3	680
+fox terrier	stray	male	low	neutral	13	false	1	681
+Saint Bernard	stray	male	high	passive	12	false	3	682
+Irish setter	surrendered	male	low	assertive	10	false	4	683
+Siberian husky	surrendered	male	low	passive	5	false	4	684
+Weimaraner	surrendered	female	high	passive	10	false	3	685
+puli	surrendered	female	low	passive	7	false	4	686
+Pekingese	stray	female	low	passive	6	false	0	687
+beagle	stray	male	high	assertive	12	false	1	688
+Norwich terrier	stray	female	low	assertive	11	false	2	689
+silky terrier	stray	male	high	neutral	10	false	1	690
+curly-coated retriever	surrendered	female	low	passive	8	false	1	691
+poodle	stray	male	low	neutral	2	false	4	692
+Mexican hairless	surrendered	female	high	assertive	9	false	3	693
+briard	stray	female	medium	assertive	5	false	1	694
+beagle	surrendered	male	high	neutral	8	false	0	695
+Eskimo dog	surrendered	female	high	neutral	5	false	4	696
+Samoyed	surrendered	female	medium	assertive	1	false	2	697
+papillon	surrendered	female	low	passive	3	false	2	698
+Norwich terrier	surrendered	male	low	neutral	1	false	0	699
+Brittany	stray	male	high	passive	5	false	2	700
+Saint Bernard	stray	male	low	passive	1	false	1	701
+boxer	surrendered	male	medium	neutral	8	false	1	702
+kuvasz	stray	female	low	passive	4	false	1	703
+Manchester terrier	stray	male	high	neutral	12	false	3	704
+Bedlington terrier	surrendered	male	medium	neutral	13	false	2	705
+French bulldog	stray	female	medium	neutral	8	false	4	706
+schipperke	surrendered	female	medium	neutral	8	false	4	707
+Norwegian elkhound	surrendered	female	medium	neutral	13	false	3	708
+Rhodesian ridgeback	stray	female	medium	assertive	3	false	0	709
+Australian cattle dog	stray	female	medium	assertive	1	false	2	710
+curly-coated retriever	surrendered	male	high	passive	6	false	4	711
+Saint Bernard	stray	male	low	neutral	7	false	3	712
+American water spaniel	stray	male	low	assertive	4	false	3	713
+French bulldog	stray	male	high	passive	4	false	0	714
+borzoi	surrendered	male	medium	passive	4	false	3	715
+saluki	surrendered	male	low	passive	6	false	1	716
+Chinese shar-pei	stray	female	medium	assertive	2	false	3	717
+bouvier des Flandres	stray	male	high	assertive	12	false	0	718
+chow chow	surrendered	male	medium	neutral	9	false	3	719
+briard	stray	male	low	passive	4	false	0	720
+border terrier	surrendered	male	high	assertive	7	false	1	721
+Sealyham terrier	stray	male	low	passive	8	false	4	722
+Eskimo dog	surrendered	male	high	neutral	4	false	0	723
+papillon	surrendered	male	medium	neutral	3	false	2	724
+keeshond	surrendered	male	high	passive	10	false	4	725
+German shepherd	surrendered	female	low	neutral	12	false	0	726
+briard	surrendered	male	high	neutral	8	false	2	727
+cocker spaniel	stray	male	medium	passive	11	false	3	728
+Sealyham terrier	surrendered	male	medium	neutral	12	false	2	729
+Samoyed	surrendered	female	high	assertive	1	false	0	730
+Skye terrier	surrendered	male	medium	assertive	13	false	2	731
+keeshond	surrendered	female	high	assertive	3	false	3	732
+pointer	surrendered	male	high	neutral	10	false	1	733
+Akita	surrendered	male	medium	passive	4	false	1	734
+whippet	stray	female	high	assertive	2	false	3	735
+Manchester terrier	surrendered	female	medium	neutral	10	false	0	736
+affenpinscher	stray	male	low	passive	13	false	1	737
+silky terrier	surrendered	female	medium	neutral	5	false	1	738
+Sussex spaniel	stray	male	medium	neutral	1	false	4	739
+Bernese mountain dog	stray	male	low	assertive	13	false	4	740
+Staffordshire bull terrier	surrendered	male	low	passive	8	false	1	741
+Saint Bernard	stray	female	medium	assertive	2	false	3	742
+schnauzer	surrendered	male	high	neutral	12	false	4	743
+Yorkshire terrier	surrendered	male	low	neutral	6	false	0	744
+bull terrier	surrendered	male	high	assertive	6	false	3	745
+Saint Bernard	stray	male	low	assertive	6	false	4	746
+bichon frise	stray	female	high	assertive	12	false	2	747
+Pomeranian	surrendered	female	medium	neutral	12	false	0	748
+spitz	surrendered	male	low	assertive	3	false	3	749
+German wirehaired pointer	surrendered	male	medium	assertive	13	false	2	750
+German shorthaired pointer	surrendered	male	low	passive	1	false	0	751
+Doberman pinscher	stray	male	low	passive	10	false	0	752
+Weimaraner	surrendered	male	high	neutral	8	false	0	753
+Dalmatian	surrendered	male	low	assertive	6	false	3	754
+border terrier	surrendered	female	low	assertive	11	false	3	755
+German shepherd	surrendered	male	high	neutral	6	false	0	756
+basenji	surrendered	male	low	passive	5	false	3	757
+Shetland sheepdog	stray	male	low	neutral	5	false	1	758
+border terrier	stray	female	medium	assertive	6	false	1	759
+boxer	stray	male	medium	neutral	13	false	0	760
+cocker spaniel	surrendered	female	high	assertive	3	false	4	761
+English setter	surrendered	female	high	assertive	1	false	2	762
+kuvasz	surrendered	female	high	neutral	1	false	1	763
+vizsla	surrendered	female	high	neutral	12	false	4	764
+bloodhound	stray	male	medium	passive	9	false	2	765
+Welsh terrier	stray	male	high	assertive	13	false	4	766
+Pomeranian	surrendered	male	high	neutral	5	false	4	767
+Gordon setter	surrendered	male	high	passive	11	false	4	768
+Sussex spaniel	stray	male	low	neutral	10	false	0	769
+Chihuahua	stray	female	high	neutral	7	false	4	770
+Eskimo dog	stray	female	high	passive	10	false	0	771
+American water spaniel	surrendered	female	medium	assertive	12	false	3	772
+boxer	surrendered	female	medium	passive	6	false	4	773
+Finnish spitz	stray	male	medium	neutral	2	false	4	774
+Newfoundland	stray	female	medium	assertive	5	false	3	775
+Australian terrier	surrendered	male	high	assertive	6	false	3	776
+briard	surrendered	female	low	passive	3	false	3	777
+Chinese shar-pei	surrendered	male	low	neutral	4	false	4	778
+collie	stray	female	medium	assertive	11	false	4	779
+pointer	surrendered	female	medium	neutral	5	false	4	780
+puli	stray	female	medium	passive	7	false	0	781
+affenpinscher	surrendered	female	medium	neutral	7	false	0	782
+puli	stray	male	medium	assertive	12	false	3	783
+Brittany	surrendered	female	medium	passive	4	false	2	784
+English springer spaniel	surrendered	female	low	assertive	12	false	1	785
+Rhodesian ridgeback	surrendered	female	high	assertive	12	false	3	786
+Chinese shar-pei	surrendered	male	low	neutral	1	false	3	787
+beagle	surrendered	male	high	neutral	1	false	0	788
+dachshund	stray	male	low	neutral	3	false	2	789
+Tibetan terrier	surrendered	female	low	neutral	7	false	0	790
+boxer	stray	female	high	neutral	13	false	0	791
+Norwich terrier	surrendered	male	medium	assertive	11	false	4	792
+Norwegian elkhound	stray	male	high	passive	2	false	4	793
+dachshund	stray	female	low	assertive	8	false	0	794
+chow chow	stray	male	medium	passive	4	false	0	795
+pointer	stray	male	low	neutral	9	false	0	796
+Tibetan terrier	surrendered	male	high	passive	4	false	4	797
+basenji	stray	male	high	assertive	7	false	4	798
+boxer	surrendered	female	low	neutral	1	false	2	799
+soft-coated wheaten terrier	stray	female	low	assertive	13	false	2	800
+basset hound	stray	female	medium	passive	3	false	3	801
+Siberian husky	surrendered	male	medium	neutral	10	false	4	802
+Doberman pinscher	stray	male	high	assertive	11	false	2	803
+Bedlington terrier	stray	male	medium	passive	9	false	3	804
+Irish water spaniel	stray	male	high	neutral	4	false	4	805
+Pomeranian	stray	male	low	neutral	11	false	0	806
+Norwegian elkhound	surrendered	male	low	neutral	13	false	4	808
+German wirehaired pointer	surrendered	male	medium	passive	13	false	2	809
+Chihuahua	surrendered	male	high	passive	4	false	3	810
+Great Dane	surrendered	male	low	neutral	8	false	1	811
+Australian cattle dog	stray	female	high	assertive	10	false	4	812
+greyhound	stray	male	high	neutral	6	false	0	813
+cairn terrier	surrendered	male	medium	assertive	3	false	4	814
+English cocker spaniel	surrendered	female	low	assertive	8	false	0	815
+Skye terrier	surrendered	female	high	assertive	8	false	4	816
+American Staffordshire terrier	surrendered	male	medium	passive	10	false	0	817
+American Staffordshire terrier	stray	female	high	neutral	2	false	0	818
+Akita	surrendered	male	low	passive	13	false	4	819
+briard	stray	male	low	passive	10	false	3	820
+foxhound	stray	female	low	neutral	4	false	4	821
+Weimaraner	stray	female	low	assertive	5	false	0	822
+bearded collie	surrendered	male	high	passive	11	false	3	823
+West Highland white terrier	surrendered	male	low	passive	4	false	3	824
+Akita	surrendered	male	medium	neutral	6	false	4	825
+Sealyham terrier	surrendered	male	medium	neutral	10	false	4	826
+English cocker spaniel	surrendered	female	high	neutral	5	false	1	827
+cairn terrier	stray	male	medium	neutral	12	false	1	828
+Brittany	stray	female	medium	assertive	6	false	1	829
+Newfoundland	stray	male	low	assertive	5	false	2	830
+shih tzu	stray	female	low	neutral	13	false	1	831
+Bernese mountain dog	stray	female	medium	passive	7	false	0	832
+bloodhound	stray	male	low	passive	12	false	0	833
+bichon frise	surrendered	female	medium	neutral	12	false	0	834
+Chinese shar-pei	surrendered	female	low	assertive	5	false	1	835
+dachshund	stray	male	high	neutral	10	false	1	836
+Yorkshire terrier	surrendered	male	medium	passive	8	false	2	837
+English setter	stray	female	medium	neutral	1	false	0	838
+Lhasa apso	stray	male	low	assertive	10	false	1	839
+Airedale terrier	surrendered	male	high	assertive	1	false	0	840
+bloodhound	stray	male	low	assertive	10	false	3	841
+Siberian husky	stray	male	medium	assertive	5	false	2	842
+Weimaraner	surrendered	female	high	passive	4	false	1	843
+Yorkshire terrier	surrendered	male	medium	assertive	13	false	1	844
+black and tan coonhound	surrendered	male	low	passive	5	false	1	845
+Dalmatian	stray	female	high	neutral	4	false	0	846
+German wirehaired pointer	surrendered	male	low	passive	10	false	4	847
+briard	stray	male	low	passive	8	false	4	848
+briard	stray	female	medium	passive	4	false	2	849
+German shepherd	stray	male	low	passive	11	false	0	850
+boxer	surrendered	male	high	passive	6	false	0	851
+German shorthaired pointer	surrendered	female	high	neutral	6	false	0	852
+curly-coated retriever	surrendered	female	medium	passive	5	false	0	853
+puli	stray	female	low	passive	7	false	2	854
+Scottish terrier	stray	female	low	assertive	6	false	1	855
+Brussels griffon	stray	female	high	passive	6	false	3	856
+Brittany	surrendered	male	medium	neutral	11	false	4	857
+Kerry blue terrier	surrendered	female	medium	passive	6	false	3	858
+Afghan hound	surrendered	female	low	assertive	10	false	2	859
+golden retriever	surrendered	female	low	assertive	6	false	0	860
+Australian terrier	surrendered	male	high	passive	13	false	1	861
+boxer	surrendered	male	medium	assertive	5	false	0	862
+Gordon setter	surrendered	female	medium	assertive	11	false	2	863
+golden retriever	stray	male	high	neutral	8	false	3	864
+Brussels griffon	surrendered	female	high	passive	7	false	2	865
+Japanese spaniel	stray	female	medium	assertive	11	false	0	866
+Eskimo dog	surrendered	male	medium	assertive	8	false	1	867
+Scottish terrier	surrendered	female	high	neutral	10	false	4	868
+flat-coated retriever	surrendered	male	medium	assertive	9	false	2	869
+bearded collie	stray	female	high	assertive	6	false	4	870
+briard	surrendered	female	low	passive	2	false	1	871
+Chesapeake Bay retriever	surrendered	female	low	passive	4	false	4	872
+Staffordshire bull terrier	surrendered	female	high	neutral	10	false	1	873
+spitz	stray	male	low	neutral	11	false	3	874
+Dalmatian	stray	female	low	neutral	9	false	0	875
+English toy spaniel	stray	female	high	assertive	4	false	3	876
+Clumber spaniel	stray	male	low	neutral	13	false	4	877
+Pekingese	stray	male	low	passive	13	false	1	878
+whippet	stray	female	high	assertive	8	false	2	879
+otterhound	surrendered	female	high	assertive	9	false	1	880
+basenji	surrendered	male	medium	neutral	5	false	2	881
+border collie	surrendered	male	high	neutral	1	false	4	882
+bullmastiff	surrendered	female	low	passive	7	false	3	883
+Eskimo dog	stray	female	low	neutral	9	false	0	884
+English setter	stray	male	medium	neutral	12	false	4	885
+Rhodesian ridgeback	surrendered	male	high	assertive	10	false	1	886
+curly-coated retriever	stray	female	low	passive	13	false	1	887
+fox terrier	surrendered	female	medium	passive	3	false	2	888
+Brittany	stray	female	low	neutral	2	false	1	889
+papillon	stray	female	high	neutral	13	false	0	890
+Labrador retriever	surrendered	male	high	assertive	3	false	4	891
+Pomeranian	stray	male	low	passive	9	false	4	892
+Scottish deerhound	surrendered	female	medium	passive	9	false	2	893
+Mexican hairless	surrendered	male	medium	assertive	6	false	2	894
+Rottweiler	surrendered	male	medium	passive	11	false	0	895
+cocker spaniel	surrendered	female	medium	passive	11	false	4	896
+French bulldog	stray	male	low	passive	12	false	1	897
+Great Dane	surrendered	male	high	assertive	7	false	1	898
+American Staffordshire terrier	surrendered	male	medium	neutral	12	false	3	899
+West Highland white terrier	surrendered	male	medium	passive	11	false	2	900
+keeshond	surrendered	female	high	assertive	2	false	2	901
+saluki	surrendered	male	high	neutral	10	false	4	902
+Canaan dog	stray	female	low	neutral	6	false	4	903
+pug	surrendered	female	high	assertive	5	false	0	904
+Kerry blue terrier	stray	female	medium	passive	13	false	0	905
+cairn terrier	surrendered	male	low	neutral	9	false	3	906
+Chinese shar-pei	surrendered	female	low	passive	4	false	2	907
+flat-coated retriever	stray	female	high	neutral	5	false	4	908
+bichon frise	stray	female	low	assertive	12	false	1	909
+affenpinscher	surrendered	male	high	neutral	9	false	2	910
+Skye terrier	stray	female	medium	neutral	8	false	1	911
+French bulldog	stray	male	medium	assertive	4	false	0	912
+Pomeranian	surrendered	male	low	passive	9	false	0	913
+Irish setter	stray	male	high	passive	1	false	4	914
+Boston terrier	surrendered	female	low	neutral	9	false	4	915
+Scottish deerhound	stray	male	high	neutral	10	false	3	916
+Pomeranian	surrendered	male	medium	neutral	2	false	0	917
+Lhasa apso	surrendered	male	medium	assertive	1	false	0	918
+Skye terrier	surrendered	female	low	passive	1	false	3	919
+bloodhound	surrendered	male	medium	assertive	13	false	4	920
+foxhound	stray	male	low	passive	9	false	2	921
+dachshund	surrendered	female	high	passive	7	false	1	922
+schnauzer	stray	female	high	passive	12	false	0	923
+pointer	surrendered	male	medium	assertive	12	false	0	924
+bearded collie	surrendered	female	high	neutral	3	false	1	925
+Chesapeake Bay retriever	stray	female	high	passive	4	false	3	926
+bull terrier	surrendered	male	high	passive	11	false	2	927
+boxer	stray	female	medium	assertive	6	false	1	928
+border collie	surrendered	male	high	assertive	9	false	2	929
+German shorthaired pointer	stray	female	low	neutral	9	false	2	930
+basset hound	stray	male	medium	neutral	9	false	0	931
+border collie	surrendered	male	low	neutral	3	false	2	932
+boxer	stray	female	low	passive	9	false	4	933
+Siberian husky	surrendered	male	medium	neutral	6	false	4	934
+Saint Bernard	stray	female	high	neutral	4	false	2	935
+Clumber spaniel	surrendered	male	low	assertive	4	false	1	936
+Australian shepherd	surrendered	female	low	assertive	13	false	2	937
+Weimaraner	surrendered	male	low	passive	7	false	4	938
+bull terrier	stray	female	high	passive	7	false	0	939
+border terrier	stray	female	low	passive	5	false	3	940
+Kerry blue terrier	stray	female	low	neutral	6	false	1	941
+Yorkshire terrier	stray	female	medium	neutral	8	false	1	942
+Newfoundland	stray	male	low	assertive	12	false	3	943
+Newfoundland	stray	male	medium	passive	9	false	4	944
+Staffordshire bull terrier	surrendered	female	high	passive	6	false	1	945
+Brussels griffon	surrendered	female	medium	assertive	5	false	3	946
+Irish wolfhound	stray	female	high	assertive	4	false	3	947
+Bedlington terrier	stray	male	high	assertive	13	false	0	948
+Maltese	surrendered	male	high	neutral	3	false	1	949
+English cocker spaniel	surrendered	female	high	assertive	7	false	2	950
+pug	surrendered	female	low	passive	4	false	3	951
+kuvasz	stray	female	low	neutral	9	false	2	952
+Weimaraner	stray	male	high	neutral	11	false	0	953
+English setter	surrendered	female	high	assertive	12	false	3	954
+French bulldog	surrendered	male	high	passive	6	false	2	955
+basset hound	stray	female	medium	passive	11	false	2	956
+Jack Russell terrier	surrendered	female	medium	assertive	11	false	4	957
+English toy spaniel	surrendered	male	high	passive	3	false	2	958
+Bedlington terrier	stray	male	medium	assertive	3	false	4	959
+komondor	surrendered	female	high	passive	4	false	0	960
+keeshond	stray	male	low	neutral	4	false	4	961
+Doberman pinscher	surrendered	male	high	assertive	12	false	2	962
+Yorkshire terrier	stray	female	medium	passive	3	false	2	963
+cocker spaniel	surrendered	male	high	neutral	12	false	0	964
+Newfoundland	surrendered	female	medium	passive	9	false	4	965
+border collie	surrendered	male	low	passive	7	false	3	966
+Shetland sheepdog	stray	male	medium	neutral	12	false	2	967
+border terrier	surrendered	female	low	neutral	12	false	0	968
+saluki	stray	male	low	passive	9	false	2	969
+Shetland sheepdog	stray	male	high	passive	11	false	1	970
+curly-coated retriever	surrendered	male	low	passive	5	false	4	971
+beagle	surrendered	female	high	neutral	6	false	4	972
+Afghan hound	surrendered	female	low	neutral	12	false	2	973
+Jack Russell terrier	stray	female	low	assertive	5	false	4	974
+bearded collie	surrendered	male	high	assertive	13	false	2	975
+keeshond	stray	female	high	neutral	8	false	3	976
+kuvasz	surrendered	female	high	passive	3	false	3	977
+mastiff	surrendered	female	high	passive	9	false	1	978
+Finnish spitz	stray	female	high	neutral	6	false	0	979
+Samoyed	surrendered	female	low	assertive	10	false	1	980
+West Highland white terrier	surrendered	male	low	neutral	7	false	3	981
+shih tzu	surrendered	male	medium	passive	12	false	1	982
+bouvier des Flandres	stray	male	low	passive	6	false	3	983
+bouvier des Flandres	surrendered	male	low	passive	4	false	3	984
+komondor	stray	male	low	passive	8	false	4	985
+pointer	surrendered	female	high	neutral	11	false	2	986
+Brussels griffon	surrendered	male	medium	neutral	1	false	1	987
+West Highland white terrier	stray	female	medium	neutral	4	false	2	988
+black and tan coonhound	stray	female	high	passive	13	false	4	989
+Brussels griffon	stray	female	high	passive	12	false	3	990
+Bedlington terrier	surrendered	female	low	neutral	5	false	4	991
+Irish wolfhound	stray	female	high	passive	6	false	2	992
+border terrier	surrendered	female	low	assertive	1	false	0	993
+English springer spaniel	stray	female	low	neutral	5	false	1	994
+puli	stray	female	high	assertive	13	false	1	995
+Australian cattle dog	stray	male	medium	neutral	9	false	2	996
+border terrier	stray	female	medium	passive	10	false	1	997
+whippet	stray	male	medium	passive	6	false	0	998
+bulldog	stray	female	medium	neutral	6	false	4	999
+whippet	surrendered	male	high	neutral	7	false	4	355
+Irish setter	stray	male	medium	neutral	1	false	4	10
+beagle	stray	male	low	neutral	6	true	0	807
+beagle	stray	male	medium	passive	7	false	0	442
+\.
+
+
+--
+-- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.employees (name, personid, shelterid) FROM stdin;
+Hillary Davidi	1	3
+Reinald O'Luney	2	0
+Benson Moatt	4	1
+Reinhold Rabjohns	7	0
+Chantalle Stickel	8	2
+Darcy Tredger	9	2
+Alyssa Barkus	11	1
+Tommie Shiel	12	0
+Ellen Baglan	13	0
+Benedict Gounot	14	2
+Venita Kwietek	16	0
+Ikey Simkovich	17	1
+Clayborn Ternault	22	4
+Giraud Tweddell	23	4
+Milly Miko	26	1
+Stella Chrstine	36	2
+Alexander Finicj	37	3
+Katrina Blindermann	38	2
+Hill Simyson	40	0
+Warde Storch	43	4
+Julissa Martyns	44	4
+\.
+
+
+--
+-- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.person (name, personid) FROM stdin;
+Beitris Pereira	0
+Hillary Davidi	1
+Reinald O'Luney	2
+Dacia Billanie	3
+Benson Moatt	4
+Samantha Briton	5
+Waldon Klemencic	6
+Reinhold Rabjohns	7
+Chantalle Stickel	8
+Darcy Tredger	9
+Joel Lowbridge	10
+Alyssa Barkus	11
+Tommie Shiel	12
+Ellen Baglan	13
+Benedict Gounot	14
+Hana Schechter	15
+Venita Kwietek	16
+Ikey Simkovich	17
+Margit Abbett	18
+Berny Cullerne	19
+Feodora Kee	20
+Symon Le Pine	21
+Clayborn Ternault	22
+Giraud Tweddell	23
+Pooh Tooke	24
+Regen Acton	25
+Milly Miko	26
+Lennie Klimaszewski	27
+Pete Finlater	28
+Kamilah Lingwood	29
+Raddie Stokey	30
+Regine Arrowsmith	31
+Leonora Proudley	32
+Nollie Lembke	33
+Lay Kierans	34
+Linette Waylen	35
+Stella Chrstine	36
+Alexander Finicj	37
+Katrina Blindermann	38
+Ax Andrysek	39
+Hill Simyson	40
+Kimberlyn Pods	41
+Ivy Pattullo	42
+Warde Storch	43
+Julissa Martyns	44
+Falito O'Scully	45
+Galven Watkin	46
+Cordie Huson	47
+Onofredo Guittet	48
+Barbee Brunger	49
+molly	50
+m	51
+Molly	52
+afdfdfda	53
+Molly	54
+\.
+
+
+--
+-- Data for Name: pet_adoption; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.pet_adoption (adopterid, employeeid, dogid, date, contractid) FROM stdin;
+50	36	47	11-29-2020	1
+50	23	30	11-29-2020	2
+52	40	807	11-30-2020	3
+54	22	32	11-30-2020	4
+\.
+
+
+--
+-- Data for Name: shelters; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.shelters (name, phonenumber, address, shelterid) FROM stdin;
+Friends For Life Animal Rescue	(480) 497-8296	952 W Melody Ave, Gilbert, AZ 85233	0
+Foothills Animal Rescue	(480) 488-9890	10197 E Bell Rd, Scottsdale, AZ 85260	1
+Maricopa County Animal Care and Control	(602) 506-7387	2500 S 27th Ave, Phoenix, AZ 85009	2
+AAWL Adoption Center	(602) 781-3906	3111 W Chandler Blvd, Chandler, AZ 85226	3
+Arizona Animal Welfare League & SPCA	(602) 273-6852	25 N 40th St, Phoenix, AZ 85034	4
+\.
+
+
+--
+-- Name: adopters adopters_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.adopters
+    ADD CONSTRAINT adopters_pkey PRIMARY KEY (personid);
+
+
+--
+-- Name: dogs dogs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.dogs
+    ADD CONSTRAINT dogs_pkey PRIMARY KEY (dogid);
+
+
+--
+-- Name: employees employees_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.employees
+    ADD CONSTRAINT employees_pkey PRIMARY KEY (personid);
+
+
+--
+-- Name: person person_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.person
+    ADD CONSTRAINT person_pkey PRIMARY KEY (personid);
+
+
+--
+-- Name: pet_adoption pet_adoption_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.pet_adoption
+    ADD CONSTRAINT pet_adoption_pkey PRIMARY KEY (contractid);
+
+
+--
+-- Name: shelters shelters_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.shelters
+    ADD CONSTRAINT shelters_pkey PRIMARY KEY (shelterid);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
